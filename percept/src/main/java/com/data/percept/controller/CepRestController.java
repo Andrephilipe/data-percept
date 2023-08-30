@@ -1,7 +1,7 @@
 package com.data.percept.controller;
 
 import java.io.IOException;
-
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -28,16 +28,27 @@ public class CepRestController {
 
 	@GetMapping("/{cep}")
 	public ResponseEntity<Endereco> getCep(@PathVariable String cep) throws IOException, InterruptedException {
-		cep = "53441625";
 		Endereco endereco = cepService.buscaEnderecoPorCep(cep);
+		_cepRepository.save(endereco);
 		
 		return endereco != null ? ResponseEntity.ok().body(endereco) : ResponseEntity.notFound().build(); 
 	}
 
-    @RequestMapping(value = "/cep", method =  RequestMethod.POST)
-    public Endereco Post(@Validated @RequestBody Endereco endereco)
+
+	@PostMapping("/cep")
+	public Endereco Post(@RequestBody Endereco endereco)
     {
-        return _cepRepository.save(endereco);
+		try {
+		
+			endereco.getCep();
+			System.out.println("log 1" + endereco);
+			_cepRepository.save(endereco);
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Erro na conexão com o HTTP.");
+            System.out.println(e.getMessage());
+		}
+        return null; 
     }
 
 }
