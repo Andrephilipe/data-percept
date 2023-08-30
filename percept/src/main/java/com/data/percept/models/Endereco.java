@@ -1,17 +1,17 @@
 package com.data.percept.models;
 
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Endereco {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "cep")
 	private String cep;
     @Column
 	private String logradouro;
@@ -31,13 +31,6 @@ public class Endereco {
 	private String ddd;
     @Column
 	private String siafi;
-	
-	//Construtor
-	///public void Endereco() {
-		
-	//}
-	
-	//gets e sets
 	
 	public String getCep() {
 		return cep;

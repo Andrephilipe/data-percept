@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "243166171413",
+    "project_id": "data-percept",
+    "storage_bucket": "data-percept.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243166171413:android:2879f965c44bde2313991c",
+        "android_client_info": {
+          "package_name": "data.percept"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243166171413-1au3crla7r8ruh47qhkqjtcq8enn6ami.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjmhnLcqd6WiAaMvdMyMtVM3jmfvWsNRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "243166171413-1au3crla7r8ruh47qhkqjtcq8enn6ami.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

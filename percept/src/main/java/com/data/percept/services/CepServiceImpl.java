@@ -1,13 +1,19 @@
-package com.data.percept.implement;
+package com.data.percept.services;
+
+import com.data.percept.implement.ConnectionDataImpl;
+import com.data.percept.interfaces.CepService;
+import com.data.percept.models.Endereco;
 
 import java.io.IOException;
 import java.net.URI;
 
-import com.data.percept.models.Endereco;
+import org.springframework.stereotype.Service;
 
-public class Buscacep {
-        public Endereco buscaEndereco(String cep) throws IOException, InterruptedException {
+@Service
+public class CepServiceImpl implements CepService {
 
+    @Override
+    public Endereco buscaEnderecoPorCep(String cep) throws IOException, InterruptedException {
         try {
 
             ConnectionDataImpl test = new ConnectionDataImpl();
@@ -27,7 +33,9 @@ public class Buscacep {
             System.out.println("Erro na conexão com o HTTP.");
             System.out.println(e.getMessage());
         }
+
         return null;
 
     }
+
 }
