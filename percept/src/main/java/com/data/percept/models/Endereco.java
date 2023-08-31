@@ -7,29 +7,34 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 @Entity
 public class Endereco {
 
     @Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
+	private Long id;
+	
 	@Column(name = "cep")
 	private String cep;
-    @Column
+    @Column(name = "logradouro")
 	private String logradouro;
-    @Column
+    @Column(name = "complemento")
 	private String complemento;
-    @Column
+    @Column(name = "bairro")
 	private String bairro;
-    @Column
+    @Column(name = "localidade")
 	private String localidade;
-    @Column
+    @Column(name = "uf")
 	private String uf;
-    @Column
+    @Column(name = "ibge")
 	private String ibge;
-    @Column
+    @Column(name = "gia")
 	private String gia;
-    @Column
+    @Column(name = "ddd")
 	private String ddd;
-    @Column
+    @Column(name = "siafi")
 	private String siafi;
 	
 	public String getCep() {
@@ -92,20 +97,11 @@ public class Endereco {
 	public void setSiafi(String siafi) {
 		this.siafi = siafi;
 	}
-	
-    @Override
-    public String toString() {
-        return "Endereco{" +
-                "cep='" + cep + '\'' +
-                ", logradouro='" + logradouro + '\'' +
-                ", complemento='" + complemento + '\'' +
-                ", bairro=" + bairro +
-                ", localidade='" + localidade + '\'' +
-                ", uf='" + uf + '\'' +
-                ", ibge='" + ibge + '\'' +
-                ", gia='" + gia + '\'' +
-                ", ddd='" + ddd + '\'' +                
-                ", siafi='" + siafi + '\'' +
-                '}';
-    }
+
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 }

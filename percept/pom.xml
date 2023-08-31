@@ -8,10 +8,10 @@
 		<version>2.6.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>acc.br</groupId>
-	<artifactId>consumo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>consumo</name>
+	<groupId>com.data</groupId>
+	<artifactId>percept</artifactId>
+	<packaging>war</packaging>
+	<name>percept</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
