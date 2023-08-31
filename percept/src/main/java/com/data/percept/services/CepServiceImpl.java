@@ -3,6 +3,7 @@ package com.data.percept.services;
 import com.data.percept.implement.ConnectionDataImpl;
 import com.data.percept.interfaces.CepService;
 import com.data.percept.models.Endereco;
+import com.data.percept.models.InfoResultsGOVList;
 
 import java.io.IOException;
 import java.net.URI;
@@ -30,12 +31,25 @@ public class CepServiceImpl implements CepService {
             System.out.println(retornoCEP);
             return retornoCEP;
         } catch (Exception e) {
-            System.out.println("Erro na conexão com o HTTP.");
+            System.out.println("Erro na conexão com o HTTP buscaEnderecoPorCep.");
             System.out.println(e.getMessage());
         }
 
         return null;
 
+    }
+
+    @Override
+    public InfoResultsGOVList buscaInfoResultsGOV(String codeige, String mesAno) throws IOException, InterruptedException {
+        // TODO Auto-generated method stub
+        try {
+            BuscaAPIGov teste = new BuscaAPIGov();
+            teste.consultaInfo(codeige, mesAno);
+        } catch (Exception e) {
+            // TODO: handle exception
+            throw new UnsupportedOperationException("Unimplemented method 'buscaInfoResultsGOV'");
+        }
+        return null;
     }
 
 }
