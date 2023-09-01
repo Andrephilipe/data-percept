@@ -2,7 +2,11 @@ package com.data.percept.services;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
+import com.data.percept.PerceptApplication;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -11,67 +15,57 @@ import java.util.List;
 
 @Service
 public class ExcelService {
+    public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
 
-    public void criarArquivoExcel(String nomeDoArquivo) throws IOException {
-         // Obtenha os cabeçalhos dinamicamente (por exemplo, a partir de uma lista)
-         List<String> cabecalhos = obterCabecalhosDinamicamente();
+    public void criarArquivoExcel(String nomeDoArquivo, String nomeTabela) throws IOException {
+        try {
+            List<String> cabecatest = obterCabecalhosDinamicamente();
+            logger.info("criarArquivoExcel: inicio.");
 
-         // Crie um novo livro de Excel
-         Workbook workbook = new XSSFWorkbook();
- 
-         // Crie uma planilha no livro
-         Sheet sheet = workbook.createSheet("Dados");
- 
-         // Defina os cabeçalhos das colunas dinamicamente
-         Row headerRow = sheet.createRow(0);
-         for (int i = 0; i < cabecalhos.size(); i++) {
-             headerRow.createCell(i).setCellValue(cabecalhos.get(i));
-         }
- 
-         // Adicione dados às colunas (exemplo com loop)
-         for (int i = 1; i <= 10; i++) { // Adicione 10 linhas de dados
-             Row dataRow = sheet.createRow(i);
-             for (int j = 0; j < cabecalhos.size(); j++) {
-                 dataRow.createCell(j).setCellValue("Dado " + i + cabecalhos.get(j));
-             }
-         }
-         try (FileOutputStream outputStream = new FileOutputStream("exemplo.xlsx")) {
-            workbook.write(outputStream);
+            logger.info("criarArquivoExcel: list cabecatest." + cabecatest);
+
+            Workbook workbook = new XSSFWorkbook();
+
+            Sheet sheet = workbook.createSheet(nomeTabela);
+
+            Row headerRow = sheet.createRow(0);
+            for (int i = 0; i < cabecatest.size(); i++) {
+                logger.info("criarArquivoExcel: primeiro for.");
+                headerRow.createCell(i).setCellValue(cabecatest.get(i));
+            }
+
+            try (FileOutputStream outputStream = new FileOutputStream(nomeDoArquivo + ".xlsx")) {
+                workbook.write(outputStream);
+            }
+            workbook.close();
+        } catch (Exception e) {
+
+            logger.info("criarArquivoExcel: erro." + e);
         }
-         // Defina o cabeçalho da resposta para indicar que é um arquivo Excel
- 
-         // Escreva o livro de Excel na resposta
-         // Feche o livro de Excel
-         workbook.close();
-     }
- 
-     // Simule a obtenção de cabeçalhos dinamicamente (a partir de uma lista, banco de dados, etc.)
-     private List<String> obterCabecalhosDinamicamente() {
-         // Substitua isto pela lógica de obtenção de cabeçalhos dinâmicos
-         return List.of("Nome", "Idade", "Cidade", "Email");
-     }
- 
-    public void atualizarArquivoExcel() throws IOException {
-        // Abra o arquivo Excel existente
-        FileInputStream fileInputStream = new FileInputStream("exemplo.xlsx");
+
+    }
+
+    private List<String> obterCabecalhosDinamicamente() {
+        // Substitua isto pela lógica de obtenção de cabeçalhos dinâmicos
+        return List.of("Id", "Mes Competencia", "Mes Referencia");
+    }
+
+    public void atualizarArquivoExcel(String id, String mesCompetencia, String mesReferencia) throws IOException {
+        FileInputStream fileInputStream = new FileInputStream("teste.xlsx");
         Workbook workbook = new XSSFWorkbook(fileInputStream);
 
-        // Obtenha a planilha desejada
-        Sheet sheet = workbook.getSheet("Exemplo");
+        Sheet sheet = workbook.getSheet("gov");
 
-        // Crie ou atualize os dados nas células conforme necessário
         Row newRow = sheet.createRow(sheet.getLastRowNum() + 1);
-        newRow.createCell(0).setCellValue("Carlos");
-        newRow.createCell(1).setCellValue(28);
+        newRow.createCell(0).setCellValue(id);
+        newRow.createCell(1).setCellValue(mesCompetencia);
+        newRow.createCell(3).setCellValue(mesReferencia);
 
-        // Salve o arquivo Excel atualizado
-        try (FileOutputStream outputStream = new FileOutputStream("exemplo.xlsx")) {
+        try (FileOutputStream outputStream = new FileOutputStream("teste.xlsx")) {
             workbook.write(outputStream);
         }
 
-        // Feche o livro de Excel
         workbook.close();
         fileInputStream.close();
     }
 }
-
