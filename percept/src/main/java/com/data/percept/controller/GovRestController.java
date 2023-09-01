@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.data.percept.PerceptApplication;
 import com.data.percept.interfaces.BuscaAPIGovServices;
-import com.data.percept.models.InfoResultsGOVList;
+import com.data.percept.models.InfoResultsGOV;
 
 @RestController
 public class GovRestController {
@@ -23,14 +23,13 @@ public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
 	private BuscaAPIGovServices buscaService;
 
 	@GetMapping("/gov/{codeibge}/{mesAno}")
-	public ResponseEntity<InfoResultsGOVList> getInfo(@PathVariable String codeibge, @PathVariable String mesAno)
+	public ResponseEntity<InfoResultsGOV> getInfo(@PathVariable String codeibge, @PathVariable String mesAno)
 			throws IOException, InterruptedException {
-
 		logger.info("GovRestController: Inicio");
 		try {
 
 			logger.info("GovRestController: Entrando no consultaInfo");
-			InfoResultsGOVList resultsInfo = buscaService.consultaInfo(codeibge, mesAno);
+			InfoResultsGOV resultsInfo = buscaService.consultaInfo(codeibge, mesAno);
 
 			logger.info("GovRestController: retornou do consultaInfo");
 			return resultsInfo != null ? ResponseEntity.ok().body(resultsInfo) : ResponseEntity.notFound().build();

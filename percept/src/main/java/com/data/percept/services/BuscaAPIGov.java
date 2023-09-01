@@ -6,7 +6,7 @@ import java.net.URI;
 import com.data.percept.PerceptApplication;
 import com.data.percept.implement.ConnectionDataImpl;
 import com.data.percept.interfaces.BuscaAPIGovServices;
-import com.data.percept.models.InfoResultsGOVList;
+import com.data.percept.models.InfoResultsGOV;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -18,10 +18,11 @@ public class BuscaAPIGov implements BuscaAPIGovServices {
 
 public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
     @Override
-    public InfoResultsGOVList consultaInfo(String codeige, String mesAno)
+    public InfoResultsGOV consultaInfo(String codeige, String mesAno)
             throws IOException, InterruptedException {
+            
+
             logger.info("Inicio consultaInfo");
-            ExcelService excelService = new ExcelService();
         try {
 
             URI endereco = URI.create("https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-brasil-sacado-beneficiario-por-municipio?codigoIbge=" + codeige + "&mesAno=" + mesAno +"&pagina=1");
@@ -30,8 +31,7 @@ public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
             ConnectionDataImpl test = new ConnectionDataImpl();
             logger.info("consultaInfo chamando o conectaApiGov");
 
-            excelService.criarArquivoExcel(mesAno);
-            excelService.atualizarArquivoExcel();
+
             return test.conectaApiGog(endereco);
                 
         } catch (Exception e) {

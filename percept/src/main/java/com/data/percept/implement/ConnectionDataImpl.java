@@ -15,6 +15,7 @@ import com.data.percept.PerceptApplication;
 import com.data.percept.models.Endereco;
 import com.data.percept.models.InfoResultsGOV;
 import com.data.percept.models.InfoResultsGOVList;
+import com.data.percept.services.ExcelService;
 import com.data.percept.services.GeraArquivo;
 import com.google.gson.Gson;
 
@@ -37,7 +38,7 @@ public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
         return new Gson().fromJson(response.body(), Endereco.class);
     }
 
-    public InfoResultsGOVList conectaApiGog(URI url) throws IOException, InterruptedException {
+    public InfoResultsGOV conectaApiGog(URI url) throws IOException, InterruptedException {
         logger.info("conectaApiGog: Inicio.");
 
         URI endereco = url;
@@ -71,18 +72,21 @@ public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
             guardarEnderecos.guardaArquivo(arquivoLista);
 
             System.out.println("results list");
+            ExcelService testeExcel = new ExcelService();
+            testeExcel.criarArquivoExcel("teste", "gov");
+            
 
             for (InfoResultsGOV result : resultsList) {
-                System.out.println("ID: " + result.getId());
+                System.out.println("ID: " + result.getId().toString());
                 System.out.println("Data Mes Competencia: " + result.getDataMesCompetencia());
                 System.out.println("Data Mes Referencia: " + result.getDataMesReferencia());
                 System.out.println("------------------------------");
 
                 System.out.println("results final");
-                System.out.println(result.getId());                
+                testeExcel.atualizarArquivoExcel(result.getId().toString(), result.getDataMesCompetencia(), result.getDataMesReferencia());              
                 
             }
-            return list;
+            return null;
 
         } catch (Exception e) {
 
