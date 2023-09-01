@@ -1,10 +1,10 @@
-package com.data.percept.services;
+package com.data.percept.funtions.buscagov;
 
 import java.io.IOException;
 import java.net.URI;
 
 import com.data.percept.PerceptApplication;
-import com.data.percept.implement.ConnectionDataImpl;
+import com.data.percept.implement.ConnectionDataImplGov;
 import com.data.percept.interfaces.BuscaAPIGovServices;
 import com.data.percept.models.InfoResultsGOV;
 import org.slf4j.Logger;
@@ -21,16 +21,14 @@ public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
     public InfoResultsGOV consultaInfo(String codeige, String mesAno)
             throws IOException, InterruptedException {
             
-
             logger.info("Inicio consultaInfo");
         try {
 
             URI endereco = URI.create("https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-brasil-sacado-beneficiario-por-municipio?codigoIbge=" + codeige + "&mesAno=" + mesAno +"&pagina=1");
             logger.info("consultaInfo" + endereco);
             
-            ConnectionDataImpl test = new ConnectionDataImpl();
+            ConnectionDataImplGov test = new ConnectionDataImplGov();
             logger.info("consultaInfo chamando o conectaApiGov");
-
 
             return test.conectaApiGog(endereco);
                 
