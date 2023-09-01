@@ -8,15 +8,18 @@ import java.net.http.HttpResponse;
 import java.util.Arrays;
 import java.util.List;
 
-import org.springframework.http.ResponseEntity;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import com.data.percept.PerceptApplication;
 import com.data.percept.models.Endereco;
 import com.data.percept.models.InfoResultsGOV;
 import com.data.percept.models.InfoResultsGOVList;
+import com.data.percept.services.GeraArquivo;
 import com.google.gson.Gson;
 
 public class ConnectionDataImpl {
-
+public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
     public Endereco conectaApi(URI url) throws IOException, InterruptedException {
 
         URI endereco = url;
@@ -35,6 +38,7 @@ public class ConnectionDataImpl {
     }
 
     public InfoResultsGOVList conectaApiGog(URI url) throws IOException, InterruptedException {
+        logger.info("conectaApiGog: Inicio.");
 
         URI endereco = url;
 
@@ -49,16 +53,22 @@ public class ConnectionDataImpl {
 
         // Enviar a solicitação e receber a resposta
         try {
+
+            logger.info("conectaApiGog: entrando no try.");
             HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-            System.out.println("Resposta: " + response.body());
+            logger.info("conectaApiGog: resposta do serviço GOV." + response.body());
 
             Gson gson = new Gson();
 
             InfoResultsGOV[] infoResultsArray = gson.fromJson(response.body(), InfoResultsGOV[].class);
             InfoResultsGOVList list = new InfoResultsGOVList();
+            List<InfoResultsGOV> arquivoLista = list.getInfoResults();
             list.setInfoResults(Arrays.asList(infoResultsArray));
 
             List<InfoResultsGOV> resultsList = list.getInfoResults();
+
+            GeraArquivo guardarEnderecos = new GeraArquivo();
+            guardarEnderecos.guardaArquivo(arquivoLista);
 
             System.out.println("results list");
 
@@ -69,13 +79,15 @@ public class ConnectionDataImpl {
                 System.out.println("------------------------------");
 
                 System.out.println("results final");
-                System.out.println(result.getId());
+                System.out.println(result.getId());                
                 
             }
             return list;
 
         } catch (Exception e) {
+
             System.err.println("Ocorreu um erro: " + e.getMessage());
+            logger.info("conectaApiGog: Erro." + e);
         }
         return null;
 

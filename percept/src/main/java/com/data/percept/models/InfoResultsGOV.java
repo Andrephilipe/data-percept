@@ -3,7 +3,6 @@ package com.data.percept.models;
 public class InfoResultsGOV {
 
     private Long id;
-
     private String dataMesCompetencia;
     private String dataMesReferencia;
 

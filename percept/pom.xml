@@ -68,6 +68,22 @@
 			<version>5.8.0</version> <!-- Use a versão mais recente -->
 			<scope>test</scope>
 		</dependency>
+			<!-- Outras dependências -->
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+			</dependency>
+			    <!-- ... outras dependências do Spring Boot ... -->
+				<dependency>
+					<groupId>org.apache.poi</groupId>
+					<artifactId>poi</artifactId>
+					<version>4.1.2</version> <!-- Use a versão mais recente -->
+				</dependency>
+				<dependency>
+					<groupId>org.apache.poi</groupId>
+					<artifactId>poi-ooxml</artifactId>
+					<version>4.1.2</version> <!-- Use a versão mais recente -->
+				</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

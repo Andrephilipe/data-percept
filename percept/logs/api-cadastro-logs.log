@@ -1,0 +1,104 @@
+2023-09-01 13:09:36,381 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-201] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 13:09:36,402 INFO com.zaxxer.hikari.HikariDataSource [Thread-201] HikariPool-34 - Shutdown initiated...
+2023-09-01 13:09:36,414 INFO com.zaxxer.hikari.HikariDataSource [Thread-201] HikariPool-34 - Shutdown completed.
+2023-09-01 13:09:36,496 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2023-09-01 13:09:37,801 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 22200 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept)
+2023-09-01 13:09:37,833 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-09-01 13:09:38,181 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 13:09:38,200 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
+2023-09-01 13:09:38,230 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=ef567a43-a123-368b-8de6-1739d0275aa5
+2023-09-01 13:09:38,283 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-09-01 13:09:38,284 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 13:09:38,285 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-09-01 13:09:38,285 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-09-01 13:09:38,340 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-09-01 13:09:38,340 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 503 ms
+2023-09-01 13:09:38,361 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 13:09:38,367 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-35 - Starting...
+2023-09-01 13:09:38,405 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-35 - Start completed.
+2023-09-01 13:09:38,405 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-09-01 13:09:38,430 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 13:09:38,430 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 13:09:38,473 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 13:09:38,527 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-09-01 13:09:39,551 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 13:09:39,555 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 13:09:40,502 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 3.997 seconds (JVM running for 7107.263)
+2023-09-01 13:09:40,504 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-09-01 13:09:40,504 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
+2023-09-01 13:10:25,253 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 13:10:25,255 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-09-01 13:10:25,256 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2023-09-01 13:10:25,260 INFO com.data.percept.PerceptApplication [http-nio-8080-exec-2] GovRestController: Inicio
+2023-09-01 13:10:25,261 INFO com.data.percept.PerceptApplication [http-nio-8080-exec-2] GovRestController: Entrando no consultaInfo
+2023-09-01 13:10:25,261 INFO com.data.percept.PerceptApplication [http-nio-8080-exec-2] Inicio consultaInfo
+2023-09-01 13:10:25,262 INFO com.data.percept.PerceptApplication [http-nio-8080-exec-2] consultaInfohttps://api.portaldatransparencia.gov.br/api-de-dados/auxilio-brasil-sacado-beneficiario-por-municipio?codigoIbge=2601300&mesAno=202302&pagina=1
+2023-09-01 13:10:25,265 INFO com.data.percept.PerceptApplication [http-nio-8080-exec-2] consultaInfo chamando o conectaApiGov
+2023-09-01 13:10:25,277 INFO com.data.percept.PerceptApplication [http-nio-8080-exec-2] Erro na consultaInfojava.io.FileNotFoundException: exemplo.xlsx (O sistema não pode encontrar o arquivo especificado)
+2023-09-01 13:10:25,278 INFO com.data.percept.PerceptApplication [http-nio-8080-exec-2] GovRestController: retornou do consultaInfo
+2023-09-01 13:12:50,171 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-207] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 13:12:50,172 INFO com.zaxxer.hikari.HikariDataSource [Thread-207] HikariPool-35 - Shutdown initiated...
+2023-09-01 13:12:50,182 INFO com.zaxxer.hikari.HikariDataSource [Thread-207] HikariPool-35 - Shutdown completed.
+2023-09-01 13:12:50,252 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2023-09-01 13:12:51,177 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 22200 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept)
+2023-09-01 13:12:51,177 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-09-01 13:12:51,357 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 13:12:51,375 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
+2023-09-01 13:12:51,400 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=ef567a43-a123-368b-8de6-1739d0275aa5
+2023-09-01 13:12:51,444 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-09-01 13:12:51,445 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 13:12:51,445 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-09-01 13:12:51,445 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-09-01 13:12:51,498 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-09-01 13:12:51,498 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 319 ms
+2023-09-01 13:12:51,517 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 13:12:51,522 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-36 - Starting...
+2023-09-01 13:12:51,559 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-36 - Start completed.
+2023-09-01 13:12:51,560 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-09-01 13:12:51,600 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 13:12:51,601 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 13:12:51,662 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 13:12:51,710 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-09-01 13:12:52,581 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 13:12:52,585 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 13:12:53,642 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 3.383 seconds (JVM running for 7300.403)
+2023-09-01 13:12:53,645 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-09-01 13:12:53,645 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
+2023-09-01 13:13:00,545 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-01 13:13:00,546 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-09-01 13:13:00,548 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 2 ms
+2023-09-01 13:13:00,570 INFO com.data.percept.PerceptApplication [http-nio-8080-exec-2] GovRestController: Inicio
+2023-09-01 13:13:00,570 INFO com.data.percept.PerceptApplication [http-nio-8080-exec-2] GovRestController: Entrando no consultaInfo
+2023-09-01 13:13:00,570 INFO com.data.percept.PerceptApplication [http-nio-8080-exec-2] Inicio consultaInfo
+2023-09-01 13:13:00,571 INFO com.data.percept.PerceptApplication [http-nio-8080-exec-2] consultaInfohttps://api.portaldatransparencia.gov.br/api-de-dados/auxilio-brasil-sacado-beneficiario-por-municipio?codigoIbge=2601300&mesAno=202302&pagina=1
+2023-09-01 13:13:00,573 INFO com.data.percept.PerceptApplication [http-nio-8080-exec-2] consultaInfo chamando o conectaApiGov
+2023-09-01 13:13:00,659 INFO com.data.percept.PerceptApplication [http-nio-8080-exec-2] Erro na consultaInfojava.lang.NullPointerException
+2023-09-01 13:13:00,659 INFO com.data.percept.PerceptApplication [http-nio-8080-exec-2] GovRestController: retornou do consultaInfo
+2023-09-01 13:13:05,029 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-213] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 13:13:05,030 INFO com.zaxxer.hikari.HikariDataSource [Thread-213] HikariPool-36 - Shutdown initiated...
+2023-09-01 13:13:05,039 INFO com.zaxxer.hikari.HikariDataSource [Thread-213] HikariPool-36 - Shutdown completed.
+2023-09-01 13:13:05,103 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2023-09-01 13:13:06,107 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 22200 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept)
+2023-09-01 13:13:06,107 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-09-01 13:13:06,468 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-01 13:13:06,485 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interfaces.
+2023-09-01 13:13:06,515 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=ef567a43-a123-368b-8de6-1739d0275aa5
+2023-09-01 13:13:06,567 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-09-01 13:13:06,568 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-01 13:13:06,568 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-09-01 13:13:06,568 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-09-01 13:13:06,678 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-09-01 13:13:06,679 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 568 ms
+2023-09-01 13:13:06,715 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-01 13:13:06,724 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-37 - Starting...
+2023-09-01 13:13:06,727 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-37 - Start completed.
+2023-09-01 13:13:06,728 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-09-01 13:13:06,762 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-01 13:13:06,762 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-01 13:13:06,822 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-01 13:13:06,905 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-09-01 13:13:08,116 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-01 13:13:08,120 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-01 13:13:09,198 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 4.088 seconds (JVM running for 7315.958)
+2023-09-01 13:13:09,212 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-09-01 13:13:09,212 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
