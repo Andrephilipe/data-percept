@@ -1,4 +1,4 @@
-package com.data.percept.connection;
+package com.data.percept.funtions;
 
 /**
  * Servicos oferecidos para conexao com Datasus para acesso ao CNS.

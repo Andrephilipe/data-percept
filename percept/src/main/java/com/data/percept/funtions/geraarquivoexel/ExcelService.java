@@ -1,4 +1,4 @@
-package com.data.percept.services;
+package com.data.percept.funtions.geraarquivoexel;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.data.percept.PerceptApplication;
+import com.data.percept.models.InfoResultsGOV;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -67,5 +68,15 @@ public class ExcelService {
 
         workbook.close();
         fileInputStream.close();
+    }
+
+    public void analisarResults(List<InfoResultsGOV> results) throws IOException {
+        // Substitua isto pela lógica de obtenção de cabeçalhos dinâmicos
+        for (InfoResultsGOV result : results) {
+
+            atualizarArquivoExcel(result.getId().toString(), result.getDataMesCompetencia(),
+                    result.getDataMesReferencia());
+        }
+
     }
 }
