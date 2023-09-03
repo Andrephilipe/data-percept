@@ -11,8 +11,11 @@ public class Custumer {
 
     @Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "account")
-    private Long account;
+    @Column(name = "id_custumer")
+    private long idCustumer;
+
+    @Column(name = "account")
+    private String account;
     @Column(name = "name_custumer")
     private String name;
     @Column(name = "cpf")
@@ -21,12 +24,13 @@ public class Custumer {
     private String rg;
     @Column(name = "email")
     private String email;
+    
 
-    public Long getAccount() {
-        return account;
+    public long getIdCustumer() {
+        return idCustumer;
     }
-    public void setAccount(Long account) {
-        this.account = account;
+    public void setIdCustumer(long idCustumer) {
+        this.idCustumer = idCustumer;
     }
     public String getName() {
         return name;
@@ -52,5 +56,17 @@ public class Custumer {
     public void setEmail(String email) {
         this.email = email;
     }
+    public String getAccount() {
+        return account;
+    }
+    public void setAccount(String account) {
+        this.account = account;
+    }
+    @Override
+    public String toString() {
+        return "Custumer [idCustumer=" + idCustumer + ", account=" + account + ", name=" + name + ", cpf=" + cpf
+                + ", rg=" + rg + ", email=" + email + "]";
+    }
+    
 
 }

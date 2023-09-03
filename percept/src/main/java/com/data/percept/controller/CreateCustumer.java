@@ -8,36 +8,38 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.data.percept.PerceptApplication;
-import com.data.percept.funtions.CpfValidator;
+import com.data.percept.funtions.createcustumer.CreateCustumerValidators;
 import com.data.percept.models.Custumer;
 import com.data.percept.repository.CreateCustumerRepository;
 
 @RestController
 public class CreateCustumer {
-    public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
+    public static Logger logger = LoggerFactory.getLogger(CreateCustumer.class);
 
     @Autowired
-    private CreateCustumerRepository _custumerRepository;
+    private CreateCustumerRepository custumerRepository;
 
 
     @PostMapping("/createCustumer")
 	public ResponseEntity<String> createCustumer(@RequestBody Custumer custumer)
     {
         logger.info("createCustumer: start");
-        if (CpfValidator.isValid(custumer.getCpf())) {
-            logger.info("createCustumer: valid CPF");
-        } else {
-            return ResponseEntity.badRequest().body("CPF invalid");
+        if (CreateCustumerValidators.isValidCpf(custumer.getCpf())) {
+            logger.info("createCustumer: cpf valid");
         }
+        else{
+            logger.info("createCustumer: cpf invalid");
+            return ResponseEntity.internalServerError().body("account not created");
+        }
+        CreateCustumerValidators.validatorCampos(custumer);
 
 		try {
-			_custumerRepository.save(custumer);
+            logger.info("createCustumer: try");
+			custumerRepository.save(custumer);
 		} catch (Exception e) {
-			// TODO: handle exception
-			System.out.println("Erro na conexão com o HTTP createCustumer.");
-            System.out.println(e.getMessage());
+			logger.info("createCustumer: erro");
+			return ResponseEntity.internalServerError().body("account not created");
 		}
-        return null; 
+        return ResponseEntity.ok().body("account created"); 
     }
 }
