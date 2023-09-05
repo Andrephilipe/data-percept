@@ -1,5 +1,9 @@
 package com.data.percept.models;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,14 +19,28 @@ public class Account {
 
     @Column(name = "name_titutular")
     private String nameTitutular;
-    
-    @Column(name = "number_account")
-    private String account;
+
+    @Column(name = "account")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private String accountNumber;
 
     @Column(name = "tipo_da_conta")
     private String tipoDaConta;
     @Column(name = "agencia")
     private Integer agencia;
+
+	@Column
+	private String dataCriacao;
+
+    public String getDataCriacao() {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date();
+        return dateFormat.format(date);
+    }
+
+    public void setDataCriacao(String string) {
+        this.dataCriacao = string;
+    }
     public String getNameTitutular() {
         return nameTitutular;
     }
@@ -48,11 +66,13 @@ public class Account {
     public void setId(Long id) {
         this.id = id;
     }
-    public String getNumberAccount() {
-        return account;
+
+    public String getAccount() {
+        return accountNumber;
     }
-    public void setNumberAccount(String account) {
-        this.account = account;
+
+    public void setAccount(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
     
