@@ -1,17 +1,22 @@
 package com.data.percept.funtions.createcustumer;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
 
-import com.data.percept.models.Custumer;
+
 
 public class CreateCustumerValidators {
         public static Logger logger = LoggerFactory.getLogger(CreateCustumerValidators.class);
 
+
     public static boolean isValidCpf(String cpf) {
-        logger.info("CreateCustumerValidators - isValidCpf: start");
+        logger.info("CreateCustumerValidators - isValidCpf: start" + cpf);
             cpf = cpf.replaceAll("[^0-9]", "");
         
             if (cpf.length() != 11) {
@@ -54,20 +59,12 @@ public class CreateCustumerValidators {
         
     }
 
-    public static ResponseEntity<String> validatorCampos(@RequestBody Custumer custumer){
-        logger.info("CreateCustumerValidators - validatorCampos: start" + custumer);
+    public static ResponseEntity<String> validatorCampos(String email){
+        logger.info("CreateCustumerValidators - validatorCampos: start");
         try {
-            if (custumer.getName() == null){
+            String testValidator = "";
+            if (email.equals(testValidator) || email == null){
             return ResponseEntity.internalServerError().body("name obrigatorio"); 
-        }
-        if (custumer.getCpf().isEmpty()){
-            return ResponseEntity.internalServerError().body("cpf obrigatorio"); 
-        }
-        if (custumer.getEmail().isEmpty()){
-            return ResponseEntity.internalServerError().body("email obrigatorio"); 
-        }
-        if (custumer.getRg().isEmpty()){
-            return ResponseEntity.internalServerError().body("rg obrigatorio"); 
         }
         } catch (Exception e) {
             // TODO: handle exception
@@ -75,6 +72,21 @@ public class CreateCustumerValidators {
         }
  
         return null;
+
+    }
+
+    public static String getDataCriacao() {
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        return dateFormat.format(date);
+    }
+
+    public static String generateAccountNumber() {
+         // Gere um número aleatório de 6 dígitos
+        Random random = new Random();
+        int numero = random.nextInt(900000) + 100000; // Isso gera um número entre 100000 e 999999
+        int digito = random.nextInt(90) + 10;
+        return String.valueOf(numero) +"-" + String.valueOf(digito);
 
     }
 }
