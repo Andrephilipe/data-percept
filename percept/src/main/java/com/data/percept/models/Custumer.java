@@ -9,22 +9,28 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.data.percept.funtions.createcustumer.CreateCustumerValidators;
 
 
 @Entity
 public class Custumer {
+
+    public static Logger logger = LoggerFactory.getLogger(Custumer.class);
 
     @Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_custumer")
     private long idCustumer;
 
-    @Column(name = "account")
     private String account;
+
 
     @NotBlank(message = "O campo nome não pode estar em branco")
     @Column(name = "name_custumer")
@@ -74,8 +80,16 @@ public class Custumer {
     public String getCpf() {
         return cpf;
     }
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCpf(String cpf) throws Exception {
+
+        if (CreateCustumerValidators.isValidCpf(cpf)) {
+            logger.info("Custumer: cpf valid.");
+            this.cpf = cpf;
+
+        }else{
+            throw new Exception("Custumer: cpf invalid.");
+        }
+
     }
     public String getRg() {
         return rg;
@@ -89,15 +103,10 @@ public class Custumer {
     public void setEmail(String email) {
         this.email = email;
     }
-    public String getAccount() {
-        return account;
-    }
-    public void setAccount(String account) {
-        this.account = account;
-    }
+
     @Override
     public String toString() {
-        return "Custumer [idCustumer=" + idCustumer + ", account=" + account + ", name=" + name + ", cpf=" + cpf
+        return "Custumer [idCustumer=" + idCustumer + ", account="+ ", name=" + name + ", cpf=" + cpf
                 + ", rg=" + rg + ", email=" + email + "]";
     }
  
@@ -108,6 +117,12 @@ public class Custumer {
     }
     public void setDataCriacao(String dataCriacao) {
         this.dataCriacao = dataCriacao;
+    }
+    public String getAccount() {
+        return account;
+    }
+    public void setAccount(String account) {
+        this.account = account;
     }
     
 

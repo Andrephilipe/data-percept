@@ -1,9 +1,5 @@
 package com.data.percept.models;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,8 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Account {
-    
+public class NewAccount {
+
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_ACCOUNT")
     @Column(name = "id_account")
@@ -35,7 +31,53 @@ public class Account {
     @Column
     private String cpf;
 
-    
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNameTitutular() {
+        return nameTitutular;
+    }
+
+    public void setNameTitutular(String nameTitutular) {
+        this.nameTitutular = nameTitutular;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public String getTipoDaConta() {
+        return tipoDaConta;
+    }
+
+    public void setTipoDaConta(String tipoDaConta) {
+        this.tipoDaConta = tipoDaConta;
+    }
+
+    public Integer getAgencia() {
+        return agencia;
+    }
+
+    public void setAgencia(Integer agencia) {
+        this.agencia = agencia;
+    }
+
+    public String getDataCriacao() {
+        return dataCriacao;
+    }
+
+    public void setDataCriacao(String dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
 
     public String getCpf() {
         return cpf;
@@ -43,55 +85,6 @@ public class Account {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-
-    public String getDataCriacao() {
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        Date date = new Date();
-        return dateFormat.format(date);
-    }
-
-    public void setDataCriacao(String string) {
-        this.dataCriacao = string;
-    }
-    public String getNameTitutular() {
-        return nameTitutular;
-    }
-    public void setNameTitutular(String nameTitutular) throws Exception {
-
-        if(nameTitutular == null || nameTitutular == ""){
-            throw new Exception("O Campo Nome e obrigatorio.");
-        }else{
-            this.nameTitutular = nameTitutular;
-        }
-
-    }
- 
-    public String getTipoDaConta() {
-        return tipoDaConta;
-    }
-    public void setTipoDaConta(String tipoDaConta) {
-        this.tipoDaConta = tipoDaConta;
-    }
-    public Integer getAgencia() {
-        return agencia;
-    }
-    public void setAgencia(Integer agencia) {
-        this.agencia = agencia;
-    }
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getAccount() {
-        return accountNumber;
-    }
-
-    public void setAccount(String accountNumber) {
-        this.accountNumber = accountNumber;
     }
 
     
