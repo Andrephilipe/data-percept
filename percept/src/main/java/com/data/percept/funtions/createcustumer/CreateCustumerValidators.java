@@ -9,6 +9,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 
+import com.data.percept.models.Account;
+
 
 
 public class CreateCustumerValidators {
@@ -87,6 +89,13 @@ public class CreateCustumerValidators {
         int numero = random.nextInt(900000) + 100000; // Isso gera um número entre 100000 e 999999
         int digito = random.nextInt(90) + 10;
         return String.valueOf(numero) +"-" + String.valueOf(digito);
+
+    }
+
+    public static String saveAccount(Account account) {
+        logger.info("teste account" + account);
+        return null;
+         // Gere um número aleatório de 6 dígitos
 
     }
 }

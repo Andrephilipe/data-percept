@@ -21,7 +21,7 @@ public enum TipoConta {
             if (tipoconta == 2) {
                 return "poupanca";
             }
-            throw new Exception("My Message");
+            throw new Exception("TipoConta : Tipo de conta invalida.");
     }
 }
 
