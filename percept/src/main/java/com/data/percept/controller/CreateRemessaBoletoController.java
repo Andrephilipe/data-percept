@@ -1,7 +1,5 @@
 package com.data.percept.controller;
 
-import java.util.Optional;
-
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -15,8 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.data.percept.funtions.geraboleto.PdfController;
-import com.data.percept.funtions.geraboleto.UsuarioDAO;
+import com.data.percept.funtions.geraboleto.GeradorDeBoletos;
 import com.data.percept.models.RemessaBoleto;
 import com.data.percept.repository.CreateRemessaBoletoRepository;
 
@@ -51,18 +48,14 @@ public class CreateRemessaBoletoController {
         return ResponseEntity.ok().body(ACCOUNT_CREATE);
     }
 
-    @GetMapping("/geraBoleto/{id}")
-    public ResponseEntity<String> createBoleto(@PathVariable Long id) {
+    @GetMapping("/geraBoleto/{status}")
+    public ResponseEntity<String> createBoleto(@PathVariable String status) {
 
         logger.info("createBoleto: start");
         try {
-            Optional<RemessaBoleto> remessaBoleto = createRemessaBoletoRepository.findById(id);
-            logger.info("createBoleto: remessaBoleto" + remessaBoleto);
 
-            RemessaBoleto remessaRecebida = remessaBoleto.get();
-            UsuarioDAO.inserirUsuario("criado");
-            //PdfController.generatePdf(remessaRecebida);
-            
+            GeradorDeBoletos.geraBoleto(status);
+
         } catch (Exception e) {
 
             logger.info("createBoleto: erro", e);
