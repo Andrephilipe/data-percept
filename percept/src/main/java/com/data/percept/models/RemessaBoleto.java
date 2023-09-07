@@ -1,5 +1,6 @@
 package com.data.percept.models;
 
+import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -32,7 +33,7 @@ public class RemessaBoleto {
     private String dataVencimento;
 
     @Column(name = "valor")
-    private String valor;
+    private BigDecimal valor;
 
     @Column(name = "data_criacao")
     private String dataCriacao;
@@ -43,6 +44,8 @@ public class RemessaBoleto {
     @Column(name = "status_boleto")
     private String statusBoleto;
 
+    @Column(name = "string_pix")
+    private String stringPix;
     
     public Long getId() {
         return id;
@@ -94,11 +97,11 @@ public class RemessaBoleto {
         this.dataVencimento = dataVencimento;
     }
 
-    public String getValor() {
+    public BigDecimal getValor() {
         return valor;
     }
 
-    public void setValor(String valor) {
+    public void setValor(BigDecimal valor) {
         this.valor = valor;
     }
 
@@ -136,6 +139,14 @@ public class RemessaBoleto {
 
     public void setStatusBoleto(String statusBoleto) {
         this.statusBoleto = statusBoleto;
+    }
+
+    public String getStringPix() {
+        return stringPix;
+    }
+
+    public void setStringPix(String stringPix) {
+        this.stringPix = stringPix;
     }
 
     

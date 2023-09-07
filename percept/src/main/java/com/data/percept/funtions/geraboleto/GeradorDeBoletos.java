@@ -37,7 +37,7 @@ public class GeradorDeBoletos {
                 geraBoletoNew.setNomeTitular(resultSet.getString("nome_titular"));
                 geraBoletoNew.setMunicipio(resultSet.getString("municipio"));
                 geraBoletoNew.setId(resultSet.getLong("id_remessa"));
-                geraBoletoNew.setValor(resultSet.getString("valor"));
+                geraBoletoNew.setValor(resultSet.getBigDecimal("valor"));
                 Boolean results = PdfController.generatePdf(geraBoletoNew);
 
                 if (results) {
