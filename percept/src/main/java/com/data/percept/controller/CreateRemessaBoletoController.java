@@ -36,7 +36,6 @@ public class CreateRemessaBoletoController {
             remessaBoleto.setDataCriacao(newRemessa.getDataCriacao());
             remessaBoleto.setDataVencimento(newRemessa.getDataVencimento());
             remessaBoleto.setDataValidade(newRemessa.getDataValidade());
-            remessaBoleto.setStatusBoleto("criado");
             createRemessaBoletoRepository.save(remessaBoleto);
 
         } catch (Exception e) {
