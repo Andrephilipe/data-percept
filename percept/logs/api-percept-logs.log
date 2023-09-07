@@ -583,3 +583,11 @@ java.lang.Exception: O Campo Nome e obrigatorio.
 2023-09-06 09:33:53,640 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-09-06 09:33:53,642 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
 2023-09-06 09:33:53,643 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2023-09-06 14:04:25,877 INFO com.data.percept.funtions.geraboleto.PdfController [main] createBoleto: generatePdfteste
+2023-09-06 14:23:02,179 INFO com.data.percept.funtions.geraboleto.PdfController [main] buscaRsults: busc errojava.lang.NullPointerException
+2023-09-06 14:23:02,183 INFO com.data.percept.funtions.geraboleto.PdfController [main] buscaRsults: busc errojava.lang.NullPointerException
+2023-09-06 14:26:47,948 INFO com.data.percept.funtions.geraboleto.PdfController [main] buscaRsults: busc errojava.lang.NullPointerException
+2023-09-06 14:26:47,953 INFO com.data.percept.funtions.geraboleto.PdfController [main] buscaRsults: busc errojava.lang.NullPointerException
+2023-09-06 17:16:01,193 INFO com.data.percept.funtions.geraboleto.PdfController [main] createBoleto: generatePdfteste
+2023-09-06 17:16:20,802 INFO com.data.percept.funtions.geraboleto.PdfController [main] createBoleto: generatePdfteste
+2023-09-06 17:16:27,467 INFO com.data.percept.funtions.geraboleto.PdfController [main] createBoleto: generatePdfteste

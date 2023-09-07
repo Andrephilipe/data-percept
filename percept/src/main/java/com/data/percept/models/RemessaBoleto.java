@@ -2,7 +2,6 @@ package com.data.percept.models;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -38,6 +37,13 @@ public class RemessaBoleto {
     @Column(name = "data_criacao")
     private String dataCriacao;
 
+    @Column(name = "data_validade")
+    private String dataValidade;
+
+    @Column(name = "status_boleto")
+    private String statusBoleto;
+
+    
     public Long getId() {
         return id;
     }
@@ -81,8 +87,6 @@ public class RemessaBoleto {
         Date newDate = calendar.getTime();
         
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-     
-
         return dateFormat.format(newDate );
     }
 
@@ -106,6 +110,32 @@ public class RemessaBoleto {
 
     public void setDataCriacao(String dataCriacao) {
         this.dataCriacao = dataCriacao;
+    }
+
+    public String getDataValidade() {
+        Date currentDate = new Date();
+        
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(currentDate);
+
+        int daysToAdd = 20;
+        calendar.add(Calendar.DAY_OF_MONTH, daysToAdd);
+        Date newDate = calendar.getTime();
+        
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        return dateFormat.format(newDate );
+    }
+
+    public void setDataValidade(String dataValidade) {
+        this.dataValidade = dataValidade;
+    }
+
+    public String getStatusBoleto() {
+        return statusBoleto;
+    }
+
+    public void setStatusBoleto(String statusBoleto) {
+        this.statusBoleto = statusBoleto;
     }
 
     

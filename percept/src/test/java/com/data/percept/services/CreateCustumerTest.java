@@ -7,7 +7,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.http.ResponseEntity;
 
-import com.data.percept.controller.CreateCustumer;
+import com.data.percept.controller.CreateCustumerController;
 import com.data.percept.models.Account;
 import com.data.percept.models.Custumer;
 import com.data.percept.repository.CreateAccountRepository;
@@ -22,7 +22,7 @@ import java.util.Optional;
 public class CreateCustumerTest {
 
     @InjectMocks
-    private CreateCustumer createCustumer;
+    private CreateCustumerController createCustumer;
 
     @Mock
     private CreateCustumerRepository custumerRepository;
