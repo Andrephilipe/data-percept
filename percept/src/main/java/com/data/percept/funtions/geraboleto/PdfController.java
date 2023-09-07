@@ -35,12 +35,13 @@ public class PdfController {
         Document document = new Document(PageSize.A4);
 
         try {
-            String diretorioPdfs = "pdf/";
+            String diretorioPdfs = "C://Users//andre.p.cassiano//";
             String diretorioImages = "images/";
 
             logger.info("createBoleto: generatePdf" + remessaBoleto.getNomeTitular());
 
             String textoParaQRCode = "Este é um exemplo de texto para o QR Code.";
+            String nameIgems = diretorioImages + remessaBoleto.getId() + "qrcode.png";
 
             PdfWriter.getInstance(document, new FileOutputStream(diretorioPdfs + remessaBoleto.getNomeTitular()+ "-" + remessaBoleto.getId() + "-"+ "boleto.pdf"));
             document.open();
@@ -48,10 +49,10 @@ public class PdfController {
             ByteArrayOutputStream byteArrayOutputStream = QRCode.from(textoParaQRCode).to(ImageType.PNG).stream();
             byte[] byteArray = byteArrayOutputStream.toByteArray();
             // Carregar a imagem a ser adicionada ao PDF
-            try (FileOutputStream fos = new FileOutputStream(diretorioImages + remessaBoleto.getId() + "qrcode.png")) {
+            try (FileOutputStream fos = new FileOutputStream(nameIgems)) {
                 fos.write(byteArray);
             }
-            Image imagem = Image.getInstance(diretorioImages + remessaBoleto.getId() + "qrcode.png");
+            Image imagem = Image.getInstance(nameIgems);
             // Definir a posição e o tamanho da imagem no PDF
             imagem.setAbsolutePosition(100f, 100f); // coordenadas X e Y
             imagem.scaleAbsolute(200f, 200f); // largura e altura
@@ -90,6 +91,7 @@ public class PdfController {
             document.add(infoPagamento);
 
             document.close();
+            RemoverArquivo.deletearquivos(nameIgems);
 
             System.out.println("Boleto gerado com sucesso!");
             return true;

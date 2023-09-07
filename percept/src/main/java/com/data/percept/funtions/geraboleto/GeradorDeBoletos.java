@@ -12,11 +12,11 @@ import org.slf4j.LoggerFactory;
 import com.data.percept.models.RemessaBoleto;
 import com.itextpdf.text.DocumentException;
 
-public class UsuarioDAO {
+public class GeradorDeBoletos {
 
-    public static Logger logger = LoggerFactory.getLogger(UsuarioDAO.class);
+    public static Logger logger = LoggerFactory.getLogger(GeradorDeBoletos.class);
 
-    public static void inserirUsuario(String status) throws IOException, DocumentException {
+    public static void geraBoleto(String status) throws IOException, DocumentException {
 
         String sql = "SELECT * FROM pessoa.remessa_boleto where status_boleto = \"" + status + "\"";
         logger.info("UsuarioDAO: generatePdf");
