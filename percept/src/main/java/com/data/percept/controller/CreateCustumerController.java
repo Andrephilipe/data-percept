@@ -30,8 +30,8 @@ import com.data.percept.repository.NewAccountRepository;
 @Controller
 @RestController
 @RequestMapping("/")
-public class CreateCustumer {
-    public static Logger logger = LoggerFactory.getLogger(CreateCustumer.class);
+public class CreateCustumerController {
+    public static Logger logger = LoggerFactory.getLogger(CreateCustumerController.class);
 
     private static final String ACCOUNT_CREATE = "account created";
     @Autowired
