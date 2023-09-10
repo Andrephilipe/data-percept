@@ -1,5 +1,6 @@
 package com.data.percept.controller;
 
+import java.math.BigDecimal;
 import java.util.Optional;
 
 import javax.validation.Valid;
@@ -17,9 +18,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.data.percept.dto.RemessaPixDTO;
+import com.data.percept.dto.RemessaDTO;
+import com.data.percept.funtions.geraboleto.CalculateBoletoInstallments;
+import com.data.percept.models.RemessaBoleto;
 import com.data.percept.models.RemessaDebito;
 import com.data.percept.models.RemessaPix;
+import com.data.percept.repository.CreateRemessaBoletoRepository;
 import com.data.percept.repository.PaymentsDebitoRepository;
 import com.data.percept.repository.PaymentsPixRepository;
 
@@ -28,8 +32,13 @@ import com.data.percept.repository.PaymentsPixRepository;
 @RequestMapping("/createOrderPayments")
 public class CreateOrderPayments {
 
-    private static final String ODERCREATE = "order pix created";
-    private static final String ODERDELETED = "order pix deleted";
+    private static final String ODERCREATE = "Payment pix created";
+    private static final String ODERDELETED = "Payment pix deleted";
+    private static final String ODERDEBITO = "Payment debito created";
+    private static final String DEBITODELETED = "Payment debito deleted";
+    private static final String STATUS_CRIACAO_REMESSA = "solicitado";
+    private static final String ODERBOLETO = "Payment boleto created";
+    private static final String BOLETODELETED = "Payment boleto deleted";
 
     public static Logger logger = LoggerFactory.getLogger(CreateOrderPayments.class);
 
@@ -39,22 +48,25 @@ public class CreateOrderPayments {
     @Autowired
     PaymentsDebitoRepository paymentsDebitoRepository;
 
+    @Autowired
+    CreateRemessaBoletoRepository createRemessaBoletoRepository;
+
     @PostMapping("/pix")
-    public ResponseEntity<String> createOrder(@Valid @RequestBody RemessaPixDTO remessaPix) {
+    public ResponseEntity<String> createOrder(@Valid @RequestBody RemessaDTO remessaPix) {
 
         logger.info("createOrder pix: start");
 
         try {
 
-            RemessaPix remessaPix2 = new RemessaPix();
-            remessaPix2.setCpf(remessaPix.getCpf());
-            remessaPix2.setDataCriacao(remessaPix2.getDataCriacao());
-            remessaPix2.setDataValidade(remessaPix2.getDataValidade());
-            remessaPix2.setNomeTitular(remessaPix.getNomeTitular());
-            remessaPix2.setValor(remessaPix.getValor());
-            remessaPix2.setStringPix(remessaPix.getStringPix());
-            remessaPix2.setStatuPix("solicitado");
-            paymentsPixRepository.save(remessaPix2);
+            RemessaPix remessaPixCreated = new RemessaPix();
+            remessaPixCreated.setCpf(remessaPix.getCpf());
+            remessaPixCreated.setDataCriacao(remessaPixCreated.getDataCriacao());
+            remessaPixCreated.setDataValidade(remessaPixCreated.getDataValidade());
+            remessaPixCreated.setNomeTitular(remessaPix.getNomeTitular());
+            remessaPixCreated.setValor(remessaPix.getValor());
+            remessaPixCreated.setStringPix(remessaPix.getStringPix());
+            remessaPixCreated.setStatuPix(STATUS_CRIACAO_REMESSA);
+            paymentsPixRepository.save(remessaPixCreated);
 
         } catch (Exception e) {
             logger.info("createOrder pix: erro", e);
@@ -72,11 +84,13 @@ public class CreateOrderPayments {
             if (remessaPix.isPresent()) {
                 paymentsPixRepository.delete(remessaPix.get());
             } else {
-                return ((BodyBuilder) ResponseEntity.noContent()).body("createOrder pix not exist");
+                return ((BodyBuilder) ResponseEntity.noContent()).body("deleteOrder pix not exist");
             }
 
         } catch (Exception e) {
-            logger.info("createOrder pix : erro " + e);
+            logger.error("deleteOrder pix : erro ", e);
+            return ResponseEntity.internalServerError().body("Error internal.");
+            
         }
 
         logger.info("createOrder pix : deleted");
@@ -84,7 +98,7 @@ public class CreateOrderPayments {
     }
 
     @PostMapping("/debito")
-    public ResponseEntity<String> createOrderDebito(@Valid @RequestBody RemessaPixDTO remessaDebito) {
+    public ResponseEntity<String> createOrderDebito(@Valid @RequestBody RemessaDTO remessaDebito) {
 
         logger.info("createOrderDebito debito: start");
 
@@ -96,7 +110,7 @@ public class CreateOrderPayments {
             remessaDebitoUpadate.setDataValidade(remessaDebitoUpadate.getDataValidade());
             remessaDebitoUpadate.setNomeTitular(remessaDebito.getNomeTitular());
             remessaDebitoUpadate.setValor(remessaDebito.getValor());
-            remessaDebitoUpadate.setStatusDebito("solicitado");
+            remessaDebitoUpadate.setStatusDebito(STATUS_CRIACAO_REMESSA);
             paymentsDebitoRepository.save(remessaDebitoUpadate);
 
         } catch (Exception e) {
@@ -104,7 +118,81 @@ public class CreateOrderPayments {
             return ResponseEntity.internalServerError().body("createOrderDebito debito not created");
         }
         logger.info("createOrderDebito debito : end");
-        return ResponseEntity.ok().body(ODERCREATE);
+        return ResponseEntity.ok().body(ODERDEBITO);
+    }
+
+    @DeleteMapping("/debito/{id}")
+    public ResponseEntity<String> deletePaymentDebito(@PathVariable Long id) {
+        try {
+
+            Optional<RemessaDebito> remessaDebito = paymentsDebitoRepository.findById(id);
+            if (remessaDebito.isPresent()) {
+                paymentsDebitoRepository.delete(remessaDebito.get());
+            } else {
+                return ((BodyBuilder) ResponseEntity.noContent()).body("deletePaymentDebito debito not exist");
+            }
+
+        } catch (Exception e) {
+            logger.error("deletePaymentDebito debito : erro ", e);
+            return ResponseEntity.internalServerError().body("Error internal.");
+        }
+
+        logger.info("deletePaymentDebito debito : deleted");
+        return ResponseEntity.ok().body(DEBITODELETED);
+    }
+
+    @PostMapping("/boleto")
+    public ResponseEntity<String> createOrderBoleto(@Valid @RequestBody RemessaDTO remessaBoleto) {
+
+        logger.info("createOrderBoleto : start");
+
+        try {
+
+            RemessaBoleto remessaBoletoUpadate = new RemessaBoleto();
+            remessaBoletoUpadate.setCpf(remessaBoleto.getCpf());
+            remessaBoletoUpadate.setDataCriacao(remessaBoletoUpadate.getDataCriacao());
+            remessaBoletoUpadate.setDataValidade(remessaBoletoUpadate.getDataValidade());
+            remessaBoletoUpadate.setDataVencimento(remessaBoletoUpadate.getDataVencimento());
+            remessaBoletoUpadate.setNomeTitular(remessaBoleto.getNomeTitular());
+            remessaBoletoUpadate.setValor(remessaBoleto.getValor());
+            remessaBoletoUpadate.setStatusBoleto(STATUS_CRIACAO_REMESSA);
+            remessaBoletoUpadate.setMunicipio(remessaBoleto.getMunicipio());
+            remessaBoletoUpadate.setParcelas(remessaBoleto.getParcelas());
+            
+            if (Boolean.TRUE.equals(CalculateBoletoInstallments.verificaValor(remessaBoleto.getValor()))) {
+                BigDecimal valorAtual = CalculateBoletoInstallments.calculaValor(remessaBoleto.getValor(), remessaBoleto.getParcelas());
+                remessaBoletoUpadate.setValorParcelas(valorAtual);
+
+            }
+
+            createRemessaBoletoRepository.save(remessaBoletoUpadate);
+
+        } catch (Exception e) {
+            logger.info("createOrderBoleto : erro", e);
+            return ResponseEntity.internalServerError().body("createOrderBoleto not created");
+        }
+        logger.info("createOrderBoleto : end");
+        return ResponseEntity.ok().body(ODERBOLETO);
+    }
+
+    @DeleteMapping("/boleto/{id}")
+    public ResponseEntity<String> deletePaymentBoleto(@PathVariable Long id) {
+        try {
+
+            Optional<RemessaDebito> remessaDebito = paymentsDebitoRepository.findById(id);
+            if (remessaDebito.isPresent()) {
+                paymentsDebitoRepository.delete(remessaDebito.get());
+            } else {
+                return ((BodyBuilder) ResponseEntity.noContent()).body("deletePaymentBoleto not exist");
+            }
+
+        } catch (Exception e) {
+            logger.error("deletePaymentBoleto : erro ", e);
+            return ResponseEntity.internalServerError().body("Error internal.");
+        }
+
+        logger.info("deletePaymentDebito debito : deleted");
+        return ResponseEntity.ok().body(BOLETODELETED);
     }
 
 }

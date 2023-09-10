@@ -15,7 +15,7 @@ import javax.persistence.Id;
 @Entity
 public class RemessaBoleto {
 
-    private static final String FORMATCREATE = "/dd/MM/yyyy HH:mm:ss/";
+    private static final String FORMATCREATE = "dd/MM/yyyy HH:mm:ss";
 
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_BOLETO")
@@ -43,9 +43,25 @@ public class RemessaBoleto {
     @Column(name = "data_validade")
     private String dataValidade;
 
-    @Column(name = "status_debito")
+    @Column(name = "status_boleto")
     private String statusBoleto;
+
+    @Column(name = "quantidade_parcelas")
+    private Integer parcelas;
     
+    @Column(name = "valor_parcelas")
+    private BigDecimal valorParcelas;
+    
+    public BigDecimal getValorParcelas() {
+
+        return valorParcelas;
+    }
+
+    public void setValorParcelas(BigDecimal valorParcelas) {
+
+        this.valorParcelas = valorParcelas;
+    }
+
     public Long getId() {
         return id;
     }
@@ -139,5 +155,14 @@ public class RemessaBoleto {
     public void setStatusBoleto(String statusBoleto) {
         this.statusBoleto = statusBoleto;
     }
+
+    public Integer getParcelas() {
+        return parcelas;
+    }
+
+    public void setParcelas(Integer parcelas) {
+        this.parcelas = parcelas;
+    }
+
     
 }
