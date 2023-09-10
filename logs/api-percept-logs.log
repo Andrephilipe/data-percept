@@ -1,153 +1,50 @@
-2023-09-08 18:00:14,571 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
-2023-09-08 18:00:17,312 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 17760 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
-2023-09-08 18:00:17,312 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2023-09-08 18:00:17,312 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
-2023-09-08 18:00:18,077 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-08 18:00:18,199 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 121 ms. Found 8 JPA repository interfaces.
-2023-09-08 18:00:18,271 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=547b54e2-6fbd-3cb5-bbb0-796464a28bc9
-2023-09-08 18:00:18,514 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2023-09-08 18:00:18,515 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2023-09-08 18:00:18,515 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
-2023-09-08 18:00:18,515 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2023-09-08 18:00:18,693 INFO org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
-2023-09-08 18:00:18,693 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1376 ms
-2023-09-08 18:00:18,782 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-08 18:00:18,797 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-84 - Starting...
-2023-09-08 18:00:18,805 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-84 - Start completed.
-2023-09-08 18:00:18,811 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-09-08 18:00:18,921 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-08 18:00:18,921 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-08 18:00:19,166 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.PaymentsPixRepository com.data.percept.funtions.downpayments.DownPaymentsFunctions.paymentsPixRepository
-2023-09-08 18:00:19,167 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.BankAccountRepository com.data.percept.funtions.downpayments.DownPaymentsFunctions.bankAccountRepository
-2023-09-08 18:00:19,170 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.CreateRemessaBoletoRepository com.data.percept.funtions.geraboleto.PdfController.createRemessaBoletoRepository
-2023-09-08 18:00:19,172 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-08 18:00:19,269 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2023-09-08 18:00:20,658 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2023-09-08 18:00:20,660 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
-2023-09-08 18:00:21,700 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 7.114 seconds (JVM running for 15851.63)
-2023-09-08 18:00:21,702 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
-2023-09-08 18:00:21,702 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
-2023-09-08 18:00:33,968 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-491] Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-09-08 18:00:33,968 INFO com.zaxxer.hikari.HikariDataSource [Thread-491] HikariPool-84 - Shutdown initiated...
-2023-09-08 18:00:33,971 INFO com.zaxxer.hikari.HikariDataSource [Thread-491] HikariPool-84 - Shutdown completed.
-2023-09-08 18:00:34,083 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
-2023-09-08 18:00:35,891 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 17760 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
-2023-09-08 18:00:35,891 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2023-09-08 18:00:35,891 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
-2023-09-08 18:00:36,381 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-08 18:00:36,499 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 117 ms. Found 8 JPA repository interfaces.
-2023-09-08 18:00:36,587 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=547b54e2-6fbd-3cb5-bbb0-796464a28bc9
-2023-09-08 18:00:36,696 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2023-09-08 18:00:36,697 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2023-09-08 18:00:36,697 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
-2023-09-08 18:00:36,698 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2023-09-08 18:00:36,832 INFO org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
-2023-09-08 18:00:36,832 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 938 ms
-2023-09-08 18:00:36,886 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-08 18:00:36,897 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-85 - Starting...
-2023-09-08 18:00:36,903 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-85 - Start completed.
-2023-09-08 18:00:36,903 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-09-08 18:00:36,985 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-08 18:00:36,985 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-08 18:00:37,200 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.PaymentsPixRepository com.data.percept.funtions.downpayments.DownPaymentsFunctions.paymentsPixRepository
-2023-09-08 18:00:37,200 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.BankAccountRepository com.data.percept.funtions.downpayments.DownPaymentsFunctions.bankAccountRepository
-2023-09-08 18:00:37,203 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.CreateRemessaBoletoRepository com.data.percept.funtions.geraboleto.PdfController.createRemessaBoletoRepository
-2023-09-08 18:00:37,204 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-08 18:00:37,316 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2023-09-08 18:00:38,879 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2023-09-08 18:00:38,882 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
-2023-09-08 18:00:40,328 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 6.233 seconds (JVM running for 15870.258)
-2023-09-08 18:00:40,330 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
-2023-09-08 18:00:40,330 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
-2023-09-08 18:01:01,068 INFO org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-09-08 18:01:01,069 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
-2023-09-08 18:01:01,069 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 0 ms
-2023-09-08 18:01:01,078 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-2] createOrder pix: start
-2023-09-08 18:01:01,093 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-2] createOrder pix : end
-2023-09-08 18:01:11,915 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-3] createOrderDebito debito: start
-2023-09-08 18:01:11,935 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-3] createOrderDebito debito : end
-2023-09-08 18:02:04,255 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-501] Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-09-08 18:02:04,256 INFO com.zaxxer.hikari.HikariDataSource [Thread-501] HikariPool-85 - Shutdown initiated...
-2023-09-08 18:02:04,262 INFO com.zaxxer.hikari.HikariDataSource [Thread-501] HikariPool-85 - Shutdown completed.
-2023-09-08 18:02:04,413 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
-2023-09-08 18:02:06,635 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 17760 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
-2023-09-08 18:02:06,635 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2023-09-08 18:02:06,635 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
-2023-09-08 18:02:07,101 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-08 18:02:07,199 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 98 ms. Found 8 JPA repository interfaces.
-2023-09-08 18:02:07,276 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=547b54e2-6fbd-3cb5-bbb0-796464a28bc9
-2023-09-08 18:02:07,367 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2023-09-08 18:02:07,368 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2023-09-08 18:02:07,368 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
-2023-09-08 18:02:07,368 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2023-09-08 18:02:07,464 INFO org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
-2023-09-08 18:02:07,465 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 825 ms
-2023-09-08 18:02:07,515 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-08 18:02:07,525 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-86 - Starting...
-2023-09-08 18:02:07,530 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-86 - Start completed.
-2023-09-08 18:02:07,531 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-09-08 18:02:07,600 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-08 18:02:07,600 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-08 18:02:07,777 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.PaymentsPixRepository com.data.percept.funtions.downpayments.DownPaymentsFunctions.paymentsPixRepository
-2023-09-08 18:02:07,778 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.BankAccountRepository com.data.percept.funtions.downpayments.DownPaymentsFunctions.bankAccountRepository
-2023-09-08 18:02:07,779 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.CreateRemessaBoletoRepository com.data.percept.funtions.geraboleto.PdfController.createRemessaBoletoRepository
-2023-09-08 18:02:07,780 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-08 18:02:07,850 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2023-09-08 18:02:08,885 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2023-09-08 18:02:08,888 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
-2023-09-08 18:02:10,034 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 5.609 seconds (JVM running for 15959.964)
-2023-09-08 18:02:10,036 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
-2023-09-08 18:02:10,037 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
-2023-09-08 18:02:18,738 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-507] Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-09-08 18:02:18,740 INFO com.zaxxer.hikari.HikariDataSource [Thread-507] HikariPool-86 - Shutdown initiated...
-2023-09-08 18:02:18,745 INFO com.zaxxer.hikari.HikariDataSource [Thread-507] HikariPool-86 - Shutdown completed.
-2023-09-08 18:02:18,883 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
-2023-09-08 18:02:20,276 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 17760 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
-2023-09-08 18:02:20,276 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2023-09-08 18:02:20,276 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
-2023-09-08 18:02:20,637 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-08 18:02:20,717 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 79 ms. Found 8 JPA repository interfaces.
-2023-09-08 18:02:20,772 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=547b54e2-6fbd-3cb5-bbb0-796464a28bc9
-2023-09-08 18:02:20,898 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2023-09-08 18:02:20,899 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2023-09-08 18:02:20,900 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
-2023-09-08 18:02:20,900 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2023-09-08 18:02:21,058 INFO org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
-2023-09-08 18:02:21,058 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 778 ms
-2023-09-08 18:02:21,138 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-08 18:02:21,154 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-87 - Starting...
-2023-09-08 18:02:21,160 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-87 - Start completed.
-2023-09-08 18:02:21,160 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-09-08 18:02:21,251 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-08 18:02:21,251 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-08 18:02:21,478 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.PaymentsPixRepository com.data.percept.funtions.downpayments.DownPaymentsFunctions.paymentsPixRepository
-2023-09-08 18:02:21,478 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.BankAccountRepository com.data.percept.funtions.downpayments.DownPaymentsFunctions.bankAccountRepository
-2023-09-08 18:02:21,479 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.CreateRemessaBoletoRepository com.data.percept.funtions.geraboleto.PdfController.createRemessaBoletoRepository
-2023-09-08 18:02:21,481 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-08 18:02:21,554 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2023-09-08 18:02:22,773 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2023-09-08 18:02:22,776 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
-2023-09-08 18:02:23,650 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 4.755 seconds (JVM running for 15973.58)
-2023-09-08 18:02:23,651 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
-2023-09-08 18:02:23,651 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
-2023-09-08 18:02:33,637 INFO org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-09-08 18:02:33,638 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
-2023-09-08 18:02:33,639 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
-2023-09-08 18:02:33,646 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-2] createPayments debito: start
-2023-09-08 18:02:33,651 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-2] DownPaymentsController :  checkPayment: start1
-2023-09-08 18:02:33,667 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-2] createPayments return: etrue!
-2023-09-08 18:02:33,667 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-2] DownPaymentsController : incrementBalance: isPresent
-2023-09-08 18:02:33,679 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-2] DownPaymentsController : incrementBalance: isPresent1410.00
-2023-09-08 18:02:33,679 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-2] createPayments pix : end
-2023-09-08 18:02:57,709 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-3] createPayments debito: start
-2023-09-08 18:02:57,712 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-3] DownPaymentsController :  checkPayment: start1
-2023-09-08 18:02:57,713 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-3] DownPaymentsController : checkPayment: pix pago.
-2023-09-08 18:03:02,503 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-5] createOrderDebito debito: start
-2023-09-08 18:03:02,522 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-5] createOrderDebito debito : end
-2023-09-08 18:03:13,589 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-6] createPayments debito: start
-2023-09-08 18:03:31,210 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-8] createPayments debito: start
-2023-09-08 18:03:31,214 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-8] DownPaymentsController :  checkPayment: start52
-2023-09-08 18:03:31,227 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-8] createPayments return: etrue!
-2023-09-08 18:03:31,227 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-8] DownPaymentsController : incrementBalance: isPresent
-2023-09-08 18:03:31,236 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-8] DownPaymentsController : incrementBalance: isPresent1455.00
-2023-09-08 18:03:31,236 INFO com.data.percept.controller.DownPaymentsController [http-nio-8080-exec-8] createPayments pix : end
+2023-09-10 15:02:14,623 INFO com.data.percept.PerceptApplication [main] Inicio PerceptApplication
+2023-09-10 15:02:15,943 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2023-09-10 15:02:20,528 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
+2023-09-10 15:02:20,569 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 18988 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
+2023-09-10 15:02:20,571 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2023-09-10 15:02:20,572 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-09-10 15:02:20,703 INFO org.springframework.boot.devtools.restart.ChangeableUrls [restartedMain] The Class-Path manifest attribute in C:\Users\andre.p.cassiano\.m2\repository\io\grpc\grpc-netty-shaded\1.38.0\grpc-netty-shaded-1.38.0.jar referenced one or more files that do not exist: file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-core-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-api-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/gson-2.8.6.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/annotations-4.1.1.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/animal-sniffer-annotations-1.19.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/error_prone_annotations-2.4.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/guava-30.1-android.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/perfmark-api-0.23.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/jsr305-3.0.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-context-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/failureaccess-1.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/checker-compat-qual-2.5.5.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/j2objc-annotations-1.3.jar
+2023-09-10 15:02:20,704 INFO org.springframework.boot.devtools.restart.ChangeableUrls [restartedMain] The Class-Path manifest attribute in C:\Users\andre.p.cassiano\.m2\repository\io\grpc\grpc-alts\1.38.0\grpc-alts-1.38.0.jar referenced one or more files that do not exist: file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-auth-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-grpclb-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-protobuf-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-stub-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/protobuf-java-util-3.12.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/protobuf-java-3.12.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/conscrypt-openjdk-uber-2.5.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-auth-library-oauth2-http-0.22.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-netty-shaded-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-core-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-protobuf-lite-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-api-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/guava-30.1-android.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/error_prone_annotations-2.4.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-auth-library-credentials-0.22.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/animal-sniffer-annotations-1.19.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-http-client-jackson2-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-http-client-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/jsr305-3.0.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-context-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/opencensus-api-0.28.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/proto-google-common-protos-2.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/auto-value-annotations-1.7.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/failureaccess-1.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/checker-compat-qual-2.5.5.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/j2objc-annotations-1.3.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/gson-2.8.6.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/annotations-4.1.1.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/perfmark-api-0.23.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/httpclient-4.5.13.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/httpcore-4.4.13.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/opencensus-contrib-http-util-0.24.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/jackson-core-2.11.3.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/commons-logging-1.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/commons-codec-1.11.jar
+2023-09-10 15:02:20,723 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-10 15:02:20,723 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-09-10 15:02:23,175 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-10 15:02:23,436 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 238 ms. Found 9 JPA repository interfaces.
+2023-09-10 15:02:24,094 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=0ed480ed-5d68-326d-bb6b-29353cd8f773
+2023-09-10 15:02:27,632 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-09-10 15:02:27,663 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-10 15:02:27,665 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-09-10 15:02:27,665 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-09-10 15:02:28,127 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-09-10 15:02:28,128 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 7397 ms
+2023-09-10 15:02:28,850 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-10 15:02:29,093 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.4.Final
+2023-09-10 15:02:29,837 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-10 15:02:30,177 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2023-09-10 15:02:30,774 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2023-09-10 15:02:30,870 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-09-10 15:02:34,037 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-10 15:02:34,062 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-10 15:02:35,753 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.PaymentsPixRepository com.data.percept.funtions.downpayments.DownPaymentsFunctions.paymentsPixRepository
+2023-09-10 15:02:35,753 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.BankAccountRepository com.data.percept.funtions.downpayments.DownPaymentsFunctions.bankAccountRepository
+2023-09-10 15:02:35,760 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.CreateRemessaBoletoRepository com.data.percept.funtions.geraboleto.PdfController.createRemessaBoletoRepository
+2023-09-10 15:02:35,781 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-10 15:02:36,969 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-09-10 15:02:39,276 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-10 15:02:39,334 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-10 15:02:41,862 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 25.886 seconds (JVM running for 30.367)
+2023-09-10 15:02:41,869 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
+2023-09-10 15:03:31,305 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-10 15:03:31,305 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-09-10 15:03:31,308 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2023-09-10 15:03:31,594 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-1] createOrderCarnet : start
+2023-09-10 15:03:31,752 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-1] createOrderCarnet : end
+2023-09-10 15:03:57,823 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-3] createOrderBoleto : start
+2023-09-10 15:03:57,863 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-3] createOrderBoleto : end
+2023-09-10 15:04:41,034 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-4] createOrderBoleto : start
+2023-09-10 15:04:41,042 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-4] createOrderBoleto : end
+2023-09-10 15:04:56,256 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-5] createOrderCarnet : start
+2023-09-10 15:04:56,266 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-5] createOrderCarnet : end
+2023-09-10 15:05:04,753 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-6] createOrderCarnet : start
+2023-09-10 15:05:04,763 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-6] createOrderCarnet : end
+2023-09-10 15:05:47,499 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-7] createOrderCarnet : start
