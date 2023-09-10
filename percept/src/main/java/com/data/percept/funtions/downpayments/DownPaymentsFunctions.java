@@ -1,7 +1,6 @@
 package com.data.percept.funtions.downpayments;
 
 import java.math.BigDecimal;
-import java.util.List;
 import java.util.Optional;
 
 import org.slf4j.Logger;

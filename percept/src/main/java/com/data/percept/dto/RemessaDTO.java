@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 import com.data.percept.models.RemessaPix;
 
-public class RemessaPixDTO {
+public class RemessaDTO {
 
     private String nomeTitular;
 
@@ -23,6 +23,9 @@ public class RemessaPixDTO {
     private String statusPix;
 
     private String stringPix;
+
+    private Integer parcelas;
+
 
     public String getNomeTitular() {
         return nomeTitular;
@@ -96,9 +99,9 @@ public class RemessaPixDTO {
         this.stringPix = stringPix;
     }
 
-    public static RemessaPixDTO convert(RemessaPix remessaPix) {
+    public static RemessaDTO convert(RemessaPix remessaPix) {
 
-        RemessaPixDTO remessaPixDTO = new RemessaPixDTO();
+        RemessaDTO remessaPixDTO = new RemessaDTO();
         remessaPixDTO.setNomeTitular(remessaPix.getNomeTitular());
         remessaPixDTO.setCpf(remessaPix.getCpf());
         remessaPixDTO.setDataCriacao(remessaPix.getDataCriacao());
@@ -107,5 +110,14 @@ public class RemessaPixDTO {
 
         return remessaPixDTO;
     }
+
+    public Integer getParcelas() {
+        return parcelas;
+    }
+
+    public void setParcelas(Integer parcelas) {
+        this.parcelas = parcelas;
+    }
+
 
 }

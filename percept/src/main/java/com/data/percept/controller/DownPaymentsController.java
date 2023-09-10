@@ -170,4 +170,41 @@ public class DownPaymentsController {
 
     }
 
+     @PostMapping("/boleto")
+    public ResponseEntity<String> createPaymentsBoleto(@Valid @RequestBody PaymentsRequestDTO requestPayment) {
+
+        logger.info("createPayments debito: start");
+
+        try {
+
+            Optional<RemessaDebito> paymentDebito = paymentsDebitoRepository.findById(requestPayment.getId());
+            if (paymentDebito.isPresent()) {
+                Long idBusca = requestPayment.getId();
+
+                if (Boolean.TRUE.equals(checkPayment(idBusca, "debito"))) {
+
+                    RemessaDebito updateRemessaDebito = new RemessaDebito();
+                    updateRemessaDebito = paymentDebito.get();
+                    updateRemessaDebito.setStatusDebito("pago");
+                    updateRemessaDebito.setDataCriacao(updateRemessaDebito.getDataCriacao());
+                    paymentsDebitoRepository.save(updateRemessaDebito);
+
+                    logger.info("createPayments return: etrue!");
+                    incrementBalance(requestPayment.getValor());
+                } else {
+                    return ResponseEntity.internalServerError().body("createPayments pix payment.");
+                }
+
+            } else {
+                return ResponseEntity.internalServerError().body("createPayments pix not exist");
+            }
+
+        } catch (Exception e) {
+            logger.info("createPayments pix: erro", e);
+            return ResponseEntity.internalServerError().body("createPayments pix not created");
+        }
+        logger.info("createPayments pix : end");
+        return ResponseEntity.ok().body(ODERCREATE);
+    }
+
 }
