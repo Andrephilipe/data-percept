@@ -13,12 +13,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class RemessaBoleto {
+public class RemessaCarnet {
 
     private static final String FORMATCREATE = "dd/MM/yyyy HH:mm:ss";
 
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_BOLETO")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_CARNÊ")
     @Column(name = "id_remessa")
     private Long id;
 
@@ -43,8 +43,24 @@ public class RemessaBoleto {
     @Column(name = "data_validade")
     private String dataValidade;
 
-    @Column(name = "status_boleto")
-    private String statusBoleto;
+    @Column(name = "status_parcela")
+    private String statusCarnet;
+
+    @Column(name = "quantidade_parcelas")
+    private Integer parcelas;
+    
+    @Column(name = "valor_parcelas")
+    private BigDecimal valorParcelas;
+    
+    public BigDecimal getValorParcelas() {
+
+        return valorParcelas;
+    }
+
+    public void setValorParcelas(BigDecimal valorParcelas) {
+
+        this.valorParcelas = valorParcelas;
+    }
 
     public Long getId() {
         return id;
@@ -132,12 +148,21 @@ public class RemessaBoleto {
         this.dataValidade = dataValidade;
     }
 
-    public String getStatusBoleto() {
-        return statusBoleto;
+    public String getStatusCarnet() {
+        return statusCarnet;
     }
 
-    public void setStatusBoleto(String statusBoleto) {
-        this.statusBoleto = statusBoleto;
+    public void setStatusCarnet(String statusCarnet) {
+        this.statusCarnet = statusCarnet;
     }
 
+    public Integer getParcelas() {
+        return parcelas;
+    }
+
+    public void setParcelas(Integer parcelas) {
+        this.parcelas = parcelas;
+    }
+
+    
 }
