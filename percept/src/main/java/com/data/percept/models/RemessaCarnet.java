@@ -48,7 +48,29 @@ public class RemessaCarnet {
 
     @Column(name = "quantidade_parcelas")
     private Integer parcelas;
+
+    @Column(name = "valor_devedor")
+    private BigDecimal valorDevedor;
+
+    @Column(name = "parcelas_restantes")
+    private Integer parcelasRestantes;
     
+    public BigDecimal getValorDevedor() {
+        return valorDevedor;
+    }
+
+    public void setValorDevedor(BigDecimal valorDevedor) {
+        this.valorDevedor = valorDevedor;
+    }
+
+    public Integer getParcelasRestantes() {
+        return parcelasRestantes;
+    }
+
+    public void setParcelasRestantes(Integer parcelasRestantes) {
+        this.parcelasRestantes = parcelasRestantes;
+    }
+
     @Column(name = "valor_parcelas")
     private BigDecimal valorParcelas;
     

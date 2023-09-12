@@ -43,8 +43,9 @@ public class CreateOrderPayments {
     private static final String BOLETODELETED = "Payment boleto deleted";
     private static final String ODERCARNET = "Payment carnet created";
     private static final String CARNETDELETED = "Payment carnet deleted";
+    private static final String ERRO_INTERNO = "Error internal";
 
-    public static Logger logger = LoggerFactory.getLogger(CreateOrderPayments.class);
+    public static final Logger logger = LoggerFactory.getLogger(CreateOrderPayments.class);
 
     @Autowired
     PaymentsPixRepository paymentsPixRepository;
@@ -96,7 +97,7 @@ public class CreateOrderPayments {
 
         } catch (Exception e) {
             logger.error("deleteOrder pix : erro ", e);
-            return ResponseEntity.internalServerError().body("Error internal.");
+            return ResponseEntity.internalServerError().body(ERRO_INTERNO);
 
         }
 
@@ -141,7 +142,7 @@ public class CreateOrderPayments {
 
         } catch (Exception e) {
             logger.error("deletePaymentDebito debito : erro ", e);
-            return ResponseEntity.internalServerError().body("Error internal.");
+            return ResponseEntity.internalServerError().body(ERRO_INTERNO);
         }
 
         logger.info("deletePaymentDebito debito : deleted");
@@ -188,7 +189,7 @@ public class CreateOrderPayments {
 
         } catch (Exception e) {
             logger.error("deletePaymentBoleto : erro ", e);
-            return ResponseEntity.internalServerError().body("Error internal.");
+            return ResponseEntity.internalServerError().body(ERRO_INTERNO);
         }
 
         logger.info("deletePaymentDebito debito : deleted");
@@ -212,6 +213,7 @@ public class CreateOrderPayments {
             remessaBoletoUpadate.setStatusCarnet(STATUS_CRIACAO_REMESSA);
             remessaBoletoUpadate.setMunicipio(remessaCarnet.getMunicipio());
             remessaBoletoUpadate.setParcelas(remessaCarnet.getParcelas());
+            remessaBoletoUpadate.setParcelasRestantes(remessaCarnet.getParcelas());
             
             if (Boolean.TRUE.equals(CalculateBoletoInstallments.verificaValor(remessaCarnet.getValor()))) {
                 BigDecimal valorAtual = CalculateBoletoInstallments.calculaValor(remessaCarnet.getValor(), remessaCarnet.getParcelas());
@@ -227,6 +229,26 @@ public class CreateOrderPayments {
         }
         logger.info("createOrderCarnet : end");
         return ResponseEntity.ok().body(ODERCARNET);
+    }
+
+    @DeleteMapping("/carnet/{id}")
+    public ResponseEntity<String> deletePaymentCarnet(@PathVariable Long id) {
+        try {
+
+            Optional<RemessaCarnet> remessaCarnet = paymentsCarnetRepository.findById(id);
+            if (remessaCarnet.isPresent()) {
+                paymentsCarnetRepository.delete(remessaCarnet.get());
+            } else {
+                return ((BodyBuilder) ResponseEntity.noContent()).body("deletePaymentCarnet not exist");
+            }
+
+        } catch (Exception e) {
+            logger.error("deletePaymentCarnet : erro ", e);
+            return ResponseEntity.internalServerError().body(ERRO_INTERNO);
+        }
+
+        logger.info("deletePaymentCarnet : deleted");
+        return ResponseEntity.ok().body(CARNETDELETED);
     }
 
 }
