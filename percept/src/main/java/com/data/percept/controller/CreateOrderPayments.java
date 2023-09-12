@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
-import org.slf4j.Logger;
+import org.slf4j.Logger;       
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -218,6 +218,8 @@ public class CreateOrderPayments {
             if (Boolean.TRUE.equals(CalculateBoletoInstallments.verificaValor(remessaCarnet.getValor()))) {
                 BigDecimal valorAtual = CalculateBoletoInstallments.calculaValor(remessaCarnet.getValor(), remessaCarnet.getParcelas());
                 remessaBoletoUpadate.setValorParcelas(valorAtual);
+                BigDecimal quantidadeParcelasBigdecimal = new BigDecimal(remessaCarnet.getParcelas());
+                remessaBoletoUpadate.setSaldoDevedor(valorAtual.multiply(quantidadeParcelasBigdecimal));
 
             }
 

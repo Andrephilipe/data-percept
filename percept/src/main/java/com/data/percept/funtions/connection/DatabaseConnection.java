@@ -1,4 +1,4 @@
-package com.data.percept.funtions.geraboleto;
+package com.data.percept.funtions.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
