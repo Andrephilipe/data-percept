@@ -13,12 +13,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class RemessaDebito {
+public class OrderPaymentsCarnet {
 
-    private static final String FORMATCREATE = "/dd/MM/yyyy HH:mm:ss/";
+    private static final String FORMATCREATE = "dd-MM-yyyy";
 
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_DEBITO")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_CARNÊ")
     @Column(name = "id_remessa")
     private Long id;
 
@@ -43,9 +43,58 @@ public class RemessaDebito {
     @Column(name = "data_validade")
     private String dataValidade;
 
-    @Column(name = "status_debito")
-    private String statusDebito;
+    @Column(name = "status_parcela")
+    private String statusCarnet;
+
+    @Column(name = "quantidade_parcelas")
+    private Integer parcelas;
+
+    @Column(name = "valor_devido")
+    private BigDecimal valorDevedor;
+
+    @Column(name = "saldo_devedor")
+    private BigDecimal saldoDevedor;
+
+    public BigDecimal getSaldoDevedor() {
+        return saldoDevedor;
+    }
+
+    public void setSaldoDevedor(BigDecimal saldoDevedor) {
+        this.saldoDevedor = saldoDevedor;
+    }
+
+    @Column(name = "parcelas_restantes")
+    private Integer parcelasRestantes;
     
+    public BigDecimal getValorDevedor() {
+        return valorDevedor;
+    }
+
+    public void setValorDevedor(BigDecimal valorDevedor) {
+        this.valorDevedor = valorDevedor;
+    }
+
+    public Integer getParcelasRestantes() {
+        return parcelasRestantes;
+    }
+
+    public void setParcelasRestantes(Integer parcelasRestantes) {
+        this.parcelasRestantes = parcelasRestantes;
+    }
+
+    @Column(name = "valor_parcelas")
+    private BigDecimal valorParcelas;
+    
+    public BigDecimal getValorParcelas() {
+
+        return valorParcelas;
+    }
+
+    public void setValorParcelas(BigDecimal valorParcelas) {
+
+        this.valorParcelas = valorParcelas;
+    }
+
     public Long getId() {
         return id;
     }
@@ -132,12 +181,21 @@ public class RemessaDebito {
         this.dataValidade = dataValidade;
     }
 
-    public String getStatusDebito() {
-        return statusDebito;
+    public String getStatusCarnet() {
+        return statusCarnet;
     }
 
-    public void setStatusDebito(String statusDebito) {
-        this.statusDebito = statusDebito;
+    public void setStatusCarnet(String statusCarnet) {
+        this.statusCarnet = statusCarnet;
     }
+
+    public Integer getParcelas() {
+        return parcelas;
+    }
+
+    public void setParcelas(Integer parcelas) {
+        this.parcelas = parcelas;
+    }
+
     
 }

@@ -13,19 +13,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class RemessaPix {
+public class OrderPaymentsBoleto {
 
-    private static final String FORMATCREATE = "dd/MM/yyyy HH:mm:ss";
+    private static final String FORMATCREATE = "dd-MM-yyyy";
 
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_PIX")
-    @Column(name = "id_pix")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_BOLETO")
+    @Column(name = "id_remessa")
     private Long id;
 
     @Column(name = "nome_titular")
     private String nomeTitular;
 
-    @Column(name = "cpf_titutar")
+    @Column(name = "cpf_titular")
     private String cpf;
 
     @Column(name = "municipio")
@@ -43,26 +43,8 @@ public class RemessaPix {
     @Column(name = "data_validade")
     private String dataValidade;
 
-    @Column(name = "status_pix")
-    private String statusPix;
-
-    @Column(name = "string_pix")
-    private String stringPix;
-
-    @Column(name = "data_pagamento")
-    private String dataPagmento;
-    
-    public void setStatusPix(String statusPix) {
-        this.statusPix = statusPix;
-    }
-
-    public String getDataPagmento() {
-        return dataPagmento;
-    }
-
-    public void setDataPagmento(String dataPagmento) {
-        this.dataPagmento = dataPagmento;
-    }
+    @Column(name = "status_boleto")
+    private String statusBoleto;
 
     public Long getId() {
         return id;
@@ -150,19 +132,12 @@ public class RemessaPix {
         this.dataValidade = dataValidade;
     }
 
-    public String getStatusPix() {
-        return statusPix;
+    public String getStatusBoleto() {
+        return statusBoleto;
     }
 
-    public void setStatuPix(String statusPix) {
-        this.statusPix = statusPix;
+    public void setStatusBoleto(String statusBoleto) {
+        this.statusBoleto = statusBoleto;
     }
 
-    public String getStringPix() {
-        return stringPix;
-    }
-
-    public void setStringPix(String stringPix) {
-        this.stringPix = stringPix;
-    }   
 }

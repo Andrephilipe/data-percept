@@ -18,13 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.data.percept.dto.PaymentsRequestDTO;
 import com.data.percept.models.BankAccount;
 import com.data.percept.models.CounterAccount;
-import com.data.percept.models.RemessaBoleto;
-import com.data.percept.models.RemessaCarnet;
-import com.data.percept.models.RemessaDebito;
-import com.data.percept.models.RemessaPix;
+import com.data.percept.models.OrderPaymentsBoleto;
+import com.data.percept.models.OrderPaymentsCarnet;
+import com.data.percept.models.OrderPaymentsDebito;
+import com.data.percept.models.OrderPaymentsPix;
 import com.data.percept.repository.BankAccountRepository;
 import com.data.percept.repository.CounterAccountRepository;
-import com.data.percept.repository.CreateRemessaBoletoRepository;
+import com.data.percept.repository.PaymentsBoletoRepository;
 import com.data.percept.repository.PaymentsCarnetRepository;
 import com.data.percept.repository.PaymentsDebitoRepository;
 import com.data.percept.repository.PaymentsPixRepository;
@@ -50,7 +50,7 @@ public class DownPaymentsController {
     PaymentsCarnetRepository paymentsCarnetRepository;
 
     @Autowired
-    CreateRemessaBoletoRepository createRemessaBoletoRepository;
+    PaymentsBoletoRepository paymentsBoletoRepository;
 
     @Autowired
     CounterAccountRepository counterAccountRepository;
@@ -62,13 +62,13 @@ public class DownPaymentsController {
 
         try {
 
-            Optional<RemessaPix> paymentPix = paymentsPixRepository.findById(requestPayment.getId());
+            Optional<OrderPaymentsPix> paymentPix = paymentsPixRepository.findById(requestPayment.getId());
             if (paymentPix.isPresent()) {
                 Long idBusca = requestPayment.getId();
 
                 if (Boolean.TRUE.equals(checkPayment(idBusca, "pix"))) {
 
-                    RemessaPix updateRemessaPix = new RemessaPix();
+                    OrderPaymentsPix updateRemessaPix = new OrderPaymentsPix();
                     updateRemessaPix = paymentPix.get();
                     updateRemessaPix.setStatuPix("pago");
                     updateRemessaPix.setDataPagmento(updateRemessaPix.getDataCriacao());
@@ -99,13 +99,13 @@ public class DownPaymentsController {
 
         try {
 
-            Optional<RemessaDebito> paymentDebito = paymentsDebitoRepository.findById(requestPayment.getId());
+            Optional<OrderPaymentsDebito> paymentDebito = paymentsDebitoRepository.findById(requestPayment.getId());
             if (paymentDebito.isPresent()) {
                 Long idBusca = requestPayment.getId();
 
                 if (Boolean.TRUE.equals(checkPayment(idBusca, "debito"))) {
 
-                    RemessaDebito updateRemessaDebito = new RemessaDebito();
+                    OrderPaymentsDebito updateRemessaDebito = new OrderPaymentsDebito();
                     updateRemessaDebito = paymentDebito.get();
                     updateRemessaDebito.setStatusDebito("pago");
                     updateRemessaDebito.setDataCriacao(updateRemessaDebito.getDataCriacao());
@@ -133,11 +133,11 @@ public class DownPaymentsController {
     public ResponseEntity<String> createPaymentsBoleto(@Valid @RequestBody PaymentsRequestDTO requestPayment) {
 
         logger.info("createPayments boleto: start");
-        RemessaBoleto updateRemessaBoleto = new RemessaBoleto();
+        OrderPaymentsBoleto updateRemessaBoleto = new OrderPaymentsBoleto();
 
         try {
 
-            Optional<RemessaBoleto> paymentBoleto = createRemessaBoletoRepository.findById(requestPayment.getId());
+            Optional<OrderPaymentsBoleto> paymentBoleto = paymentsBoletoRepository.findById(requestPayment.getId());
             if (paymentBoleto.isPresent()) {
                 Long idBusca = requestPayment.getId();
 
@@ -146,7 +146,7 @@ public class DownPaymentsController {
                     updateRemessaBoleto = paymentBoleto.get();
                     updateRemessaBoleto.setStatusBoleto("pago");
                     updateRemessaBoleto.setDataCriacao(updateRemessaBoleto.getDataCriacao());
-                    createRemessaBoletoRepository.save(updateRemessaBoleto);
+                    paymentsBoletoRepository.save(updateRemessaBoleto);
 
                     logger.info("createPayments return: e true!");
                     incrementBalanceBanck(requestPayment.getValor());
@@ -170,11 +170,11 @@ public class DownPaymentsController {
     public ResponseEntity<String> createPaymentsCarnet(@Valid @RequestBody PaymentsRequestDTO requestPayment) {
 
         logger.info("createPaymentsCarnet carnet: start");
-        RemessaCarnet updateRemessaBoleto = new RemessaCarnet();
+        OrderPaymentsCarnet updateRemessaBoleto = new OrderPaymentsCarnet();
 
         try {
 
-            Optional<RemessaCarnet> paymentBoleto = paymentsCarnetRepository.findById(requestPayment.getId());
+            Optional<OrderPaymentsCarnet> paymentBoleto = paymentsCarnetRepository.findById(requestPayment.getId());
             if (paymentBoleto.isPresent()) {
                 Long idBusca = requestPayment.getId();
 
@@ -258,8 +258,8 @@ public class DownPaymentsController {
         logger.info("DownPaymentsController : paymentCarnet: start" + id);
         try {
 
-            Optional<RemessaCarnet> buscaStatusCarnet = paymentsCarnetRepository.findById(id);
-            RemessaCarnet buscaCarnetStatus = new RemessaCarnet();
+            Optional<OrderPaymentsCarnet> buscaStatusCarnet = paymentsCarnetRepository.findById(id);
+            OrderPaymentsCarnet buscaCarnetStatus = new OrderPaymentsCarnet();
             if (buscaStatusCarnet.isPresent()) {
                 buscaCarnetStatus = buscaStatusCarnet.get();
                 if (buscaCarnetStatus.getParcelas().equals(buscaCarnetStatus.getParcelasRestantes())) {
@@ -297,8 +297,8 @@ public class DownPaymentsController {
 
         switch (type) {
             case "pix":
-                Optional<RemessaPix> buscaStatus = paymentsPixRepository.findById(id);
-                RemessaPix checkStatusPix = new RemessaPix();
+                Optional<OrderPaymentsPix> buscaStatus = paymentsPixRepository.findById(id);
+                OrderPaymentsPix checkStatusPix = new OrderPaymentsPix();
                 if (buscaStatus.isPresent())
                     checkStatusPix = buscaStatus.get();
                 if (checkStatusPix.getStatusPix().equalsIgnoreCase("pago")) {
@@ -308,8 +308,8 @@ public class DownPaymentsController {
                 }
                 break;
             case "debito":
-                Optional<RemessaDebito> buscaStatusDebito = paymentsDebitoRepository.findById(id);
-                RemessaDebito checkStatusDebito = new RemessaDebito();
+                Optional<OrderPaymentsDebito> buscaStatusDebito = paymentsDebitoRepository.findById(id);
+                OrderPaymentsDebito checkStatusDebito = new OrderPaymentsDebito();
 
                 if (buscaStatusDebito.isPresent())
                     checkStatusDebito = buscaStatusDebito.get();
@@ -320,8 +320,8 @@ public class DownPaymentsController {
                 break;
 
             case "boleto":
-                Optional<RemessaBoleto> buscaStatusBoleto = createRemessaBoletoRepository.findById(id);
-                RemessaBoleto checkStatusBoleto = new RemessaBoleto();
+                Optional<OrderPaymentsBoleto> buscaStatusBoleto = paymentsBoletoRepository.findById(id);
+                OrderPaymentsBoleto checkStatusBoleto = new OrderPaymentsBoleto();
                 if (buscaStatusBoleto.isPresent())
                     checkStatusBoleto = buscaStatusBoleto.get();
                 if (buscaStatusBoleto.isPresent() && checkStatusBoleto.getStatusBoleto().equalsIgnoreCase("pago")) {
@@ -333,8 +333,8 @@ public class DownPaymentsController {
                 break;
 
             case "carnet":
-                Optional<RemessaCarnet> buscaStatusCarnet = paymentsCarnetRepository.findById(id);
-                RemessaCarnet buscaCarnetStatus = new RemessaCarnet();
+                Optional<OrderPaymentsCarnet> buscaStatusCarnet = paymentsCarnetRepository.findById(id);
+                OrderPaymentsCarnet buscaCarnetStatus = new OrderPaymentsCarnet();
                 if (buscaStatusCarnet.isPresent())
                     buscaCarnetStatus = buscaStatusCarnet.get();
                 if (buscaCarnetStatus.getStatusCarnet().equalsIgnoreCase("pago")) {

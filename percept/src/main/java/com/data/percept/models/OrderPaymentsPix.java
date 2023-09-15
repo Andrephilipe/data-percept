@@ -13,13 +13,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class RemessaCarnet {
+public class OrderPaymentsPix {
 
-    private static final String FORMATCREATE = "dd/MM/yyyy HH:mm:ss";
+    private static final String FORMATCREATE = "dd-MM-yyyy";
 
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_CARNÊ")
-    @Column(name = "id_remessa")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_PIX")
+    @Column(name = "id_pix")
     private Long id;
 
     @Column(name = "nome_titular")
@@ -43,56 +43,25 @@ public class RemessaCarnet {
     @Column(name = "data_validade")
     private String dataValidade;
 
-    @Column(name = "status_parcela")
-    private String statusCarnet;
+    @Column(name = "status_pix")
+    private String statusPix;
 
-    @Column(name = "quantidade_parcelas")
-    private Integer parcelas;
+    @Column(name = "string_pix")
+    private String stringPix;
 
-    @Column(name = "valor_devido")
-    private BigDecimal valorDevedor;
-
-    @Column(name = "saldo_devedor")
-    private BigDecimal saldoDevedor;
-
-    public BigDecimal getSaldoDevedor() {
-        return saldoDevedor;
-    }
-
-    public void setSaldoDevedor(BigDecimal saldoDevedor) {
-        this.saldoDevedor = saldoDevedor;
-    }
-
-    @Column(name = "parcelas_restantes")
-    private Integer parcelasRestantes;
+    @Column(name = "data_pagamento")
+    private String dataPagmento;
     
-    public BigDecimal getValorDevedor() {
-        return valorDevedor;
+    public void setStatusPix(String statusPix) {
+        this.statusPix = statusPix;
     }
 
-    public void setValorDevedor(BigDecimal valorDevedor) {
-        this.valorDevedor = valorDevedor;
+    public String getDataPagmento() {
+        return dataPagmento;
     }
 
-    public Integer getParcelasRestantes() {
-        return parcelasRestantes;
-    }
-
-    public void setParcelasRestantes(Integer parcelasRestantes) {
-        this.parcelasRestantes = parcelasRestantes;
-    }
-
-    @Column(name = "valor_parcelas")
-    private BigDecimal valorParcelas;
-    
-    public BigDecimal getValorParcelas() {
-
-        return valorParcelas;
-    }
-
-    public void setValorParcelas(BigDecimal valorParcelas) {
-
-        this.valorParcelas = valorParcelas;
+    public void setDataPagmento(String dataPagmento) {
+        this.dataPagmento = dataPagmento;
     }
 
     public Long getId() {
@@ -181,21 +150,19 @@ public class RemessaCarnet {
         this.dataValidade = dataValidade;
     }
 
-    public String getStatusCarnet() {
-        return statusCarnet;
+    public String getStatusPix() {
+        return statusPix;
     }
 
-    public void setStatusCarnet(String statusCarnet) {
-        this.statusCarnet = statusCarnet;
+    public void setStatuPix(String statusPix) {
+        this.statusPix = statusPix;
     }
 
-    public Integer getParcelas() {
-        return parcelas;
+    public String getStringPix() {
+        return stringPix;
     }
 
-    public void setParcelas(Integer parcelas) {
-        this.parcelas = parcelas;
-    }
-
-    
+    public void setStringPix(String stringPix) {
+        this.stringPix = stringPix;
+    }   
 }

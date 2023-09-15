@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 import com.data.percept.funtions.connection.DatabaseConnection;
 import com.data.percept.funtions.geraboleto.PdfController;
-import com.data.percept.models.RemessaBoleto;
+import com.data.percept.models.OrderPaymentsBoleto;
 import com.itextpdf.text.DocumentException;
 
 public class DownPaymentsFuntions {
@@ -32,7 +32,7 @@ public class DownPaymentsFuntions {
                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 
             ResultSet resultSet = preparedStatement.executeQuery();
-            RemessaBoleto geraBoletoNew = new RemessaBoleto();
+            OrderPaymentsBoleto geraBoletoNew = new OrderPaymentsBoleto();
 
             while (resultSet.next()) {
                 String id = resultSet.getString("id_remessa");

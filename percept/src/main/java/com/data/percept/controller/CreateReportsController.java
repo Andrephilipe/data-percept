@@ -2,29 +2,22 @@ package com.data.percept.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.data.percept.dto.GeraRelatorioDTO;
 import com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto;
 import com.data.percept.funtions.geraboleto.GeradorDeBoletos;
-import com.data.percept.repository.CreateRemessaBoletoRepository;
 
 @RestController
 @Validated
-public class CreateRemessaBoletoController {
+public class CreateReportsController {
 
     private static final String ACCOUNT_CREATE = "remessa created";
-    public static final Logger logger = LoggerFactory.getLogger(CreateRemessaBoletoController.class);
-
-    @Autowired
-    CreateRemessaBoletoRepository createRemessaBoletoRepository;
+    public static final Logger logger = LoggerFactory.getLogger(CreateReportsController.class);
 
     @GetMapping("/geraBoleto/{status}")
     public ResponseEntity<String> createBoleto(@PathVariable String status) {
@@ -42,12 +35,14 @@ public class CreateRemessaBoletoController {
         return ResponseEntity.ok().body(ACCOUNT_CREATE);
     }
 
-    @PostMapping("/gerarRelatorio")
-    public ResponseEntity<String> createRelatorio(@RequestBody GeraRelatorioDTO geraRelatorioDTO) {
+    @GetMapping("/gerarRelatorio")
+    public ResponseEntity<String> createRelatorio(@PathVariable @RequestParam String type, @RequestParam String data) {
 
         logger.info("createRelatorio: start");
+        
         try {
-            ExcelServiceBoleto.criarArquivoExcel(geraRelatorioDTO.getNomeTipo(), geraRelatorioDTO.getDataInicial(), geraRelatorioDTO.getDataFinal());
+            
+            ExcelServiceBoleto.criarArquivoExcel(type,data);
 
         } catch (Exception e) {
 
