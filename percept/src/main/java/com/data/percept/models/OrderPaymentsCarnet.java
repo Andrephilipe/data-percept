@@ -13,9 +13,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class RemessaCarnet {
+public class OrderPaymentsCarnet {
 
-    private static final String FORMATCREATE = "dd/MM/yyyy HH:mm:ss";
+    private static final String FORMATCREATE = "dd-MM-yyyy";
 
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_CARNÊ")
@@ -48,7 +48,40 @@ public class RemessaCarnet {
 
     @Column(name = "quantidade_parcelas")
     private Integer parcelas;
+
+    @Column(name = "valor_devido")
+    private BigDecimal valorDevedor;
+
+    @Column(name = "saldo_devedor")
+    private BigDecimal saldoDevedor;
+
+    public BigDecimal getSaldoDevedor() {
+        return saldoDevedor;
+    }
+
+    public void setSaldoDevedor(BigDecimal saldoDevedor) {
+        this.saldoDevedor = saldoDevedor;
+    }
+
+    @Column(name = "parcelas_restantes")
+    private Integer parcelasRestantes;
     
+    public BigDecimal getValorDevedor() {
+        return valorDevedor;
+    }
+
+    public void setValorDevedor(BigDecimal valorDevedor) {
+        this.valorDevedor = valorDevedor;
+    }
+
+    public Integer getParcelasRestantes() {
+        return parcelasRestantes;
+    }
+
+    public void setParcelasRestantes(Integer parcelasRestantes) {
+        this.parcelasRestantes = parcelasRestantes;
+    }
+
     @Column(name = "valor_parcelas")
     private BigDecimal valorParcelas;
     

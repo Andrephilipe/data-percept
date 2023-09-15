@@ -13,12 +13,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class RemessaBoleto {
+public class OrderPaymentsDebito {
 
-    private static final String FORMATCREATE = "dd/MM/yyyy HH:mm:ss";
+    private static final String FORMATCREATE = "dd-MM-yyyy";
 
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_BOLETO")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_DEBITO")
     @Column(name = "id_remessa")
     private Long id;
 
@@ -43,9 +43,9 @@ public class RemessaBoleto {
     @Column(name = "data_validade")
     private String dataValidade;
 
-    @Column(name = "status_boleto")
-    private String statusBoleto;
-
+    @Column(name = "status_debito")
+    private String statusDebito;
+    
     public Long getId() {
         return id;
     }
@@ -132,12 +132,12 @@ public class RemessaBoleto {
         this.dataValidade = dataValidade;
     }
 
-    public String getStatusBoleto() {
-        return statusBoleto;
+    public String getStatusDebito() {
+        return statusDebito;
     }
 
-    public void setStatusBoleto(String statusBoleto) {
-        this.statusBoleto = statusBoleto;
+    public void setStatusDebito(String statusDebito) {
+        this.statusDebito = statusDebito;
     }
-
+    
 }

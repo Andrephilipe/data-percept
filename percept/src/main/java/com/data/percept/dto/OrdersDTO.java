@@ -2,9 +2,7 @@ package com.data.percept.dto;
 
 import java.math.BigDecimal;
 
-import com.data.percept.models.RemessaPix;
-
-public class RemessaDTO {
+public class OrdersDTO {
 
     private String nomeTitular;
 
@@ -97,18 +95,6 @@ public class RemessaDTO {
 
     public void setStringPix(String stringPix) {
         this.stringPix = stringPix;
-    }
-
-    public static RemessaDTO convert(RemessaPix remessaPix) {
-
-        RemessaDTO remessaPixDTO = new RemessaDTO();
-        remessaPixDTO.setNomeTitular(remessaPix.getNomeTitular());
-        remessaPixDTO.setCpf(remessaPix.getCpf());
-        remessaPixDTO.setDataCriacao(remessaPix.getDataCriacao());
-        remessaPixDTO.setStatusPix(remessaPix.getStatusPix());
-        remessaPixDTO.setValor(remessaPix.getValor());
-
-        return remessaPixDTO;
     }
 
     public Integer getParcelas() {

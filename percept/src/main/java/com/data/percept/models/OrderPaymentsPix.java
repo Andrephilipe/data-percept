@@ -13,13 +13,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class RemessaDebito {
+public class OrderPaymentsPix {
 
-    private static final String FORMATCREATE = "/dd/MM/yyyy HH:mm:ss/";
+    private static final String FORMATCREATE = "dd-MM-yyyy";
 
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_DEBITO")
-    @Column(name = "id_remessa")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ID_PIX")
+    @Column(name = "id_pix")
     private Long id;
 
     @Column(name = "nome_titular")
@@ -43,9 +43,27 @@ public class RemessaDebito {
     @Column(name = "data_validade")
     private String dataValidade;
 
-    @Column(name = "status_debito")
-    private String statusDebito;
+    @Column(name = "status_pix")
+    private String statusPix;
+
+    @Column(name = "string_pix")
+    private String stringPix;
+
+    @Column(name = "data_pagamento")
+    private String dataPagmento;
     
+    public void setStatusPix(String statusPix) {
+        this.statusPix = statusPix;
+    }
+
+    public String getDataPagmento() {
+        return dataPagmento;
+    }
+
+    public void setDataPagmento(String dataPagmento) {
+        this.dataPagmento = dataPagmento;
+    }
+
     public Long getId() {
         return id;
     }
@@ -132,12 +150,19 @@ public class RemessaDebito {
         this.dataValidade = dataValidade;
     }
 
-    public String getStatusDebito() {
-        return statusDebito;
+    public String getStatusPix() {
+        return statusPix;
     }
 
-    public void setStatusDebito(String statusDebito) {
-        this.statusDebito = statusDebito;
+    public void setStatuPix(String statusPix) {
+        this.statusPix = statusPix;
     }
-    
+
+    public String getStringPix() {
+        return stringPix;
+    }
+
+    public void setStringPix(String stringPix) {
+        this.stringPix = stringPix;
+    }   
 }

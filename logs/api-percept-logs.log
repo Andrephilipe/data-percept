@@ -1,51 +1,418 @@
-2023-09-10 15:02:14,623 INFO com.data.percept.PerceptApplication [main] Inicio PerceptApplication
-2023-09-10 15:02:15,943 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
-2023-09-10 15:02:20,528 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
-2023-09-10 15:02:20,569 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 18988 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
-2023-09-10 15:02:20,571 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2023-09-10 15:02:20,572 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
-2023-09-10 15:02:20,703 INFO org.springframework.boot.devtools.restart.ChangeableUrls [restartedMain] The Class-Path manifest attribute in C:\Users\andre.p.cassiano\.m2\repository\io\grpc\grpc-netty-shaded\1.38.0\grpc-netty-shaded-1.38.0.jar referenced one or more files that do not exist: file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-core-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-api-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/gson-2.8.6.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/annotations-4.1.1.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/animal-sniffer-annotations-1.19.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/error_prone_annotations-2.4.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/guava-30.1-android.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/perfmark-api-0.23.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/jsr305-3.0.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-context-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/failureaccess-1.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/checker-compat-qual-2.5.5.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/j2objc-annotations-1.3.jar
-2023-09-10 15:02:20,704 INFO org.springframework.boot.devtools.restart.ChangeableUrls [restartedMain] The Class-Path manifest attribute in C:\Users\andre.p.cassiano\.m2\repository\io\grpc\grpc-alts\1.38.0\grpc-alts-1.38.0.jar referenced one or more files that do not exist: file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-auth-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-grpclb-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-protobuf-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-stub-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/protobuf-java-util-3.12.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/protobuf-java-3.12.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/conscrypt-openjdk-uber-2.5.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-auth-library-oauth2-http-0.22.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-netty-shaded-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-core-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-protobuf-lite-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-api-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/guava-30.1-android.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/error_prone_annotations-2.4.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-auth-library-credentials-0.22.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/animal-sniffer-annotations-1.19.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-http-client-jackson2-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-http-client-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/jsr305-3.0.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-context-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/opencensus-api-0.28.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/proto-google-common-protos-2.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/auto-value-annotations-1.7.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/failureaccess-1.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/checker-compat-qual-2.5.5.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/j2objc-annotations-1.3.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/gson-2.8.6.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/annotations-4.1.1.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/perfmark-api-0.23.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/httpclient-4.5.13.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/httpcore-4.4.13.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/opencensus-contrib-http-util-0.24.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/jackson-core-2.11.3.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/commons-logging-1.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/commons-codec-1.11.jar
-2023-09-10 15:02:20,723 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-09-10 15:02:20,723 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-09-10 15:02:23,175 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-10 15:02:23,436 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 238 ms. Found 9 JPA repository interfaces.
-2023-09-10 15:02:24,094 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=0ed480ed-5d68-326d-bb6b-29353cd8f773
-2023-09-10 15:02:27,632 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2023-09-10 15:02:27,663 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2023-09-10 15:02:27,665 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
-2023-09-10 15:02:27,665 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2023-09-10 15:02:28,127 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
-2023-09-10 15:02:28,128 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 7397 ms
-2023-09-10 15:02:28,850 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-10 15:02:29,093 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.4.Final
-2023-09-10 15:02:29,837 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-09-10 15:02:30,177 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2023-09-10 15:02:30,774 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2023-09-10 15:02:30,870 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-09-10 15:02:34,037 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-10 15:02:34,062 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-10 15:02:35,753 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.PaymentsPixRepository com.data.percept.funtions.downpayments.DownPaymentsFunctions.paymentsPixRepository
-2023-09-10 15:02:35,753 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.BankAccountRepository com.data.percept.funtions.downpayments.DownPaymentsFunctions.bankAccountRepository
-2023-09-10 15:02:35,760 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.CreateRemessaBoletoRepository com.data.percept.funtions.geraboleto.PdfController.createRemessaBoletoRepository
-2023-09-10 15:02:35,781 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-10 15:02:36,969 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2023-09-10 15:02:39,276 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2023-09-10 15:02:39,334 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
-2023-09-10 15:02:41,862 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 25.886 seconds (JVM running for 30.367)
-2023-09-10 15:02:41,869 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
-2023-09-10 15:03:31,305 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-09-10 15:03:31,305 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2023-09-10 15:03:31,308 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
-2023-09-10 15:03:31,594 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-1] createOrderCarnet : start
-2023-09-10 15:03:31,752 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-1] createOrderCarnet : end
-2023-09-10 15:03:57,823 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-3] createOrderBoleto : start
-2023-09-10 15:03:57,863 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-3] createOrderBoleto : end
-2023-09-10 15:04:41,034 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-4] createOrderBoleto : start
-2023-09-10 15:04:41,042 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-4] createOrderBoleto : end
-2023-09-10 15:04:56,256 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-5] createOrderCarnet : start
-2023-09-10 15:04:56,266 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-5] createOrderCarnet : end
-2023-09-10 15:05:04,753 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-6] createOrderCarnet : start
-2023-09-10 15:05:04,763 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-6] createOrderCarnet : end
-2023-09-10 15:05:47,499 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-7] createOrderCarnet : start
-2023-09-10 15:05:47,514 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-7] createOrderCarnet : end
+2023-09-12 20:26:14,987 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-823] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12 20:26:14,992 INFO com.zaxxer.hikari.HikariDataSource [Thread-823] HikariPool-138 - Shutdown initiated...
+2023-09-12 20:26:14,997 INFO com.zaxxer.hikari.HikariDataSource [Thread-823] HikariPool-138 - Shutdown completed.
+2023-09-12 20:26:15,134 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2023-09-12 20:26:16,340 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 24664 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
+2023-09-12 20:26:16,344 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2023-09-12 20:26:16,344 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-09-12 20:26:16,669 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-12 20:26:16,749 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 80 ms. Found 10 JPA repository interfaces.
+2023-09-12 20:26:16,775 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=906cf352-7df2-3ce5-b5cd-71bae81411ea
+2023-09-12 20:26:16,825 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-09-12 20:26:16,825 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-12 20:26:16,825 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-09-12 20:26:16,825 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-09-12 20:26:16,958 INFO org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-09-12 20:26:16,958 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 612 ms
+2023-09-12 20:26:16,994 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-12 20:26:16,999 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-139 - Starting...
+2023-09-12 20:26:17,003 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-139 - Start completed.
+2023-09-12 20:26:17,004 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-09-12 20:26:17,101 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-12 20:26:17,102 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12 20:26:17,301 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.CreateRemessaBoletoRepository com.data.percept.funtions.geraboleto.PdfController.createRemessaBoletoRepository
+2023-09-12 20:26:17,303 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-12 20:26:17,370 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-09-12 20:26:18,339 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-12 20:26:18,343 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-12 20:26:19,255 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 4.112 seconds (JVM running for 34560.141)
+2023-09-12 20:26:19,255 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-09-12 20:26:19,256 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
+2023-09-12 20:31:35,713 INFO org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-12 20:31:35,714 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-09-12 20:31:35,715 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2023-09-12 20:31:35,725 INFO com.data.percept.controller.CreateRemessaBoletoController [http-nio-8080-exec-2] createRelatorio: start
+2023-09-12 20:31:35,726 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: inicio.SELECT * FROM pessoa.remessa_boleto WHERE data_criacao BETWEEN '08/09/2023 00:00:00' AND '12/09/2023 23:59:00'
+2023-09-12 20:31:35,779 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: inicio.
+2023-09-12 20:31:35,784 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:31:35,786 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:31:35,786 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:31:35,786 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:31:35,787 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:31:35,787 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:31:35,808 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: whele for.
+2023-09-12 20:31:35,830 ERROR com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: erro.
+java.lang.NullPointerException: null
+	at com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto.atualizarArquivoExcel(ExcelServiceBoleto.java:77)
+	at com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto.processaExel(ExcelServiceBoleto.java:133)
+	at com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto.criarArquivoExcel(ExcelServiceBoleto.java:55)
+	at com.data.percept.controller.CreateRemessaBoletoController.createRelatorio(CreateRemessaBoletoController.java:50)
+	at com.data.percept.controller.CreateRemessaBoletoController$$FastClassBySpringCGLIB$$7aa6e3c7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.data.percept.controller.CreateRemessaBoletoController$$EnhancerBySpringCGLIB$$f4b1f390.createRelatorio(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.data.percept.config.CorsWebConfig.doFilter(CorsWebConfig.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-09-12 20:31:35,831 INFO com.data.percept.controller.CreateRemessaBoletoController [http-nio-8080-exec-2] createRelatorio: end
+2023-09-12 20:32:23,957 INFO com.data.percept.controller.CreateRemessaBoletoController [http-nio-8080-exec-3] createRelatorio: start
+2023-09-12 20:32:23,957 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-3] criarArquivoExcel: inicio.SELECT * FROM pessoa.remessa_carnet WHERE data_criacao BETWEEN '08/09/2023 00:00:00' AND '12/09/2023 23:59:00'
+2023-09-12 20:32:23,972 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-3] criarArquivoExcel: inicio.
+2023-09-12 20:32:23,974 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-3] criarArquivoExcel: primeiro for.
+2023-09-12 20:32:23,974 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-3] criarArquivoExcel: primeiro for.
+2023-09-12 20:32:23,974 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-3] criarArquivoExcel: primeiro for.
+2023-09-12 20:32:23,974 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-3] criarArquivoExcel: primeiro for.
+2023-09-12 20:32:23,974 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-3] criarArquivoExcel: primeiro for.
+2023-09-12 20:32:23,974 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-3] criarArquivoExcel: primeiro for.
+2023-09-12 20:32:24,014 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-3] criarArquivoExcel: whele for.
+2023-09-12 20:32:24,024 ERROR com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-3] criarArquivoExcel: erro.
+java.lang.NullPointerException: null
+	at com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto.atualizarArquivoExcel(ExcelServiceBoleto.java:77)
+	at com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto.processaExel(ExcelServiceBoleto.java:146)
+	at com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto.criarArquivoExcel(ExcelServiceBoleto.java:55)
+	at com.data.percept.controller.CreateRemessaBoletoController.createRelatorio(CreateRemessaBoletoController.java:50)
+	at com.data.percept.controller.CreateRemessaBoletoController$$FastClassBySpringCGLIB$$7aa6e3c7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.data.percept.controller.CreateRemessaBoletoController$$EnhancerBySpringCGLIB$$f4b1f390.createRelatorio(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.data.percept.config.CorsWebConfig.doFilter(CorsWebConfig.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-09-12 20:32:24,024 INFO com.data.percept.controller.CreateRemessaBoletoController [http-nio-8080-exec-3] createRelatorio: end
+2023-09-12 20:36:29,809 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-829] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12 20:36:29,811 INFO com.zaxxer.hikari.HikariDataSource [Thread-829] HikariPool-139 - Shutdown initiated...
+2023-09-12 20:36:29,813 INFO com.zaxxer.hikari.HikariDataSource [Thread-829] HikariPool-139 - Shutdown completed.
+2023-09-12 20:36:29,930 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2023-09-12 20:36:30,883 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 24664 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
+2023-09-12 20:36:30,883 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2023-09-12 20:36:30,883 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-09-12 20:36:31,184 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-12 20:36:31,249 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 65 ms. Found 10 JPA repository interfaces.
+2023-09-12 20:36:31,274 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=906cf352-7df2-3ce5-b5cd-71bae81411ea
+2023-09-12 20:36:31,324 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-09-12 20:36:31,325 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-12 20:36:31,325 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-09-12 20:36:31,325 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-09-12 20:36:31,384 INFO org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-09-12 20:36:31,384 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 497 ms
+2023-09-12 20:36:31,423 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-12 20:36:31,431 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-140 - Starting...
+2023-09-12 20:36:31,434 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-140 - Start completed.
+2023-09-12 20:36:31,435 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-09-12 20:36:31,510 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-12 20:36:31,510 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12 20:36:31,718 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.CreateRemessaBoletoRepository com.data.percept.funtions.geraboleto.PdfController.createRemessaBoletoRepository
+2023-09-12 20:36:31,719 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-12 20:36:31,772 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-09-12 20:36:32,765 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-12 20:36:32,770 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-12 20:36:34,085 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 4.145 seconds (JVM running for 35174.971)
+2023-09-12 20:36:34,088 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-09-12 20:36:34,088 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
+2023-09-12 20:36:45,141 INFO org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-12 20:36:45,142 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-09-12 20:36:45,145 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 2 ms
+2023-09-12 20:36:45,161 INFO com.data.percept.controller.CreateRemessaBoletoController [http-nio-8080-exec-2] createRelatorio: start
+2023-09-12 20:36:45,162 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: inicio.SELECT * FROM pessoa.remessa_boleto WHERE data_criacao BETWEEN '08/09/2023 00:00:00' AND '12/09/2023 23:59:00'
+2023-09-12 20:36:45,198 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: inicio.
+2023-09-12 20:36:45,202 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:36:45,203 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:36:45,204 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:36:45,204 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:36:45,205 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:36:45,205 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:36:45,225 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: whele for.
+2023-09-12 20:36:45,259 ERROR com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: erro.
+java.lang.NullPointerException: null
+	at com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto.atualizarArquivoExcel(ExcelServiceBoleto.java:77)
+	at com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto.processaExel(ExcelServiceBoleto.java:133)
+	at com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto.criarArquivoExcel(ExcelServiceBoleto.java:55)
+	at com.data.percept.controller.CreateRemessaBoletoController.createRelatorio(CreateRemessaBoletoController.java:50)
+	at com.data.percept.controller.CreateRemessaBoletoController$$FastClassBySpringCGLIB$$7aa6e3c7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.data.percept.controller.CreateRemessaBoletoController$$EnhancerBySpringCGLIB$$f4b1f390.createRelatorio(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.data.percept.config.CorsWebConfig.doFilter(CorsWebConfig.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-09-12 20:36:45,259 INFO com.data.percept.controller.CreateRemessaBoletoController [http-nio-8080-exec-2] createRelatorio: end
+2023-09-12 20:38:09,408 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-835] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12 20:38:09,410 INFO com.zaxxer.hikari.HikariDataSource [Thread-835] HikariPool-140 - Shutdown initiated...
+2023-09-12 20:38:09,412 INFO com.zaxxer.hikari.HikariDataSource [Thread-835] HikariPool-140 - Shutdown completed.
+2023-09-12 20:38:09,519 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2023-09-12 20:38:10,785 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 24664 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
+2023-09-12 20:38:10,785 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2023-09-12 20:38:10,785 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-09-12 20:38:11,047 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-12 20:38:11,119 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 71 ms. Found 10 JPA repository interfaces.
+2023-09-12 20:38:11,151 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=906cf352-7df2-3ce5-b5cd-71bae81411ea
+2023-09-12 20:38:11,200 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-09-12 20:38:11,201 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-12 20:38:11,201 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-09-12 20:38:11,201 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-09-12 20:38:11,313 INFO org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-09-12 20:38:11,313 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 526 ms
+2023-09-12 20:38:11,352 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-12 20:38:11,358 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-141 - Starting...
+2023-09-12 20:38:11,362 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-141 - Start completed.
+2023-09-12 20:38:11,363 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-09-12 20:38:11,445 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-12 20:38:11,445 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12 20:38:11,577 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.CreateRemessaBoletoRepository com.data.percept.funtions.geraboleto.PdfController.createRemessaBoletoRepository
+2023-09-12 20:38:11,577 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-12 20:38:11,631 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-09-12 20:38:12,581 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-12 20:38:12,583 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-12 20:38:13,462 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 3.937 seconds (JVM running for 35274.347)
+2023-09-12 20:38:13,464 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-09-12 20:38:13,464 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
+2023-09-12 20:38:35,055 INFO org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-12 20:38:35,055 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-09-12 20:38:35,056 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2023-09-12 20:38:35,063 INFO com.data.percept.controller.CreateRemessaBoletoController [http-nio-8080-exec-2] createRelatorio: start
+2023-09-12 20:38:35,064 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: inicio.SELECT * FROM pessoa.remessa_boleto WHERE data_criacao BETWEEN '08/09/2023 00:00:00' AND '12/09/2023 23:59:00'
+2023-09-12 20:38:35,079 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: inicio.
+2023-09-12 20:38:35,081 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:38:35,081 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:38:35,081 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:38:35,081 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:38:35,082 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:38:35,082 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: primeiro for.
+2023-09-12 20:38:35,091 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] processaExel: whele for.
+2023-09-12 20:38:35,091 INFO com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] processaExel: whele for.1302
+2023-09-12 20:38:35,108 ERROR com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto [http-nio-8080-exec-2] criarArquivoExcel: erro.
+java.lang.NullPointerException: null
+	at com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto.atualizarArquivoExcel(ExcelServiceBoleto.java:77)
+	at com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto.processaExel(ExcelServiceBoleto.java:135)
+	at com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto.criarArquivoExcel(ExcelServiceBoleto.java:55)
+	at com.data.percept.controller.CreateRemessaBoletoController.createRelatorio(CreateRemessaBoletoController.java:50)
+	at com.data.percept.controller.CreateRemessaBoletoController$$FastClassBySpringCGLIB$$7aa6e3c7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.data.percept.controller.CreateRemessaBoletoController$$EnhancerBySpringCGLIB$$f4b1f390.createRelatorio(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.data.percept.config.CorsWebConfig.doFilter(CorsWebConfig.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-09-12 20:38:35,108 INFO com.data.percept.controller.CreateRemessaBoletoController [http-nio-8080-exec-2] createRelatorio: end
+2023-09-12 20:39:51,605 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-841] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12 20:39:51,606 INFO com.zaxxer.hikari.HikariDataSource [Thread-841] HikariPool-141 - Shutdown initiated...
+2023-09-12 20:39:51,608 INFO com.zaxxer.hikari.HikariDataSource [Thread-841] HikariPool-141 - Shutdown completed.
+2023-09-12 20:39:51,733 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2023-09-12 20:39:52,727 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 24664 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
+2023-09-12 20:39:52,727 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2023-09-12 20:39:52,727 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-09-12 20:39:52,951 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-12 20:39:53,024 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 73 ms. Found 10 JPA repository interfaces.
+2023-09-12 20:39:53,049 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=906cf352-7df2-3ce5-b5cd-71bae81411ea
+2023-09-12 20:39:53,096 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-09-12 20:39:53,097 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-12 20:39:53,097 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-09-12 20:39:53,097 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-09-12 20:39:53,195 INFO org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-09-12 20:39:53,195 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 466 ms
+2023-09-12 20:39:53,231 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-12 20:39:53,236 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-142 - Starting...
+2023-09-12 20:39:53,240 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-142 - Start completed.
+2023-09-12 20:39:53,240 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-09-12 20:39:53,353 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-12 20:39:53,353 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12 20:39:53,515 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.data.percept.repository.CreateRemessaBoletoRepository com.data.percept.funtions.geraboleto.PdfController.createRemessaBoletoRepository
+2023-09-12 20:39:53,515 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-12 20:39:53,585 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-09-12 20:39:54,434 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-12 20:39:54,437 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-12 20:39:55,309 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 3.57 seconds (JVM running for 35376.194)
+2023-09-12 20:39:55,311 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-09-12 20:39:55,311 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication

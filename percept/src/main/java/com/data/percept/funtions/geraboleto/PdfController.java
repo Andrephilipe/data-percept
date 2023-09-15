@@ -1,7 +1,6 @@
 package com.data.percept.funtions.geraboleto;
 
-import com.data.percept.models.RemessaBoleto;
-import com.data.percept.repository.CreateRemessaBoletoRepository;
+import com.data.percept.models.OrderPaymentsBoleto;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
@@ -27,11 +26,9 @@ import com.itextpdf.text.Image;
 @RestController
 public class PdfController {
     public static Logger logger = LoggerFactory.getLogger(PdfController.class);
-        
-    @Autowired
-    static CreateRemessaBoletoRepository createRemessaBoletoRepository;
 
-    public static Boolean generatePdf(RemessaBoleto remessaBoleto) throws IOException, DocumentException {
+
+    public static Boolean generatePdf(OrderPaymentsBoleto remessaBoleto) throws IOException, DocumentException {
         Document document = new Document(PageSize.A4);
 
         try {

@@ -6,7 +6,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.data.percept.PerceptApplication;
 import com.data.percept.models.InfoResultsGOV;
 
 import java.io.FileInputStream;
@@ -16,7 +15,7 @@ import java.util.List;
 
 @Service
 public class ExcelService {
-    public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
+    public static final Logger logger = LoggerFactory.getLogger(ExcelService.class);
 
     public void criarArquivoExcel(String nomeDoArquivo, String nomeTabela) throws IOException {
         try {

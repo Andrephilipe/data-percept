@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
-import org.slf4j.Logger;
+import org.slf4j.Logger;       
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,13 +18,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.data.percept.dto.RemessaDTO;
+import com.data.percept.dto.OrdersDTO;
 import com.data.percept.funtions.geraboleto.CalculateBoletoInstallments;
-import com.data.percept.models.RemessaBoleto;
-import com.data.percept.models.RemessaCarnet;
-import com.data.percept.models.RemessaDebito;
-import com.data.percept.models.RemessaPix;
-import com.data.percept.repository.CreateRemessaBoletoRepository;
+import com.data.percept.models.OrderPaymentsBoleto;
+import com.data.percept.models.OrderPaymentsCarnet;
+import com.data.percept.models.OrderPaymentsDebito;
+import com.data.percept.models.OrderPaymentsPix;
+import com.data.percept.repository.PaymentsBoletoRepository;
 import com.data.percept.repository.PaymentsCarnetRepository;
 import com.data.percept.repository.PaymentsDebitoRepository;
 import com.data.percept.repository.PaymentsPixRepository;
@@ -43,8 +43,9 @@ public class CreateOrderPayments {
     private static final String BOLETODELETED = "Payment boleto deleted";
     private static final String ODERCARNET = "Payment carnet created";
     private static final String CARNETDELETED = "Payment carnet deleted";
+    private static final String ERRO_INTERNO = "Error internal";
 
-    public static Logger logger = LoggerFactory.getLogger(CreateOrderPayments.class);
+    public static final Logger logger = LoggerFactory.getLogger(CreateOrderPayments.class);
 
     @Autowired
     PaymentsPixRepository paymentsPixRepository;
@@ -53,27 +54,27 @@ public class CreateOrderPayments {
     PaymentsDebitoRepository paymentsDebitoRepository;
 
     @Autowired
-    CreateRemessaBoletoRepository createRemessaBoletoRepository;
+    PaymentsBoletoRepository paymentsBoletoRepository;
 
     @Autowired
     PaymentsCarnetRepository paymentsCarnetRepository;
 
     @PostMapping("/pix")
-    public ResponseEntity<String> createOrder(@Valid @RequestBody RemessaDTO remessaPix) {
+    public ResponseEntity<String> createOrder(@Valid @RequestBody OrdersDTO orderPaymentsPix) {
 
         logger.info("createOrder pix: start");
 
         try {
 
-            RemessaPix remessaPixCreated = new RemessaPix();
-            remessaPixCreated.setCpf(remessaPix.getCpf());
-            remessaPixCreated.setDataCriacao(remessaPixCreated.getDataCriacao());
-            remessaPixCreated.setDataValidade(remessaPixCreated.getDataValidade());
-            remessaPixCreated.setNomeTitular(remessaPix.getNomeTitular());
-            remessaPixCreated.setValor(remessaPix.getValor());
-            remessaPixCreated.setStringPix(remessaPix.getStringPix());
-            remessaPixCreated.setStatuPix(STATUS_CRIACAO_REMESSA);
-            paymentsPixRepository.save(remessaPixCreated);
+            OrderPaymentsPix orderPixCreated = new OrderPaymentsPix();
+            orderPixCreated.setCpf(orderPaymentsPix.getCpf());
+            orderPixCreated.setDataCriacao(orderPixCreated.getDataCriacao());
+            orderPixCreated.setDataValidade(orderPixCreated.getDataValidade());
+            orderPixCreated.setNomeTitular(orderPaymentsPix.getNomeTitular());
+            orderPixCreated.setValor(orderPaymentsPix.getValor());
+            orderPixCreated.setStringPix(orderPaymentsPix.getStringPix());
+            orderPixCreated.setStatuPix(STATUS_CRIACAO_REMESSA);
+            paymentsPixRepository.save(orderPixCreated);
 
         } catch (Exception e) {
             logger.info("createOrder pix: erro", e);
@@ -87,7 +88,7 @@ public class CreateOrderPayments {
     public ResponseEntity<String> deleteOrder(@PathVariable Long id) {
         try {
 
-            Optional<RemessaPix> remessaPix = paymentsPixRepository.findById(id);
+            Optional<OrderPaymentsPix> remessaPix = paymentsPixRepository.findById(id);
             if (remessaPix.isPresent()) {
                 paymentsPixRepository.delete(remessaPix.get());
             } else {
@@ -96,7 +97,7 @@ public class CreateOrderPayments {
 
         } catch (Exception e) {
             logger.error("deleteOrder pix : erro ", e);
-            return ResponseEntity.internalServerError().body("Error internal.");
+            return ResponseEntity.internalServerError().body(ERRO_INTERNO);
 
         }
 
@@ -105,20 +106,20 @@ public class CreateOrderPayments {
     }
 
     @PostMapping("/debito")
-    public ResponseEntity<String> createOrderDebito(@Valid @RequestBody RemessaDTO remessaDebito) {
+    public ResponseEntity<String> createOrderDebito(@Valid @RequestBody OrdersDTO orderPaymentDebito) {
 
         logger.info("createOrderDebito debito: start");
 
         try {
 
-            RemessaDebito remessaDebitoUpadate = new RemessaDebito();
-            remessaDebitoUpadate.setCpf(remessaDebito.getCpf());
-            remessaDebitoUpadate.setDataCriacao(remessaDebitoUpadate.getDataCriacao());
-            remessaDebitoUpadate.setDataValidade(remessaDebitoUpadate.getDataValidade());
-            remessaDebitoUpadate.setNomeTitular(remessaDebito.getNomeTitular());
-            remessaDebitoUpadate.setValor(remessaDebito.getValor());
-            remessaDebitoUpadate.setStatusDebito(STATUS_CRIACAO_REMESSA);
-            paymentsDebitoRepository.save(remessaDebitoUpadate);
+            OrderPaymentsDebito orderDebitoCreated = new OrderPaymentsDebito();
+            orderDebitoCreated.setCpf(orderPaymentDebito.getCpf());
+            orderDebitoCreated.setDataCriacao(orderDebitoCreated.getDataCriacao());
+            orderDebitoCreated.setDataValidade(orderDebitoCreated.getDataValidade());
+            orderDebitoCreated.setNomeTitular(orderPaymentDebito.getNomeTitular());
+            orderDebitoCreated.setValor(orderPaymentDebito.getValor());
+            orderDebitoCreated.setStatusDebito(STATUS_CRIACAO_REMESSA);
+            paymentsDebitoRepository.save(orderDebitoCreated);
 
         } catch (Exception e) {
             logger.info("createOrderDebito debito: erro", e);
@@ -132,7 +133,7 @@ public class CreateOrderPayments {
     public ResponseEntity<String> deletePaymentDebito(@PathVariable Long id) {
         try {
 
-            Optional<RemessaDebito> remessaDebito = paymentsDebitoRepository.findById(id);
+            Optional<OrderPaymentsDebito> remessaDebito = paymentsDebitoRepository.findById(id);
             if (remessaDebito.isPresent()) {
                 paymentsDebitoRepository.delete(remessaDebito.get());
             } else {
@@ -141,7 +142,7 @@ public class CreateOrderPayments {
 
         } catch (Exception e) {
             logger.error("deletePaymentDebito debito : erro ", e);
-            return ResponseEntity.internalServerError().body("Error internal.");
+            return ResponseEntity.internalServerError().body(ERRO_INTERNO);
         }
 
         logger.info("deletePaymentDebito debito : deleted");
@@ -149,23 +150,23 @@ public class CreateOrderPayments {
     }
 
     @PostMapping("/boleto")
-    public ResponseEntity<String> createOrderBoleto(@Valid @RequestBody RemessaDTO remessaBoleto) {
+    public ResponseEntity<String> createOrderBoleto(@Valid @RequestBody OrdersDTO orderPaymentBoleto) {
 
         logger.info("createOrderBoleto : start");
 
         try {
 
-            RemessaBoleto remessaBoletoUpadate = new RemessaBoleto();
-            remessaBoletoUpadate.setCpf(remessaBoleto.getCpf());
-            remessaBoletoUpadate.setDataCriacao(remessaBoletoUpadate.getDataCriacao());
-            remessaBoletoUpadate.setDataValidade(remessaBoletoUpadate.getDataValidade());
-            remessaBoletoUpadate.setDataVencimento(remessaBoletoUpadate.getDataVencimento());
-            remessaBoletoUpadate.setNomeTitular(remessaBoleto.getNomeTitular());
-            remessaBoletoUpadate.setValor(remessaBoleto.getValor());
-            remessaBoletoUpadate.setStatusBoleto(STATUS_CRIACAO_REMESSA);
-            remessaBoletoUpadate.setMunicipio(remessaBoleto.getMunicipio());
+            OrderPaymentsBoleto orderBoletoCreated = new OrderPaymentsBoleto();
+            orderBoletoCreated.setCpf(orderPaymentBoleto.getCpf());
+            orderBoletoCreated.setDataCriacao(orderBoletoCreated.getDataCriacao());
+            orderBoletoCreated.setDataValidade(orderBoletoCreated.getDataValidade());
+            orderBoletoCreated.setDataVencimento(orderBoletoCreated.getDataVencimento());
+            orderBoletoCreated.setNomeTitular(orderPaymentBoleto.getNomeTitular());
+            orderBoletoCreated.setValor(orderPaymentBoleto.getValor());
+            orderBoletoCreated.setStatusBoleto(STATUS_CRIACAO_REMESSA);
+            orderBoletoCreated.setMunicipio(orderPaymentBoleto.getMunicipio());
 
-            createRemessaBoletoRepository.save(remessaBoletoUpadate);
+            paymentsBoletoRepository.save(orderBoletoCreated);
 
         } catch (Exception e) {
             logger.info("createOrderBoleto : erro", e);
@@ -179,7 +180,7 @@ public class CreateOrderPayments {
     public ResponseEntity<String> deletePaymentBoleto(@PathVariable Long id) {
         try {
 
-            Optional<RemessaDebito> remessaDebito = paymentsDebitoRepository.findById(id);
+            Optional<OrderPaymentsDebito> remessaDebito = paymentsDebitoRepository.findById(id);
             if (remessaDebito.isPresent()) {
                 paymentsDebitoRepository.delete(remessaDebito.get());
             } else {
@@ -188,7 +189,7 @@ public class CreateOrderPayments {
 
         } catch (Exception e) {
             logger.error("deletePaymentBoleto : erro ", e);
-            return ResponseEntity.internalServerError().body("Error internal.");
+            return ResponseEntity.internalServerError().body(ERRO_INTERNO);
         }
 
         logger.info("deletePaymentDebito debito : deleted");
@@ -196,30 +197,33 @@ public class CreateOrderPayments {
     }
 
     @PostMapping("/carnet")
-    public ResponseEntity<String> createOrderCarnet(@Valid @RequestBody RemessaDTO remessaCarnet) {
+    public ResponseEntity<String> createOrderCarnet(@Valid @RequestBody OrdersDTO orderPaymentCarnet) {
 
         logger.info("createOrderCarnet : start");
 
         try {
 
-            RemessaCarnet remessaBoletoUpadate = new RemessaCarnet();
-            remessaBoletoUpadate.setCpf(remessaCarnet.getCpf());
-            remessaBoletoUpadate.setDataCriacao(remessaBoletoUpadate.getDataCriacao());
-            remessaBoletoUpadate.setDataValidade(remessaBoletoUpadate.getDataValidade());
-            remessaBoletoUpadate.setDataVencimento(remessaBoletoUpadate.getDataVencimento());
-            remessaBoletoUpadate.setNomeTitular(remessaCarnet.getNomeTitular());
-            remessaBoletoUpadate.setValor(remessaCarnet.getValor());
-            remessaBoletoUpadate.setStatusCarnet(STATUS_CRIACAO_REMESSA);
-            remessaBoletoUpadate.setMunicipio(remessaCarnet.getMunicipio());
-            remessaBoletoUpadate.setParcelas(remessaCarnet.getParcelas());
+            OrderPaymentsCarnet odersBoletoCreated = new OrderPaymentsCarnet();
+            odersBoletoCreated.setCpf(orderPaymentCarnet.getCpf());
+            odersBoletoCreated.setDataCriacao(odersBoletoCreated.getDataCriacao());
+            odersBoletoCreated.setDataValidade(odersBoletoCreated.getDataValidade());
+            odersBoletoCreated.setDataVencimento(odersBoletoCreated.getDataVencimento());
+            odersBoletoCreated.setNomeTitular(orderPaymentCarnet.getNomeTitular());
+            odersBoletoCreated.setValor(orderPaymentCarnet.getValor());
+            odersBoletoCreated.setStatusCarnet(STATUS_CRIACAO_REMESSA);
+            odersBoletoCreated.setMunicipio(orderPaymentCarnet.getMunicipio());
+            odersBoletoCreated.setParcelas(orderPaymentCarnet.getParcelas());
+            odersBoletoCreated.setParcelasRestantes(orderPaymentCarnet.getParcelas());
             
-            if (Boolean.TRUE.equals(CalculateBoletoInstallments.verificaValor(remessaCarnet.getValor()))) {
-                BigDecimal valorAtual = CalculateBoletoInstallments.calculaValor(remessaCarnet.getValor(), remessaCarnet.getParcelas());
-                remessaBoletoUpadate.setValorParcelas(valorAtual);
+            if (Boolean.TRUE.equals(CalculateBoletoInstallments.verificaValor(orderPaymentCarnet.getValor()))) {
+                BigDecimal valorAtual = CalculateBoletoInstallments.calculaValor(orderPaymentCarnet.getValor(), orderPaymentCarnet.getParcelas());
+                odersBoletoCreated.setValorParcelas(valorAtual);
+                BigDecimal quantidadeParcelasBigdecimal = new BigDecimal(orderPaymentCarnet.getParcelas());
+                odersBoletoCreated.setSaldoDevedor(valorAtual.multiply(quantidadeParcelasBigdecimal));
 
             }
 
-            paymentsCarnetRepository.save(remessaBoletoUpadate);
+            paymentsCarnetRepository.save(odersBoletoCreated);
 
         } catch (Exception e) {
             logger.info("createOrderCarnet : erro", e);
@@ -227,6 +231,26 @@ public class CreateOrderPayments {
         }
         logger.info("createOrderCarnet : end");
         return ResponseEntity.ok().body(ODERCARNET);
+    }
+
+    @DeleteMapping("/carnet/{id}")
+    public ResponseEntity<String> deletePaymentCarnet(@PathVariable Long id) {
+        try {
+
+            Optional<OrderPaymentsCarnet> remessaCarnet = paymentsCarnetRepository.findById(id);
+            if (remessaCarnet.isPresent()) {
+                paymentsCarnetRepository.delete(remessaCarnet.get());
+            } else {
+                return ((BodyBuilder) ResponseEntity.noContent()).body("deletePaymentCarnet not exist");
+            }
+
+        } catch (Exception e) {
+            logger.error("deletePaymentCarnet : erro ", e);
+            return ResponseEntity.internalServerError().body(ERRO_INTERNO);
+        }
+
+        logger.info("deletePaymentCarnet : deleted");
+        return ResponseEntity.ok().body(CARNETDELETED);
     }
 
 }
