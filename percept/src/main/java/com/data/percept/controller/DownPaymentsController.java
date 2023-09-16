@@ -181,7 +181,7 @@ public class DownPaymentsController {
                 if (Boolean.TRUE.equals(checkPayment(idBusca, "carnet"))) {
 
                     updateRemessaBoleto = paymentBoleto.get();
-                    updateRemessaBoleto.setStatusCarnet("pago_parcialmente");
+                    updateRemessaBoleto.setStatusCarnet("pago");
                     updateRemessaBoleto.setDataCriacao(updateRemessaBoleto.getDataCriacao());
                     paymentsCarnetRepository.save(updateRemessaBoleto);
 
