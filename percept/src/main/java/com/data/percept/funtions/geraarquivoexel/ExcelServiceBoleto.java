@@ -22,10 +22,6 @@ import java.util.List;
 public class ExcelServiceBoleto {
     public static final Logger logger = LoggerFactory.getLogger(ExcelServiceBoleto.class);
 
-    private ExcelServiceBoleto() {
-        logger.info("ExcelServiceBoleto start");
-        throw new IllegalStateException("ExcelServiceBoleto");
-    }
 
     public static void criarArquivoExcel(String nomeDoArquivo, String datainicial)
             throws IOException {
@@ -117,11 +113,8 @@ public class ExcelServiceBoleto {
         for (int rowIndex = 1; rowIndex <= sheet.getLastRowNum(); rowIndex++) {
             Row row = sheet.getRow(rowIndex);
 
-            // Obtenha o valor da coluna "Valores" (supondo que seja a coluna A, ou seja,
-            // índice 0)
             Cell cellSoma = row.getCell(4, Row.MissingCellPolicy.CREATE_NULL_AS_BLANK);
 
-            // Verifique se a célula contém um valor numérico
             if (cellSoma.getCellType() == CellType.NUMERIC) {
                 soma += cell.getNumericCellValue();
             }
