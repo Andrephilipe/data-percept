@@ -1,11 +1,15 @@
 package com.data.percept.controller;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 import javax.validation.Valid;
 
-import org.slf4j.Logger;       
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -202,28 +206,38 @@ public class CreateOrderPayments {
         logger.info("createOrderCarnet : start");
 
         try {
+            Date newdate = new Date();
+            List<Date> datas = Parcelamento.gerarParcelas(newdate, orderPaymentCarnet.getParcelas());
 
-            OrderPaymentsCarnet odersBoletoCreated = new OrderPaymentsCarnet();
-            odersBoletoCreated.setCpf(orderPaymentCarnet.getCpf());
-            odersBoletoCreated.setDataCriacao(odersBoletoCreated.getDataCriacao());
-            odersBoletoCreated.setDataValidade(odersBoletoCreated.getDataValidade());
-            odersBoletoCreated.setDataVencimento(odersBoletoCreated.getDataVencimento());
-            odersBoletoCreated.setNomeTitular(orderPaymentCarnet.getNomeTitular());
-            odersBoletoCreated.setValor(orderPaymentCarnet.getValor());
-            odersBoletoCreated.setStatusCarnet(STATUS_CRIACAO_REMESSA);
-            odersBoletoCreated.setMunicipio(orderPaymentCarnet.getMunicipio());
-            odersBoletoCreated.setParcelas(orderPaymentCarnet.getParcelas());
-            odersBoletoCreated.setParcelasRestantes(orderPaymentCarnet.getParcelas());
-            
-            if (Boolean.TRUE.equals(CalculateBoletoInstallments.verificaValor(orderPaymentCarnet.getValor()))) {
-                BigDecimal valorAtual = CalculateBoletoInstallments.calculaValor(orderPaymentCarnet.getValor(), orderPaymentCarnet.getParcelas());
-                odersBoletoCreated.setValorParcelas(valorAtual);
-                BigDecimal quantidadeParcelasBigdecimal = new BigDecimal(orderPaymentCarnet.getParcelas());
-                odersBoletoCreated.setSaldoDevedor(valorAtual.multiply(quantidadeParcelasBigdecimal));
+            for (Date parcela : datas) {
+
+                logger.info("createOrderCarnet : primeiro for");
+                OrderPaymentsCarnet odersBoletoCreated = new OrderPaymentsCarnet();
+                odersBoletoCreated.setCpf(orderPaymentCarnet.getCpf());
+                odersBoletoCreated.setDataCriacao(odersBoletoCreated.getDataCriacao());
+                odersBoletoCreated.setDataValidade(odersBoletoCreated.getDataValidade());
+              
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+                odersBoletoCreated.setDataVencimento(dateFormat.format(parcela));
+                odersBoletoCreated.setNomeTitular(orderPaymentCarnet.getNomeTitular());
+                odersBoletoCreated.setValor(orderPaymentCarnet.getValor());
+                odersBoletoCreated.setStatusCarnet(STATUS_CRIACAO_REMESSA);
+                odersBoletoCreated.setMunicipio(orderPaymentCarnet.getMunicipio());
+                odersBoletoCreated.setParcelas(orderPaymentCarnet.getParcelas());
+                odersBoletoCreated.setParcelasRestantes(orderPaymentCarnet.getParcelas());
+
+                if (Boolean.TRUE.equals(CalculateBoletoInstallments.verificaValor(orderPaymentCarnet.getValor()))) {
+                    BigDecimal valorAtual = CalculateBoletoInstallments.calculaValor(orderPaymentCarnet.getValor(),
+                            orderPaymentCarnet.getParcelas());
+                    odersBoletoCreated.setValorParcelas(valorAtual);
+                    BigDecimal quantidadeParcelasBigdecimal = new BigDecimal(orderPaymentCarnet.getParcelas());
+                    odersBoletoCreated.setSaldoDevedor(valorAtual.multiply(quantidadeParcelasBigdecimal));
+
+                }
+
+                paymentsCarnetRepository.save(odersBoletoCreated);
 
             }
-
-            paymentsCarnetRepository.save(odersBoletoCreated);
 
         } catch (Exception e) {
             logger.info("createOrderCarnet : erro", e);
