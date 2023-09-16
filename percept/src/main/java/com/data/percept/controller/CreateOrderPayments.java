@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.data.percept.dto.OrdersDTO;
+import com.data.percept.funtions.createorderpayments.DueDateOrderPayments;
 import com.data.percept.funtions.geraboleto.CalculateBoletoInstallments;
 import com.data.percept.models.OrderPaymentsBoleto;
 import com.data.percept.models.OrderPaymentsCarnet;
@@ -206,24 +207,24 @@ public class CreateOrderPayments {
         logger.info("createOrderCarnet : start");
 
         try {
-            Date newdate = new Date();
-            List<Date> datas = Parcelamento.gerarParcelas(newdate, orderPaymentCarnet.getParcelas());
 
-            for (Date parcela : datas) {
+            Date newdate = new Date();
+            List<Date> dueDates = DueDateOrderPayments.gerarParcelas(newdate, orderPaymentCarnet.getParcelas());
+            int parcelaSequencial = 1;
+
+            for (Date getDueDate : dueDates) {
 
                 logger.info("createOrderCarnet : primeiro for");
                 OrderPaymentsCarnet odersBoletoCreated = new OrderPaymentsCarnet();
                 odersBoletoCreated.setCpf(orderPaymentCarnet.getCpf());
                 odersBoletoCreated.setDataCriacao(odersBoletoCreated.getDataCriacao());
-                odersBoletoCreated.setDataValidade(odersBoletoCreated.getDataValidade());
-              
-                SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-                odersBoletoCreated.setDataVencimento(dateFormat.format(parcela));
+                odersBoletoCreated.setDataValidade(odersBoletoCreated.getDataValidade()); 
+                odersBoletoCreated.setDataVencimento(DueDateOrderPayments.formatDate(getDueDate));
                 odersBoletoCreated.setNomeTitular(orderPaymentCarnet.getNomeTitular());
                 odersBoletoCreated.setValor(orderPaymentCarnet.getValor());
                 odersBoletoCreated.setStatusCarnet(STATUS_CRIACAO_REMESSA);
                 odersBoletoCreated.setMunicipio(orderPaymentCarnet.getMunicipio());
-                odersBoletoCreated.setParcelas(orderPaymentCarnet.getParcelas());
+                odersBoletoCreated.setParcelas(parcelaSequencial);
                 odersBoletoCreated.setParcelasRestantes(orderPaymentCarnet.getParcelas());
 
                 if (Boolean.TRUE.equals(CalculateBoletoInstallments.verificaValor(orderPaymentCarnet.getValor()))) {
@@ -237,6 +238,8 @@ public class CreateOrderPayments {
 
                 paymentsCarnetRepository.save(odersBoletoCreated);
 
+                parcelaSequencial++;
+
             }
 
         } catch (Exception e) {
@@ -249,6 +252,7 @@ public class CreateOrderPayments {
 
     @DeleteMapping("/carnet/{id}")
     public ResponseEntity<String> deletePaymentCarnet(@PathVariable Long id) {
+        
         try {
 
             Optional<OrderPaymentsCarnet> remessaCarnet = paymentsCarnetRepository.findById(id);

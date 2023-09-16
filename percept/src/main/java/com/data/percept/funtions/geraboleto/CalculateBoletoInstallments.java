@@ -1,6 +1,7 @@
 package com.data.percept.funtions.geraboleto;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,7 +49,7 @@ public class CalculateBoletoInstallments {
 
         BigDecimal quantidadeParcelasBigdecimal = new BigDecimal(parcelas);
 
-        BigDecimal primeiroValor = valorTotal.divide(quantidadeParcelasBigdecimal);
+        BigDecimal primeiroValor = valorTotal.divide(quantidadeParcelasBigdecimal,2, RoundingMode.HALF_UP);
         BigDecimal segundoValor = valorTotal.multiply(taxaDeJuros);
 
         return primeiroValor.add(segundoValor);

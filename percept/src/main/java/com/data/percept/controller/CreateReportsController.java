@@ -10,13 +10,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.data.percept.funtions.geraarquivoexel.ExcelServiceBoleto;
+import com.data.percept.funtions.geraarquivoexel.ReportsCarnet;
 import com.data.percept.funtions.geraboleto.GeradorDeBoletos;
 
 @RestController
 @Validated
 public class CreateReportsController {
 
-    private static final String ACCOUNT_CREATE = "remessa created";
+    private static final String ACCOUNT_CREATE = "Report created";
     public static final Logger logger = LoggerFactory.getLogger(CreateReportsController.class);
 
     @GetMapping("/geraBoleto/{status}")
@@ -42,7 +43,25 @@ public class CreateReportsController {
         
         try {
             
-            ExcelServiceBoleto.criarArquivoExcel(type,data);
+            ExcelServiceBoleto.criarArquivoExcel(type, data);
+
+        } catch (Exception e) {
+
+            logger.info("createRelatorio: erro", e);
+            return ResponseEntity.internalServerError().body("createRelatorio not created");
+        }
+        logger.info("createRelatorio: end");
+        return ResponseEntity.ok().body(ACCOUNT_CREATE);
+    }
+
+    @GetMapping("/gerarRelatorioCarnet")
+    public ResponseEntity<String> createRelatorioCarnet(@PathVariable @RequestParam String type, @RequestParam String data) {
+
+        logger.info("createRelatorio: start");
+
+        try {
+
+            ReportsCarnet.criarArquivoExcel(type, data);
 
         } catch (Exception e) {
 

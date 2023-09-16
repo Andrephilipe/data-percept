@@ -25,7 +25,7 @@ public class OrderPaymentsCarnet {
     @Column(name = "nome_titular")
     private String nomeTitular;
 
-    @Column(name = "cpf_titutar")
+    @Column(name = "cpf_titular")
     private String cpf;
 
     @Column(name = "municipio")
@@ -46,7 +46,7 @@ public class OrderPaymentsCarnet {
     @Column(name = "status_parcela")
     private String statusCarnet;
 
-    @Column(name = "quantidade_parcelas")
+    @Column(name = "numero_parcela")
     private Integer parcelas;
 
     @Column(name = "valor_devido")
