@@ -211,6 +211,8 @@ public class CreateOrderPayments {
             Date newdate = new Date();
             List<Date> dueDates = DueDateOrderPayments.gerarParcelas(newdate, orderPaymentCarnet.getParcelas());
             int parcelaSequencial = 1;
+            OrderPaymentsCarnet teste = new OrderPaymentsCarnet();
+            String number = teste.generateContract();
 
             for (Date getDueDate : dueDates) {
 
@@ -226,6 +228,7 @@ public class CreateOrderPayments {
                 odersBoletoCreated.setMunicipio(orderPaymentCarnet.getMunicipio());
                 odersBoletoCreated.setParcelas(parcelaSequencial);
                 odersBoletoCreated.setParcelasRestantes(orderPaymentCarnet.getParcelas());
+                odersBoletoCreated.setNumberContract(number);
 
                 if (Boolean.TRUE.equals(CalculateBoletoInstallments.verificaValor(orderPaymentCarnet.getValor()))) {
                     BigDecimal valorAtual = CalculateBoletoInstallments.calculaValor(orderPaymentCarnet.getValor(),
