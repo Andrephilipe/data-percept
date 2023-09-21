@@ -23,10 +23,10 @@ public class ReportsCarnet {
     public static final Logger logger = LoggerFactory.getLogger(ReportsCarnet.class);
 
 
-    public static void criarArquivoExcel(String nomeDoArquivo, String cpfRecept)
+    public static void criarArquivoExcel(String nomeDoArquivo, String numberContract)
             throws IOException {
-        String nameExel = nomeDoArquivo + "-percept" + cpfRecept + ".xlsx";
-        String sql = "SELECT * FROM percept." + retornaTable(nomeDoArquivo) + " where data_criacao = \'" + cpfRecept + "\'";
+        String nameExel = nomeDoArquivo + "-percept" + numberContract + ".xlsx";
+        String sql = "SELECT * FROM percept." + retornaTable(nomeDoArquivo) + " where numero_contrato = \"" + numberContract + "\"";
 
         logger.info("criarArquivoExcel: inicio."+ sql);
 

@@ -1,223 +1,324 @@
-2023-09-20 10:55:51,571 INFO com.zaxxer.hikari.HikariDataSource [Thread-98] HikariPool-17 - Shutdown initiated...
-2023-09-20 10:55:51,595 INFO com.zaxxer.hikari.HikariDataSource [Thread-98] HikariPool-17 - Shutdown completed.
-2023-09-20 10:55:51,929 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
-2023-09-20 10:55:56,953 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 13296 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
-2023-09-20 10:55:56,954 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2023-09-20 10:55:56,954 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
-2023-09-20 10:55:57,310 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-20 10:55:57,376 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 65 ms. Found 10 JPA repository interfaces.
-2023-09-20 10:55:57,428 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=97941aa5-052f-3c88-aa82-8af065b35777
-2023-09-20 10:55:57,533 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2023-09-20 10:55:57,533 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2023-09-20 10:55:57,534 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
-2023-09-20 10:55:57,534 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2023-09-20 10:55:57,635 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
-2023-09-20 10:55:57,635 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 677 ms
-2023-09-20 10:55:57,683 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-20 10:55:57,696 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-18 - Starting...
-2023-09-20 10:55:57,703 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-18 - Start completed.
-2023-09-20 10:55:57,703 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-09-20 10:55:57,811 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-20 10:55:57,811 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-20 10:55:58,113 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-20 10:55:58,233 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2023-09-20 10:56:02,747 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2023-09-20 10:56:02,750 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
-2023-09-20 10:56:04,934 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-09-20 10:56:04,935 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
-2023-09-20 10:56:04,936 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 0 ms
-2023-09-20 10:56:06,995 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 15.041 seconds (JVM running for 4875.303)
-2023-09-20 10:56:06,998 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
-2023-09-20 10:56:06,998 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
-2023-09-20 10:56:44,149 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-105] Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-09-20 10:56:44,150 INFO com.zaxxer.hikari.HikariDataSource [Thread-105] HikariPool-18 - Shutdown initiated...
-2023-09-20 10:56:44,173 INFO com.zaxxer.hikari.HikariDataSource [Thread-105] HikariPool-18 - Shutdown completed.
-2023-09-20 10:56:44,302 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
-2023-09-20 10:56:49,183 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 13296 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
-2023-09-20 10:56:49,183 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2023-09-20 10:56:49,183 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
-2023-09-20 10:56:49,946 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-20 10:56:50,098 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 151 ms. Found 10 JPA repository interfaces.
-2023-09-20 10:56:50,188 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=97941aa5-052f-3c88-aa82-8af065b35777
-2023-09-20 10:56:50,323 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2023-09-20 10:56:50,324 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2023-09-20 10:56:50,325 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
-2023-09-20 10:56:50,325 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2023-09-20 10:56:50,468 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
-2023-09-20 10:56:50,469 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1281 ms
-2023-09-20 10:56:50,530 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-20 10:56:50,546 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-19 - Starting...
-2023-09-20 10:56:50,555 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-19 - Start completed.
-2023-09-20 10:56:50,556 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-09-20 10:56:50,759 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-20 10:56:50,759 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-20 10:56:51,234 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-20 10:56:51,373 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2023-09-20 10:56:56,581 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2023-09-20 10:56:56,587 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
-2023-09-20 10:57:02,091 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 17.769 seconds (JVM running for 4930.385)
-2023-09-20 10:57:02,094 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
-2023-09-20 10:57:02,094 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
-2023-09-20 10:57:24,590 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-09-20 10:57:24,591 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
-2023-09-20 10:57:24,592 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
-2023-09-20 10:57:24,623 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-2] createOrderCarnet : start
-2023-09-20 10:57:24,626 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-2] createOrderCarnet : primeiro for
-2023-09-20 10:57:24,692 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-2] SQL Error: 1366, SQLState: HY000
-2023-09-20 10:57:24,693 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-2] Incorrect integer value: 'CONTRACT-805083' for column 'numero_contrato' at row 1
-2023-09-20 10:57:24,699 INFO org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl [http-nio-8080-exec-2] HHH000010: On release of batch it still contained JDBC statements
-2023-09-20 10:57:24,737 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-2] createOrderCarnet : erro
-org.springframework.orm.jpa.JpaSystemException: could not execute statement; nested exception is org.hibernate.exception.GenericJDBCException: could not execute statement
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:331)
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233)
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566)
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407)
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
-	at com.sun.proxy.$Proxy384.save(Unknown Source)
-	at com.data.percept.controller.CreateOrderPayments.createOrderCarnet(CreateOrderPayments.java:242)
-	at com.data.percept.controller.CreateOrderPayments$$FastClassBySpringCGLIB$$8586ec2f.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
-	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
-	at com.data.percept.controller.CreateOrderPayments$$EnhancerBySpringCGLIB$$dd760a52.createOrderCarnet(<generated>)
+2023-09-20 21:44:52,565 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2023-09-20 21:44:55,207 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 27440 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
+2023-09-20 21:44:55,208 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2023-09-20 21:44:55,208 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-09-20 21:44:55,570 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-20 21:44:55,649 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 78 ms. Found 10 JPA repository interfaces.
+2023-09-20 21:44:55,706 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=97941aa5-052f-3c88-aa82-8af065b35777
+2023-09-20 21:44:55,825 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-09-20 21:44:55,826 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-20 21:44:55,826 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-09-20 21:44:55,827 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-09-20 21:44:55,971 INFO org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-09-20 21:44:55,971 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 726 ms
+2023-09-20 21:44:56,029 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-20 21:44:56,048 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-8 - Starting...
+2023-09-20 21:44:56,053 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-8 - Start completed.
+2023-09-20 21:44:56,054 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-09-20 21:44:56,184 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-20 21:44:56,184 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-20 21:44:56,414 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderPayments': Unsatisfied dependency expressed through field 'paymentsCarnetRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'paymentsCarnetRepository' defined in com.data.percept.repository.PaymentsCarnetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! Reason: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!
+2023-09-20 21:44:56,414 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-20 21:44:56,415 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-8 - Shutdown initiated...
+2023-09-20 21:44:56,425 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-8 - Shutdown completed.
+2023-09-20 21:44:56,426 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-09-20 21:44:56,432 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-20 21:44:56,439 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderPayments': Unsatisfied dependency expressed through field 'paymentsCarnetRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'paymentsCarnetRepository' defined in com.data.percept.repository.PaymentsCarnetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! Reason: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.data.percept.PerceptApplication.main(PerceptApplication.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at com.data.percept.config.CorsWebConfig.doFilter(CorsWebConfig.java:49)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: org.hibernate.exception.GenericJDBCException: could not execute statement
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
-	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:46)
-	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3375)
-	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3908)
-	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107)
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
-	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344)
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
-	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1402)
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:493)
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3285)
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2420)
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
-	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
-	... 70 common frames omitted
-Caused by: java.sql.SQLException: Incorrect integer value: 'CONTRACT-805083' for column 'numero_contrato' at row 1
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1098)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1046)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1371)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1031)
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
-	... 91 common frames omitted
-2023-09-20 10:58:32,708 INFO com.data.percept.PerceptApplication [main] Inicio PerceptApplication
-2023-09-20 10:58:33,746 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
-2023-09-20 10:58:38,556 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
-2023-09-20 10:58:38,670 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 17092 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
-2023-09-20 10:58:38,671 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2023-09-20 10:58:38,714 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
-2023-09-20 10:58:38,898 INFO org.springframework.boot.devtools.restart.ChangeableUrls [restartedMain] The Class-Path manifest attribute in C:\Users\andre.p.cassiano\.m2\repository\io\grpc\grpc-netty-shaded\1.38.0\grpc-netty-shaded-1.38.0.jar referenced one or more files that do not exist: file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-core-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-api-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/gson-2.8.6.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/annotations-4.1.1.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/animal-sniffer-annotations-1.19.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/error_prone_annotations-2.4.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/guava-30.1-android.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/perfmark-api-0.23.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/jsr305-3.0.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-context-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/failureaccess-1.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/checker-compat-qual-2.5.5.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/j2objc-annotations-1.3.jar
-2023-09-20 10:58:38,899 INFO org.springframework.boot.devtools.restart.ChangeableUrls [restartedMain] The Class-Path manifest attribute in C:\Users\andre.p.cassiano\.m2\repository\io\grpc\grpc-alts\1.38.0\grpc-alts-1.38.0.jar referenced one or more files that do not exist: file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-auth-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-grpclb-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-protobuf-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-stub-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/protobuf-java-util-3.12.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/protobuf-java-3.12.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/conscrypt-openjdk-uber-2.5.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-auth-library-oauth2-http-0.22.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-netty-shaded-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-core-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-protobuf-lite-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-api-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/guava-30.1-android.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/error_prone_annotations-2.4.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-auth-library-credentials-0.22.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/animal-sniffer-annotations-1.19.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-http-client-jackson2-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-http-client-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/jsr305-3.0.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-context-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/opencensus-api-0.28.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/proto-google-common-protos-2.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/auto-value-annotations-1.7.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/failureaccess-1.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/checker-compat-qual-2.5.5.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/j2objc-annotations-1.3.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/gson-2.8.6.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/annotations-4.1.1.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/perfmark-api-0.23.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/httpclient-4.5.13.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/httpcore-4.4.13.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/opencensus-contrib-http-util-0.24.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/jackson-core-2.11.3.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/commons-logging-1.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/commons-codec-1.11.jar
-2023-09-20 10:58:38,899 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-09-20 10:58:38,900 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-09-20 10:58:41,066 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-20 10:58:41,313 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 223 ms. Found 10 JPA repository interfaces.
-2023-09-20 10:58:41,902 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=97941aa5-052f-3c88-aa82-8af065b35777
-2023-09-20 10:58:46,516 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2023-09-20 10:58:46,554 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2023-09-20 10:58:46,556 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
-2023-09-20 10:58:46,557 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2023-09-20 10:58:47,185 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
-2023-09-20 10:58:47,185 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 8284 ms
-2023-09-20 10:58:47,766 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-20 10:58:47,966 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.4.Final
-2023-09-20 10:58:48,619 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-09-20 10:58:49,006 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2023-09-20 10:58:49,535 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2023-09-20 10:58:49,598 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-09-20 10:58:52,222 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-20 10:58:52,252 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-20 10:58:55,817 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-20 10:58:58,420 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2023-09-20 10:59:05,879 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2023-09-20 10:59:05,938 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
-2023-09-20 10:59:11,312 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 37.486 seconds (JVM running for 40.953)
-2023-09-20 10:59:11,321 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
-2023-09-20 11:05:25,687 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-09-20 11:05:25,687 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
-2023-09-20 11:05:25,690 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 2 ms
-2023-09-20 11:05:26,241 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-2] createOrderCarnet : start
-2023-09-20 11:05:26,247 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-2] createOrderCarnet : primeiro for
-2023-09-20 11:05:26,500 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-2] createOrderCarnet : primeiro for
-2023-09-20 11:05:26,512 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-2] createOrderCarnet : primeiro for
-2023-09-20 11:05:26,524 INFO com.data.percept.controller.CreateOrderPayments [http-nio-8080-exec-2] createOrderCarnet : end
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'paymentsCarnetRepository' defined in com.data.percept.repository.PaymentsCarnetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! Reason: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 25 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! Reason: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:106)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:94)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:96)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:86)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:86)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:364)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:322)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:328)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 35 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:113)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:254)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:87)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:102)
+	... 57 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property getNumberContract found for type OrderPaymentsCarnet!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:90)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:437)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:413)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:366)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:348)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:331)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:249)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:250)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:383)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:384)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:92)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89)
+	... 61 common frames omitted
+2023-09-20 21:46:12,018 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2023-09-20 21:46:15,102 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 27440 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
+2023-09-20 21:46:15,102 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2023-09-20 21:46:15,103 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-09-20 21:46:15,482 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-20 21:46:15,592 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 109 ms. Found 10 JPA repository interfaces.
+2023-09-20 21:46:15,658 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=97941aa5-052f-3c88-aa82-8af065b35777
+2023-09-20 21:46:15,779 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-09-20 21:46:15,780 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-20 21:46:15,780 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-09-20 21:46:15,780 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-09-20 21:46:15,902 INFO org.apache.catalina.core.ContainerBase.[Tomcat-2].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-09-20 21:46:15,902 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 796 ms
+2023-09-20 21:46:15,974 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-20 21:46:15,990 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-9 - Starting...
+2023-09-20 21:46:15,999 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-9 - Start completed.
+2023-09-20 21:46:15,999 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-09-20 21:46:16,215 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-20 21:46:16,215 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-20 21:46:16,494 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderPayments': Unsatisfied dependency expressed through field 'paymentsCarnetRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'paymentsCarnetRepository' defined in com.data.percept.repository.PaymentsCarnetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! Reason: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!
+2023-09-20 21:46:16,495 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-20 21:46:16,495 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-9 - Shutdown initiated...
+2023-09-20 21:46:16,506 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-9 - Shutdown completed.
+2023-09-20 21:46:16,507 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-09-20 21:46:16,515 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-20 21:46:16,520 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createOrderPayments': Unsatisfied dependency expressed through field 'paymentsCarnetRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'paymentsCarnetRepository' defined in com.data.percept.repository.PaymentsCarnetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! Reason: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.data.percept.PerceptApplication.main(PerceptApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'paymentsCarnetRepository' defined in com.data.percept.repository.PaymentsCarnetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! Reason: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 25 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! Reason: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:106)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(QueryExecutorMethodInterceptor.java:94)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1054)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:96)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:86)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:86)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:364)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:322)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:230)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:328)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 35 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.Optional com.data.percept.repository.PaymentsCarnetRepository.getNumberContract(java.lang.String)! No property getNumberContract found for type OrderPaymentsCarnet!
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:96)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:113)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:254)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:87)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:102)
+	... 57 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property getNumberContract found for type OrderPaymentsCarnet!
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:90)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:437)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:413)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:366)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:348)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:331)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:249)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:250)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:383)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:384)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:92)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:89)
+	... 61 common frames omitted
+2023-09-20 21:47:45,450 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2023-09-20 21:47:49,776 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 27440 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
+2023-09-20 21:47:49,776 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2023-09-20 21:47:49,777 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-09-20 21:47:50,151 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-20 21:47:50,226 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 74 ms. Found 10 JPA repository interfaces.
+2023-09-20 21:47:50,277 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=97941aa5-052f-3c88-aa82-8af065b35777
+2023-09-20 21:47:50,374 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-09-20 21:47:50,374 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-20 21:47:50,374 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-09-20 21:47:50,374 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-09-20 21:47:50,504 INFO org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-09-20 21:47:50,504 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 722 ms
+2023-09-20 21:47:50,550 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-20 21:47:50,560 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-10 - Starting...
+2023-09-20 21:47:50,567 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-10 - Start completed.
+2023-09-20 21:47:50,567 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-09-20 21:47:50,742 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-20 21:47:50,742 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-20 21:47:51,048 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-20 21:47:51,177 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-09-20 21:47:54,157 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-20 21:47:54,160 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-20 21:47:57,190 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 11.73 seconds (JVM running for 2580.63)
+2023-09-20 21:47:57,193 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-09-20 21:47:57,195 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
+2023-09-20 21:48:28,584 INFO org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-20 21:48:28,585 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-09-20 21:48:28,586 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 0 ms
+2023-09-20 21:51:33,905 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-39] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-20 21:51:33,906 INFO com.zaxxer.hikari.HikariDataSource [Thread-39] HikariPool-10 - Shutdown initiated...
+2023-09-20 21:51:33,915 INFO com.zaxxer.hikari.HikariDataSource [Thread-39] HikariPool-10 - Shutdown completed.
+2023-09-20 21:51:33,992 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2023-09-20 21:51:35,917 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 27440 (C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept)
+2023-09-20 21:51:35,917 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2023-09-20 21:51:35,918 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2023-09-20 21:51:36,324 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-20 21:51:36,443 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 119 ms. Found 10 JPA repository interfaces.
+2023-09-20 21:51:36,517 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=97941aa5-052f-3c88-aa82-8af065b35777
+2023-09-20 21:51:36,679 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-09-20 21:51:36,680 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-20 21:51:36,680 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-09-20 21:51:36,680 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-09-20 21:51:36,802 INFO org.apache.catalina.core.ContainerBase.[Tomcat-3].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-09-20 21:51:36,802 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 881 ms
+2023-09-20 21:51:36,850 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-20 21:51:36,860 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-11 - Starting...
+2023-09-20 21:51:36,868 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-11 - Start completed.
+2023-09-20 21:51:36,868 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-09-20 21:51:37,040 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-20 21:51:37,040 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-20 21:51:37,337 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-20 21:51:37,446 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-09-20 21:51:40,590 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-20 21:51:40,595 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-20 21:51:46,829 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 12.827 seconds (JVM running for 2810.268)
+2023-09-20 21:51:46,831 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-09-20 21:51:46,831 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
