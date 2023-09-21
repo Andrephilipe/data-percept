@@ -5,6 +5,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Random;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -54,6 +55,29 @@ public class OrderPaymentsCarnet {
 
     @Column(name = "saldo_devedor")
     private BigDecimal saldoDevedor;
+
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    @Column(name = "numero_contrato")
+    private String numberContract;
+    
+
+    public String getNumberContract() {
+        return generateContract();
+    }
+
+    public void setNumberContract(String numberContract) {
+        this.numberContract = numberContract;
+        
+    }
+
+    public static String generateContract() {
+         // Gere um número aleatório de 6 dígitos
+        Random random = new Random();
+        int numero = random.nextInt(900000) + 100000;
+        //int digito = random.nextInt(90) + 10;
+        return "CONTRACT"+"-"+String.valueOf(numero);
+
+    }
 
     public BigDecimal getSaldoDevedor() {
         return saldoDevedor;

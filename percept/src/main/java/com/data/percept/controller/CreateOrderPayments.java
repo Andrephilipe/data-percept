@@ -16,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.ResponseEntity.BodyBuilder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -211,6 +212,8 @@ public class CreateOrderPayments {
             Date newdate = new Date();
             List<Date> dueDates = DueDateOrderPayments.gerarParcelas(newdate, orderPaymentCarnet.getParcelas());
             int parcelaSequencial = 1;
+            OrderPaymentsCarnet teste = new OrderPaymentsCarnet();
+            String number = teste.generateContract();
 
             for (Date getDueDate : dueDates) {
 
@@ -226,6 +229,7 @@ public class CreateOrderPayments {
                 odersBoletoCreated.setMunicipio(orderPaymentCarnet.getMunicipio());
                 odersBoletoCreated.setParcelas(parcelaSequencial);
                 odersBoletoCreated.setParcelasRestantes(orderPaymentCarnet.getParcelas());
+                odersBoletoCreated.setNumberContract(number);
 
                 if (Boolean.TRUE.equals(CalculateBoletoInstallments.verificaValor(orderPaymentCarnet.getValor()))) {
                     BigDecimal valorAtual = CalculateBoletoInstallments.calculaValor(orderPaymentCarnet.getValor(),
@@ -269,6 +273,24 @@ public class CreateOrderPayments {
 
         logger.info("deletePaymentCarnet : deleted");
         return ResponseEntity.ok().body(CARNETDELETED);
+    }
+
+    @GetMapping("/carnet/{id}")
+    public Optional<OrderPaymentsCarnet> getPaymentCarnet(@PathVariable Long id) {
+        
+        try {
+
+            Optional<OrderPaymentsCarnet> remessaCarnet = paymentsCarnetRepository.findById(id);
+            if (remessaCarnet.isPresent()) {
+                return remessaCarnet;
+            } else {
+                return null;            }
+
+        } catch (Exception e) {
+            logger.error("deletePaymentCarnet : erro ", e);
+            return null; 
+        }
+
     }
 
 }

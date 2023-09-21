@@ -27,7 +27,6 @@ import com.data.percept.interfaces.BuscaAPIGovServices;
 import com.data.percept.models.InfoResultsGOV;
 import com.data.percept.models.OrderPaymentsBoleto;
 import com.data.percept.repository.PaymentsBoletoRepository;
-import com.data.percept.services.ReportService;
 
 
 @RestController
@@ -41,7 +40,7 @@ public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
 	@Autowired
     PaymentsBoletoRepository paymentsBoletoRepository;
 
-	ReportService schoolService;
+	RelatorioController schoolService;
 
 	@GetMapping("/gov/{codeibge}/{mesAno}")
 	public ResponseEntity<InfoResultsGOV> getInfo(@PathVariable String codeibge, @PathVariable String mesAno)
@@ -64,16 +63,19 @@ public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
 	}
 
 	@GetMapping("/pdf")
-	public ResponseEntity<byte[]> getInfoPdf()
+	public ResponseEntity<InputStreamResource> getInfoPdf()
 			throws IOException, InterruptedException {
 		logger.info("GovRestController: Inicio");
 		try {
 
+			HttpHeaders headers = new HttpHeaders();
+            headers.add("Content-Disposition", "inline; filename=students.pdf");
 			logger.info("GovRestController: Entrando no consultaInfo");
-			RelatorioController.gerarPdf();
 
-			logger.info("GovRestController: retornou do consultaInfo");
-			return RelatorioController.gerarPdf();
+            return ResponseEntity.ok()
+                    .headers(headers)
+                    .contentType(MediaType.APPLICATION_PDF)
+                    .body(new InputStreamResource(this.schoolService.gerarPdf()));
 
 		} catch (Exception e) {
 			logger.info("GovRestController: Erro" + e);
@@ -121,7 +123,7 @@ public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
             return ResponseEntity.ok()
                     .headers(headers)
                     .contentType(MediaType.APPLICATION_PDF)
-                    .body(new InputStreamResource(this.schoolService.report()));
+                    .body(new InputStreamResource(this.schoolService.gerarPdf()));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
