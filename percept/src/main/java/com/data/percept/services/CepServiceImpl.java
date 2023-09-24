@@ -14,6 +14,7 @@ public class CepServiceImpl implements CepService {
 
     @Override
     public Endereco buscaEnderecoPorCep(String cep) throws IOException, InterruptedException {
+        
         try {
 
             ConnectionDataImpl test = new ConnectionDataImpl();

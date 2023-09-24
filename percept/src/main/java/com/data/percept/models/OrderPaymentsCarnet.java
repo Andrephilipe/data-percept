@@ -157,8 +157,8 @@ public class OrderPaymentsCarnet {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(currentDate);
 
-        int daysToAdd = 5;
-        calendar.add(Calendar.DAY_OF_MONTH, daysToAdd);
+        int daysToAdd = 15;
+        calendar.add(Calendar.ZONE_OFFSET, daysToAdd);
         Date newDate = calendar.getTime();
         
         DateFormat dateFormat = new SimpleDateFormat(FORMATCREATE);
@@ -221,5 +221,15 @@ public class OrderPaymentsCarnet {
         this.parcelas = parcelas;
     }
 
+    @Override
+    public String toString() {
+
+        return "OrderPaymentsCarnet {id=" + id + ", nomeTitular=" + nomeTitular + ", cpf=" + cpf + ", municipio="
+                + municipio + ", dataVencimento=" + dataVencimento + ", valor=" + valor + ", dataCriacao=" + dataCriacao
+                + ", dataValidade=" + dataValidade + ", statusCarnet=" + statusCarnet + ", parcelas=" + parcelas
+                + ", valorDevedor=" + valorDevedor + ", saldoDevedor=" + saldoDevedor + ", numberContract="
+                + numberContract + ", parcelasRestantes=" + parcelasRestantes + ", valorParcelas=" + valorParcelas
+                + "}";
+    }
     
 }

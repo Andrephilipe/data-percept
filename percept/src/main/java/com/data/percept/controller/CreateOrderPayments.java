@@ -1,8 +1,6 @@
 package com.data.percept.controller;
 
 import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -16,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.ResponseEntity.BodyBuilder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,10 +25,12 @@ import com.data.percept.funtions.createorderpayments.DueDateOrderPayments;
 import com.data.percept.funtions.geraboleto.CalculateBoletoInstallments;
 import com.data.percept.models.OrderPaymentsBoleto;
 import com.data.percept.models.OrderPaymentsCarnet;
+import com.data.percept.models.OrderPaymentsCash;
 import com.data.percept.models.OrderPaymentsDebito;
 import com.data.percept.models.OrderPaymentsPix;
 import com.data.percept.repository.PaymentsBoletoRepository;
 import com.data.percept.repository.PaymentsCarnetRepository;
+import com.data.percept.repository.PaymentsCashRepository;
 import com.data.percept.repository.PaymentsDebitoRepository;
 import com.data.percept.repository.PaymentsPixRepository;
 
@@ -51,6 +50,9 @@ public class CreateOrderPayments {
     private static final String CARNETDELETED = "Payment carnet deleted";
     private static final String ERRO_INTERNO = "Error internal";
 
+    private static final String ODERCASH = "Payment cash created";
+    private static final String CASHDELETED = "Payment cash deleted";
+
     public static final Logger logger = LoggerFactory.getLogger(CreateOrderPayments.class);
 
     @Autowired
@@ -64,6 +66,9 @@ public class CreateOrderPayments {
 
     @Autowired
     PaymentsCarnetRepository paymentsCarnetRepository;
+
+    @Autowired
+    PaymentsCashRepository paymentsCashRepository;
 
     @PostMapping("/pix")
     public ResponseEntity<String> createOrder(@Valid @RequestBody OrdersDTO orderPaymentsPix) {
@@ -212,8 +217,7 @@ public class CreateOrderPayments {
             Date newdate = new Date();
             List<Date> dueDates = DueDateOrderPayments.gerarParcelas(newdate, orderPaymentCarnet.getParcelas());
             int parcelaSequencial = 1;
-            OrderPaymentsCarnet teste = new OrderPaymentsCarnet();
-            String number = teste.generateContract();
+            String number = OrderPaymentsCarnet.generateContract();
 
             for (Date getDueDate : dueDates) {
 
@@ -275,22 +279,30 @@ public class CreateOrderPayments {
         return ResponseEntity.ok().body(CARNETDELETED);
     }
 
-    @GetMapping("/carnet/{id}")
-    public Optional<OrderPaymentsCarnet> getPaymentCarnet(@PathVariable Long id) {
-        
+
+    @PostMapping("/paymentInCash")
+    public ResponseEntity<String> createOrderCash(@Valid @RequestBody OrdersDTO orderPaymentCash) {
+
+        logger.info("createOrderCash : start");
+
         try {
 
-            Optional<OrderPaymentsCarnet> remessaCarnet = paymentsCarnetRepository.findById(id);
-            if (remessaCarnet.isPresent()) {
-                return remessaCarnet;
-            } else {
-                return null;            }
+            OrderPaymentsCash orderBoletoCreated = new OrderPaymentsCash();
+            orderBoletoCreated.setCpf(orderPaymentCash.getCpf());
+            orderBoletoCreated.setDataCriacao(orderBoletoCreated.getDataCriacao());
+            orderBoletoCreated.setNomeTitular(orderPaymentCash.getNomeTitular());
+            orderBoletoCreated.setValor(orderPaymentCash.getValor());
+            orderBoletoCreated.setStatusPagmento(STATUS_CRIACAO_REMESSA);
+            orderBoletoCreated.setMunicipio(orderPaymentCash.getMunicipio());
+
+            paymentsCashRepository.save(orderBoletoCreated);
 
         } catch (Exception e) {
-            logger.error("deletePaymentCarnet : erro ", e);
-            return null; 
+            logger.info("createOrderCash : erro", e);
+            return ResponseEntity.internalServerError().body("createOrderCash not created");
         }
-
+        logger.info("createOrderCash : end");
+        return ResponseEntity.ok().body(ODERCASH);
     }
 
 }
