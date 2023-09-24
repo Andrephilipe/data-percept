@@ -13,7 +13,7 @@ public class DueDateOrderPayments {
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(dataInicial);
-        calendar.add(Calendar.DAY_OF_MONTH, 5);
+        calendar.add(Calendar.DAY_OF_MONTH, 15);
 
         parcelas.add(calendar.getTime());
 

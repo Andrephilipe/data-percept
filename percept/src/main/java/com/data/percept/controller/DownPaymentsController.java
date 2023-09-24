@@ -20,12 +20,14 @@ import com.data.percept.models.BankAccount;
 import com.data.percept.models.CounterAccount;
 import com.data.percept.models.OrderPaymentsBoleto;
 import com.data.percept.models.OrderPaymentsCarnet;
+import com.data.percept.models.OrderPaymentsCash;
 import com.data.percept.models.OrderPaymentsDebito;
 import com.data.percept.models.OrderPaymentsPix;
 import com.data.percept.repository.BankAccountRepository;
 import com.data.percept.repository.CounterAccountRepository;
 import com.data.percept.repository.PaymentsBoletoRepository;
 import com.data.percept.repository.PaymentsCarnetRepository;
+import com.data.percept.repository.PaymentsCashRepository;
 import com.data.percept.repository.PaymentsDebitoRepository;
 import com.data.percept.repository.PaymentsPixRepository;
 
@@ -54,6 +56,9 @@ public class DownPaymentsController {
 
     @Autowired
     CounterAccountRepository counterAccountRepository;
+
+    @Autowired
+    PaymentsCashRepository paymentsCashRepository;
 
     @PostMapping("/pix")
     public ResponseEntity<String> createPaymentsPix(@Valid @RequestBody PaymentsRequestDTO requestPayment) {
@@ -350,6 +355,43 @@ public class DownPaymentsController {
 
         return true;
 
+    }
+
+    @PostMapping("/cash")
+    public ResponseEntity<String> createPaymentsCash(@Valid @RequestBody PaymentsRequestDTO requestPayment) {
+
+        logger.info("createPayments cash: start");
+
+        try {
+
+            Optional<OrderPaymentsCash> paymentPix = paymentsCashRepository.findById(requestPayment.getId());
+            if (paymentPix.isPresent()) {
+                Long idBusca = requestPayment.getId();
+
+                if (Boolean.TRUE.equals(checkPayment(idBusca, "cash"))) {
+
+                    OrderPaymentsCash updateRemessaPix = new OrderPaymentsCash();
+                    updateRemessaPix = paymentPix.get();
+                    updateRemessaPix.setStatusPagmento("pago");
+                    updateRemessaPix.setDataPagmento(updateRemessaPix.getDataCriacao());
+                    paymentsCashRepository.save(updateRemessaPix);
+
+                    logger.info("createPayments return: etrue!");
+                    incrementBalanceBanck(requestPayment.getValor());
+                } else {
+                    return ResponseEntity.internalServerError().body("createPayments pix payment.");
+                }
+
+            } else {
+                return ResponseEntity.internalServerError().body("createPayments pix not exist");
+            }
+
+        } catch (Exception e) {
+            logger.info("createPayments pix: erro", e);
+            return ResponseEntity.internalServerError().body("createPayments pix not created");
+        }
+        logger.info("createPayments pix : end");
+        return ResponseEntity.ok().body(ODERCREATE);
     }
 
 }
