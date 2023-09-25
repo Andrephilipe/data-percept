@@ -274,7 +274,7 @@ public class DownPaymentsController {
                     buscaCarnetStatus.setParcelasRestantes(parcelaAtal);
                     buscaCarnetStatus.setValorDevedor(resultado);
                     if (buscaCarnetStatus.getParcelas().equals(1)) {
-                       buscaCarnetStatus.setStatusCarnet("pago"); 
+                        buscaCarnetStatus.setStatusCarnet("pago");
                     }
                     paymentsCarnetRepository.save(buscaCarnetStatus);
                     return true;
@@ -349,6 +349,19 @@ public class DownPaymentsController {
 
                 }
                 break;
+
+            case "cash":
+                Optional<OrderPaymentsCash> buscaStatuCash = paymentsCashRepository.findById(id);
+                OrderPaymentsCash buscaCashtStatus = new OrderPaymentsCash();
+                if (buscaStatuCash.isPresent())
+                    buscaCashtStatus = buscaStatuCash.get();
+                if (buscaCashtStatus.getStatusPagmento().equalsIgnoreCase("pago")) {
+
+                    logger.info("DownPaymentsController : checkPayment: cash pago.");
+                    return false;
+
+                }
+                break;
             default:
                 break;
         }
@@ -377,20 +390,20 @@ public class DownPaymentsController {
                     paymentsCashRepository.save(updateRemessaPix);
 
                     logger.info("createPayments return: etrue!");
-                    incrementBalanceBanck(requestPayment.getValor());
+                    incrementBalanceCounter(paymentPix.get().getValor());
                 } else {
-                    return ResponseEntity.internalServerError().body("createPayments pix payment.");
+                    return ResponseEntity.internalServerError().body("createPayments cash payment.");
                 }
 
             } else {
-                return ResponseEntity.internalServerError().body("createPayments pix not exist");
+                return ResponseEntity.internalServerError().body("createPayments cash not exist");
             }
 
         } catch (Exception e) {
-            logger.info("createPayments pix: erro", e);
-            return ResponseEntity.internalServerError().body("createPayments pix not created");
+            logger.info("createPayments cash: erro", e);
+            return ResponseEntity.internalServerError().body("createPayments cash not created");
         }
-        logger.info("createPayments pix : end");
+        logger.info("createPayments cash : end");
         return ResponseEntity.ok().body(ODERCREATE);
     }
 
