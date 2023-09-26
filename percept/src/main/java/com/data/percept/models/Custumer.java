@@ -16,6 +16,8 @@ import javax.validation.constraints.NotBlank;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.data.percept.funtions.createcustumer.CreateContract;
+
 import com.data.percept.funtions.createcustumer.CreateCustumerValidators;
 
 
@@ -51,7 +53,36 @@ public class Custumer {
 
 	@Column
 	private String dataCriacao;
+
+
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    @Column(name = "numero_contrato")
+    private String numberContract;
+
+
+    @Column(name = "data_recorrencia")
+    private String dataRecorrencia;
+
     
+    public String getDataRecorrencia() {
+        DateFormat dateFormat = new SimpleDateFormat("dd");
+        Date date = new Date();
+        return dateFormat.format(date);
+    }
+
+    public void setDataRecorrencia(String dataRecorrencia) {
+        this.dataRecorrencia = dataRecorrencia;
+    }
+    
+
+    public String getNumberContract() {
+        return CreateContract.generateContract();
+    }
+
+    public void setNumberContract(String numberContract) {
+        this.numberContract = numberContract;
+        
+    } 
 
     public Integer getTipoConta() {
         return tipoConta;

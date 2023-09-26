@@ -13,6 +13,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.data.percept.funtions.createcustumer.CreateContract;
+
 @Entity
 public class OrderPaymentsCarnet {
 
@@ -62,21 +64,12 @@ public class OrderPaymentsCarnet {
     
 
     public String getNumberContract() {
-        return generateContract();
+        return CreateContract.generateContract();
     }
 
     public void setNumberContract(String numberContract) {
         this.numberContract = numberContract;
         
-    }
-
-    public static String generateContract() {
-         // Gere um número aleatório de 6 dígitos
-        Random random = new Random();
-        int numero = random.nextInt(900000) + 100000;
-        //int digito = random.nextInt(90) + 10;
-        return "CONTRACT"+"-"+String.valueOf(numero);
-
     }
 
     public BigDecimal getSaldoDevedor() {

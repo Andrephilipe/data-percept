@@ -33,7 +33,12 @@ public class RelatorioController {
                 .setTextAlignment(TextAlignment.CENTER)
                 .setFont(PdfFontFactory.createFont(StandardFonts.COURIER_BOLD)));
 
-                report.closeDocument();
+                
+        report.addNewLine();
+        report.openTable(4);
+        report.addTableHeader("NAME", "STUDENTS", "CREATED AT", "VALOR");
+
+        report.closeDocument();
         // Retorne o PDF na resposta HTTP
         return report.getByteArrayInputStream();
     }
