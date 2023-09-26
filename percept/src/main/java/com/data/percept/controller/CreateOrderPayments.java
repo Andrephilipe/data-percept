@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.data.percept.dto.OrdersDTO;
+import com.data.percept.funtions.createcustumer.CreateContract;
 import com.data.percept.funtions.createorderpayments.DueDateOrderPayments;
 import com.data.percept.funtions.geraboleto.CalculateBoletoInstallments;
 import com.data.percept.models.OrderPaymentsBoleto;
@@ -175,6 +176,7 @@ public class CreateOrderPayments {
             orderBoletoCreated.setNomeTitular(orderPaymentBoleto.getNomeTitular());
             orderBoletoCreated.setValor(orderPaymentBoleto.getValor());
             orderBoletoCreated.setStatusBoleto(STATUS_CRIACAO_REMESSA);
+            orderBoletoCreated.setDataRecorrencia(orderBoletoCreated.getDataRecorrencia());
             orderBoletoCreated.setMunicipio(orderPaymentBoleto.getMunicipio());
 
             paymentsBoletoRepository.save(orderBoletoCreated);
@@ -217,7 +219,7 @@ public class CreateOrderPayments {
             Date newdate = new Date();
             List<Date> dueDates = DueDateOrderPayments.gerarParcelas(newdate, orderPaymentCarnet.getParcelas());
             int parcelaSequencial = 1;
-            String number = OrderPaymentsCarnet.generateContract();
+            String number = CreateContract.generateContract();
 
             for (Date getDueDate : dueDates) {
 

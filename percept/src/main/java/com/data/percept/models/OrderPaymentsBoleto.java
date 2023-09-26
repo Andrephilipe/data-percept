@@ -46,6 +46,20 @@ public class OrderPaymentsBoleto {
     @Column(name = "status_boleto")
     private String statusBoleto;
 
+    @Column(name = "data_recorrencia")
+    private String dataRecorrencia;
+
+    
+    public String getDataRecorrencia() {
+        DateFormat dateFormat = new SimpleDateFormat("dd");
+        Date date = new Date();
+        return dateFormat.format(date);
+    }
+
+    public void setDataRecorrencia(String dataRecorrencia) {
+        this.dataRecorrencia = dataRecorrencia;
+    }
+
     public Long getId() {
         return id;
     }

@@ -60,7 +60,10 @@ public class CreateCustumerController {
             logger.info("createCustumer: create customer");
             custumer.setDataCriacao(CreateCustumerValidators.getDataCriacao());
             custumer.setAccount(numberAccount);
+            custumer.setDataRecorrencia(custumer.getDataRecorrencia());
+            custumer.setNumberContract(custumer.getNumberContract());
             custumerRepository.save(custumer);
+
             accountCreate.setNameTitutular(custumer.getName());
             accountCreate.setTipoDaConta(TipoConta.getValor(custumer.getTipoConta()));
             accountCreate.setAgencia(Agencias.getAgencia(custumer.getLocalMunicipio()));

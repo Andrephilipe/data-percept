@@ -40,9 +40,9 @@ public class CreateReportsController {
     public ResponseEntity<String> createRelatorio(@PathVariable @RequestParam String type, @RequestParam String data) {
 
         logger.info("createRelatorio: start");
-        
+
         try {
-            
+
             ExcelServiceBoleto.criarArquivoExcel(type, data);
 
         } catch (Exception e) {
@@ -55,7 +55,8 @@ public class CreateReportsController {
     }
 
     @GetMapping("/gerarRelatorioCarnet")
-    public ResponseEntity<String> createRelatorioCarnet(@PathVariable @RequestParam String type, @RequestParam String contract) {
+    public ResponseEntity<String> createRelatorioCarnet(@PathVariable @RequestParam String type,
+            @RequestParam String contract) {
 
         logger.info("createRelatorio: start");
 
