@@ -1,5 +1,6 @@
 package com.data.percept.models;
 
+import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -63,7 +64,19 @@ public class Custumer {
     @Column(name = "data_recorrencia")
     private String dataRecorrencia;
 
+    @Column(name = "valor")
+    private BigDecimal valor;
+
+
     
+    public BigDecimal getValor() {
+        return valor;
+    }
+
+    public void setValor(BigDecimal valor) {
+        this.valor = valor;
+    }
+
     public String getDataRecorrencia() {
         DateFormat dateFormat = new SimpleDateFormat("dd");
         Date date = new Date();
