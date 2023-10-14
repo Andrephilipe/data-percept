@@ -62,6 +62,7 @@ public class CreateCustumerController {
             custumer.setAccount(numberAccount);
             custumer.setDataRecorrencia(custumer.getDataRecorrencia());
             custumer.setNumberContract(custumer.getNumberContract());
+            custumer.setValor(custumer.getValor());
             custumerRepository.save(custumer);
 
             accountCreate.setNameTitutular(custumer.getName());

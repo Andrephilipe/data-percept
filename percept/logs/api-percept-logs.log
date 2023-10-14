@@ -1,35 +1,35 @@
-2023-09-19 14:13:38,212 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.data.percept.PerceptApplicationTests], using SpringBootContextLoader
-2023-09-19 14:13:38,259 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [com.data.percept.PerceptApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-09-19 14:13:38,261 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.data.percept.PerceptApplicationTests]: PerceptApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-09-19 14:13:38,578 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.data.percept.PerceptApplication for test class com.data.percept.PerceptApplicationTests
-2023-09-19 14:13:38,900 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-09-19 14:13:38,966 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5c1bd44c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@9f46d94, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@18cc679e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2e77b8cf, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2c4ca0f9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67ef029, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7df587ef, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6e57e95e, org.springframework.test.context.event.EventPublishingTestExecutionListener@2755d705, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@56db847e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@740abb5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@560cbf1a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5fe8b721, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@551a20d6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@578524c3]
-2023-09-19 14:13:42,936 INFO com.data.percept.PerceptApplicationTests [main] Starting PerceptApplicationTests using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 26848 (started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept)
-2023-09-19 14:13:42,937 DEBUG com.data.percept.PerceptApplicationTests [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2023-09-19 14:13:42,937 INFO com.data.percept.PerceptApplicationTests [main] No active profile set, falling back to default profiles: default
-2023-09-19 14:13:42,960 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
-2023-09-19 14:13:45,733 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-19 14:13:45,990 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 233 ms. Found 10 JPA repository interfaces.
-2023-09-19 14:13:46,490 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=b07bc233-1e7e-3d00-bad1-b2555df9c85d
-2023-09-19 14:13:47,704 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-19 14:13:47,958 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.4.Final
-2023-09-19 14:13:48,901 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-09-19 14:13:53,935 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2023-09-19 14:13:55,438 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2023-09-19 14:13:55,536 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-09-19 14:13:59,073 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-19 14:13:59,108 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-19 14:14:01,936 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-19 14:14:11,877 INFO com.data.percept.PerceptApplicationTests [main] Started PerceptApplicationTests in 32.785 seconds (JVM running for 35.629)
-2023-09-19 14:14:13,191 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: create account
-2023-09-19 14:14:13,191 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: start
-2023-09-19 14:14:13,200 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: customer not exist
-2023-09-19 14:14:13,232 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: start
-2023-09-19 14:14:13,237 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: create customer
-2023-09-19 14:14:13,248 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: erro
+2023-09-29 11:21:58,685 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.data.percept.PerceptApplicationTests], using SpringBootContextLoader
+2023-09-29 11:21:58,737 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [com.data.percept.PerceptApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-09-29 11:21:58,738 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.data.percept.PerceptApplicationTests]: PerceptApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-09-29 11:21:59,148 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.data.percept.PerceptApplication for test class com.data.percept.PerceptApplicationTests
+2023-09-29 11:21:59,627 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-09-29 11:21:59,700 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@18cc679e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2e77b8cf, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2c4ca0f9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@67ef029, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7df587ef, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6e57e95e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2755d705, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@56db847e, org.springframework.test.context.event.EventPublishingTestExecutionListener@740abb5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@560cbf1a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5fe8b721, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@551a20d6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@578524c3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@64c2b546, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7e094740]
+2023-09-29 11:22:07,328 INFO com.data.percept.PerceptApplicationTests [main] Starting PerceptApplicationTests using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 25348 (started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept)
+2023-09-29 11:22:07,329 DEBUG com.data.percept.PerceptApplicationTests [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2023-09-29 11:22:07,330 INFO com.data.percept.PerceptApplicationTests [main] No active profile set, falling back to default profiles: default
+2023-09-29 11:22:07,397 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
+2023-09-29 11:22:10,151 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 11:22:10,496 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 315 ms. Found 11 JPA repository interfaces.
+2023-09-29 11:22:11,234 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=85193165-330a-3b3d-9311-db8ca77d2b77
+2023-09-29 11:22:13,009 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 11:22:13,356 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.4.Final
+2023-09-29 11:22:14,244 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-29 11:22:17,294 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-29 11:22:18,331 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-29 11:22:18,412 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-09-29 11:22:22,322 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 11:22:22,356 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 11:22:24,899 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 11:22:34,317 INFO com.data.percept.PerceptApplicationTests [main] Started PerceptApplicationTests in 34.449 seconds (JVM running for 39.145)
+2023-09-29 11:22:36,024 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: create account
+2023-09-29 11:22:36,025 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: start
+2023-09-29 11:22:36,034 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: customer not exist
+2023-09-29 11:22:36,077 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: start
+2023-09-29 11:22:36,085 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: create customer
+2023-09-29 11:22:36,097 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: erro
 java.lang.Exception: O Campo Nome e obrigatorio.
 	at com.data.percept.models.Account.setNameTitutular(Account.java:63)
-	at com.data.percept.controller.CreateCustumerController.createCustumer(CreateCustumerController.java:64)
+	at com.data.percept.controller.CreateCustumerController.createCustumer(CreateCustumerController.java:68)
 	at com.data.percept.services.CreateCustumerTest.testCreateCustumer(CreateCustumerTest.java:49)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -96,6 +96,208 @@ java.lang.Exception: O Campo Nome e obrigatorio.
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-2023-09-19 14:14:13,502 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-09-19 14:14:13,507 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2023-09-19 14:14:13,606 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-09-29 11:22:36,206 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 11:22:36,210 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-09-29 11:22:36,298 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-09-29 11:38:08,214 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.data.percept.PerceptApplicationTests], using SpringBootContextLoader
+2023-09-29 11:38:08,231 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [com.data.percept.PerceptApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-09-29 11:38:08,233 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.data.percept.PerceptApplicationTests]: PerceptApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-09-29 11:38:08,727 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.data.percept.PerceptApplication for test class com.data.percept.PerceptApplicationTests
+2023-09-29 11:38:08,942 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-09-29 11:38:08,980 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@9f46d94, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@18cc679e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2e77b8cf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2c4ca0f9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@67ef029, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7df587ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6e57e95e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2755d705, org.springframework.test.context.event.EventPublishingTestExecutionListener@56db847e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@740abb5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@560cbf1a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5fe8b721, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@551a20d6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@578524c3, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@64c2b546]
+2023-09-29 11:38:13,031 INFO com.data.percept.PerceptApplicationTests [main] Starting PerceptApplicationTests using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 28576 (started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept)
+2023-09-29 11:38:13,031 DEBUG com.data.percept.PerceptApplicationTests [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2023-09-29 11:38:13,032 INFO com.data.percept.PerceptApplicationTests [main] No active profile set, falling back to default profiles: default
+2023-09-29 11:38:13,050 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
+2023-09-29 11:38:15,775 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 11:38:16,163 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 359 ms. Found 11 JPA repository interfaces.
+2023-09-29 11:38:16,836 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=85193165-330a-3b3d-9311-db8ca77d2b77
+2023-09-29 11:38:18,240 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 11:38:18,503 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.4.Final
+2023-09-29 11:38:19,187 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-29 11:38:22,109 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-29 11:38:22,857 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-29 11:38:22,925 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 11:38:25,479 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 11:38:25,497 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 11:38:27,177 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 11:38:34,468 INFO com.data.percept.PerceptApplicationTests [main] Started PerceptApplicationTests in 25.381 seconds (JVM running for 28.598)
+2023-09-29 11:38:35,458 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: create account
+2023-09-29 11:38:35,459 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: start
+2023-09-29 11:38:35,467 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: customer not exist
+2023-09-29 11:38:35,494 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: start
+2023-09-29 11:38:35,497 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: create customer
+2023-09-29 11:38:35,507 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: erro
+java.lang.Exception: O Campo Nome e obrigatorio.
+	at com.data.percept.models.Account.setNameTitutular(Account.java:63)
+	at com.data.percept.controller.CreateCustumerController.createCustumer(CreateCustumerController.java:68)
+	at com.data.percept.services.CreateCustumerTest.testCreateCustumer(CreateCustumerTest.java:49)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+2023-09-29 11:38:35,594 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 11:38:35,601 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-09-29 11:38:35,674 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-09-29 11:44:49,009 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.data.percept.PerceptApplicationTests], using SpringBootContextLoader
+2023-09-29 11:44:49,030 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [com.data.percept.PerceptApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-09-29 11:44:49,033 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.data.percept.PerceptApplicationTests]: PerceptApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-09-29 11:44:49,540 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.data.percept.PerceptApplication for test class com.data.percept.PerceptApplicationTests
+2023-09-29 11:44:49,942 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-09-29 11:44:50,016 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3ec11999, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5c1bd44c, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@9f46d94, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@18cc679e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2e77b8cf, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2c4ca0f9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@67ef029, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7df587ef, org.springframework.test.context.event.EventPublishingTestExecutionListener@6e57e95e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2755d705, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@56db847e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@740abb5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@560cbf1a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5fe8b721, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@551a20d6]
+2023-09-29 11:44:58,308 INFO com.data.percept.PerceptApplicationTests [main] Starting PerceptApplicationTests using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 19740 (started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept)
+2023-09-29 11:44:58,310 DEBUG com.data.percept.PerceptApplicationTests [main] Running with Spring Boot v2.6.3, Spring v5.3.15
+2023-09-29 11:44:58,310 INFO com.data.percept.PerceptApplicationTests [main] No active profile set, falling back to default profiles: default
+2023-09-29 11:44:58,366 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
+2023-09-29 11:45:02,193 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 11:45:02,578 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 350 ms. Found 11 JPA repository interfaces.
+2023-09-29 11:45:03,380 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=85193165-330a-3b3d-9311-db8ca77d2b77
+2023-09-29 11:45:04,752 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-29 11:45:05,788 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-29 11:45:06,031 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 11:45:06,281 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.4.Final
+2023-09-29 11:45:07,015 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-29 11:45:10,320 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-09-29 11:45:13,175 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 11:45:13,201 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 11:45:15,327 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 11:45:23,498 INFO com.data.percept.PerceptApplicationTests [main] Started PerceptApplicationTests in 33.281 seconds (JVM running for 40.135)
+2023-09-29 11:45:24,572 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: create account
+2023-09-29 11:45:24,573 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: start
+2023-09-29 11:45:24,578 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: customer not exist
+2023-09-29 11:45:24,595 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: start
+2023-09-29 11:45:24,598 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: create customer
+2023-09-29 11:45:24,605 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: erro
+java.lang.Exception: O Campo Nome e obrigatorio.
+	at com.data.percept.models.Account.setNameTitutular(Account.java:63)
+	at com.data.percept.controller.CreateCustumerController.createCustumer(CreateCustumerController.java:68)
+	at com.data.percept.services.CreateCustumerTest.testCreateCustumer(CreateCustumerTest.java:49)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+2023-09-29 11:45:24,658 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 11:45:24,666 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-09-29 11:45:24,702 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
