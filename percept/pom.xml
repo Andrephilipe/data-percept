@@ -25,10 +25,11 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.30</version>
+    <scope>provided</scope>
+</dependency>
 		<dependency>
 			<groupId>com.itextpdf</groupId>
 			<artifactId>kernel</artifactId>
@@ -83,12 +84,11 @@
 			<artifactId>mssql-jdbc</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<version>5.8.0</version> <!-- Use a versão mais recente -->
-			<scope>test</scope>
-		</dependency>
+  <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.3.2</version>
+    </dependency>
 		<!-- Outras dependências -->
 		<dependency>
 			<groupId>ch.qos.logback</groupId>

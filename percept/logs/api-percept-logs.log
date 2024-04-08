@@ -1,303 +1,520 @@
-2023-09-29 11:21:58,685 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.data.percept.PerceptApplicationTests], using SpringBootContextLoader
-2023-09-29 11:21:58,737 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [com.data.percept.PerceptApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-09-29 11:21:58,738 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.data.percept.PerceptApplicationTests]: PerceptApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-09-29 11:21:59,148 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.data.percept.PerceptApplication for test class com.data.percept.PerceptApplicationTests
-2023-09-29 11:21:59,627 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-09-29 11:21:59,700 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@18cc679e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2e77b8cf, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2c4ca0f9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@67ef029, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7df587ef, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6e57e95e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2755d705, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@56db847e, org.springframework.test.context.event.EventPublishingTestExecutionListener@740abb5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@560cbf1a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5fe8b721, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@551a20d6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@578524c3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@64c2b546, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7e094740]
-2023-09-29 11:22:07,328 INFO com.data.percept.PerceptApplicationTests [main] Starting PerceptApplicationTests using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 25348 (started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept)
-2023-09-29 11:22:07,329 DEBUG com.data.percept.PerceptApplicationTests [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2023-09-29 11:22:07,330 INFO com.data.percept.PerceptApplicationTests [main] No active profile set, falling back to default profiles: default
-2023-09-29 11:22:07,397 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
-2023-09-29 11:22:10,151 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-29 11:22:10,496 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 315 ms. Found 11 JPA repository interfaces.
-2023-09-29 11:22:11,234 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=85193165-330a-3b3d-9311-db8ca77d2b77
-2023-09-29 11:22:13,009 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-29 11:22:13,356 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.4.Final
-2023-09-29 11:22:14,244 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-09-29 11:22:17,294 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2023-09-29 11:22:18,331 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2023-09-29 11:22:18,412 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-09-29 11:22:22,322 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-29 11:22:22,356 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-29 11:22:24,899 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-29 11:22:34,317 INFO com.data.percept.PerceptApplicationTests [main] Started PerceptApplicationTests in 34.449 seconds (JVM running for 39.145)
-2023-09-29 11:22:36,024 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: create account
-2023-09-29 11:22:36,025 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: start
-2023-09-29 11:22:36,034 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: customer not exist
-2023-09-29 11:22:36,077 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: start
-2023-09-29 11:22:36,085 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: create customer
-2023-09-29 11:22:36,097 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: erro
-java.lang.Exception: O Campo Nome e obrigatorio.
-	at com.data.percept.models.Account.setNameTitutular(Account.java:63)
-	at com.data.percept.controller.CreateCustumerController.createCustumer(CreateCustumerController.java:68)
-	at com.data.percept.services.CreateCustumerTest.testCreateCustumer(CreateCustumerTest.java:49)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-2023-09-29 11:22:36,206 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-09-29 11:22:36,210 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2023-09-29 11:22:36,298 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2023-09-29 11:38:08,214 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.data.percept.PerceptApplicationTests], using SpringBootContextLoader
-2023-09-29 11:38:08,231 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [com.data.percept.PerceptApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-09-29 11:38:08,233 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.data.percept.PerceptApplicationTests]: PerceptApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-09-29 11:38:08,727 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.data.percept.PerceptApplication for test class com.data.percept.PerceptApplicationTests
-2023-09-29 11:38:08,942 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-09-29 11:38:08,980 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@9f46d94, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@18cc679e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2e77b8cf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2c4ca0f9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@67ef029, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7df587ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6e57e95e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2755d705, org.springframework.test.context.event.EventPublishingTestExecutionListener@56db847e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@740abb5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@560cbf1a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5fe8b721, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@551a20d6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@578524c3, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@64c2b546]
-2023-09-29 11:38:13,031 INFO com.data.percept.PerceptApplicationTests [main] Starting PerceptApplicationTests using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 28576 (started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept)
-2023-09-29 11:38:13,031 DEBUG com.data.percept.PerceptApplicationTests [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2023-09-29 11:38:13,032 INFO com.data.percept.PerceptApplicationTests [main] No active profile set, falling back to default profiles: default
-2023-09-29 11:38:13,050 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
-2023-09-29 11:38:15,775 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-29 11:38:16,163 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 359 ms. Found 11 JPA repository interfaces.
-2023-09-29 11:38:16,836 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=85193165-330a-3b3d-9311-db8ca77d2b77
-2023-09-29 11:38:18,240 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-29 11:38:18,503 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.4.Final
-2023-09-29 11:38:19,187 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-09-29 11:38:22,109 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2023-09-29 11:38:22,857 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2023-09-29 11:38:22,925 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-09-29 11:38:25,479 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-29 11:38:25,497 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-29 11:38:27,177 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-29 11:38:34,468 INFO com.data.percept.PerceptApplicationTests [main] Started PerceptApplicationTests in 25.381 seconds (JVM running for 28.598)
-2023-09-29 11:38:35,458 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: create account
-2023-09-29 11:38:35,459 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: start
-2023-09-29 11:38:35,467 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: customer not exist
-2023-09-29 11:38:35,494 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: start
-2023-09-29 11:38:35,497 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: create customer
-2023-09-29 11:38:35,507 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: erro
-java.lang.Exception: O Campo Nome e obrigatorio.
-	at com.data.percept.models.Account.setNameTitutular(Account.java:63)
-	at com.data.percept.controller.CreateCustumerController.createCustumer(CreateCustumerController.java:68)
-	at com.data.percept.services.CreateCustumerTest.testCreateCustumer(CreateCustumerTest.java:49)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-2023-09-29 11:38:35,594 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-09-29 11:38:35,601 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2023-09-29 11:38:35,674 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
-2023-09-29 11:44:49,009 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.data.percept.PerceptApplicationTests], using SpringBootContextLoader
-2023-09-29 11:44:49,030 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [com.data.percept.PerceptApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-09-29 11:44:49,033 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.data.percept.PerceptApplicationTests]: PerceptApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-09-29 11:44:49,540 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.data.percept.PerceptApplication for test class com.data.percept.PerceptApplicationTests
-2023-09-29 11:44:49,942 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-09-29 11:44:50,016 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3ec11999, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5c1bd44c, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@9f46d94, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@18cc679e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2e77b8cf, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2c4ca0f9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@67ef029, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7df587ef, org.springframework.test.context.event.EventPublishingTestExecutionListener@6e57e95e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2755d705, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@56db847e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@740abb5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@560cbf1a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5fe8b721, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@551a20d6]
-2023-09-29 11:44:58,308 INFO com.data.percept.PerceptApplicationTests [main] Starting PerceptApplicationTests using Java 11.0.19 on CPX-R3Q0SB8SNR6 with PID 19740 (started by andre.p.cassiano in C:\Users\andre.p.cassiano\projeto-data-percept\data-percept\percept)
-2023-09-29 11:44:58,310 DEBUG com.data.percept.PerceptApplicationTests [main] Running with Spring Boot v2.6.3, Spring v5.3.15
-2023-09-29 11:44:58,310 INFO com.data.percept.PerceptApplicationTests [main] No active profile set, falling back to default profiles: default
-2023-09-29 11:44:58,366 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
-2023-09-29 11:45:02,193 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-29 11:45:02,578 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 350 ms. Found 11 JPA repository interfaces.
-2023-09-29 11:45:03,380 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=85193165-330a-3b3d-9311-db8ca77d2b77
-2023-09-29 11:45:04,752 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2023-09-29 11:45:05,788 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2023-09-29 11:45:06,031 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-29 11:45:06,281 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.4.Final
-2023-09-29 11:45:07,015 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-09-29 11:45:10,320 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-09-29 11:45:13,175 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-29 11:45:13,201 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-29 11:45:15,327 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-29 11:45:23,498 INFO com.data.percept.PerceptApplicationTests [main] Started PerceptApplicationTests in 33.281 seconds (JVM running for 40.135)
-2023-09-29 11:45:24,572 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: create account
-2023-09-29 11:45:24,573 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: start
-2023-09-29 11:45:24,578 INFO com.data.percept.controller.CreateCustumerController [main] createAccount: customer not exist
-2023-09-29 11:45:24,595 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: start
-2023-09-29 11:45:24,598 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: create customer
-2023-09-29 11:45:24,605 INFO com.data.percept.controller.CreateCustumerController [main] createCustumer: erro
-java.lang.Exception: O Campo Nome e obrigatorio.
-	at com.data.percept.models.Account.setNameTitutular(Account.java:63)
-	at com.data.percept.controller.CreateCustumerController.createCustumer(CreateCustumerController.java:68)
-	at com.data.percept.services.CreateCustumerTest.testCreateCustumer(CreateCustumerTest.java:49)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-2023-09-29 11:45:24,658 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-09-29 11:45:24,666 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
-2023-09-29 11:45:24,702 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-04-06 16:35:57,990 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 79 ms. Found 11 JPA repository interfaces.
+2024-04-06 16:35:58,257 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=aa23d5e9-893c-3897-8e45-689b5736c948
+2024-04-06 16:35:58,980 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-04-06 16:35:58,987 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-06 16:35:59,016 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2024-04-06 16:35:59,016 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2024-04-06 16:35:59,217 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-04-06 16:35:59,217 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1951 ms
+2024-04-06 16:35:59,384 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unsatisfied dependency expressed through method 'entityManagerFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'entityManagerFactoryBuilder' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unsatisfied dependency expressed through method 'entityManagerFactoryBuilder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaVendorAdapter' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.orm.jpa.JpaVendorAdapter]: Factory method 'jpaVendorAdapter' threw exception; nested exception is java.lang.NoClassDefFoundError: org/hibernate/jpa/HibernatePersistenceProvider
+2024-04-06 16:35:59,384 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2024-04-06 16:35:59,429 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-04-06 16:35:59,444 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unsatisfied dependency expressed through method 'entityManagerFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'entityManagerFactoryBuilder' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unsatisfied dependency expressed through method 'entityManagerFactoryBuilder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaVendorAdapter' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.orm.jpa.JpaVendorAdapter]: Factory method 'jpaVendorAdapter' threw exception; nested exception is java.lang.NoClassDefFoundError: org/hibernate/jpa/HibernatePersistenceProvider
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.data.percept.PerceptApplication.main(PerceptApplication.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'entityManagerFactoryBuilder' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unsatisfied dependency expressed through method 'entityManagerFactoryBuilder' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaVendorAdapter' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.orm.jpa.JpaVendorAdapter]: Factory method 'jpaVendorAdapter' threw exception; nested exception is java.lang.NoClassDefFoundError: org/hibernate/jpa/HibernatePersistenceProvider
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaVendorAdapter' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.orm.jpa.JpaVendorAdapter]: Factory method 'jpaVendorAdapter' threw exception; nested exception is java.lang.NoClassDefFoundError: org/hibernate/jpa/HibernatePersistenceProvider
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 36 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.orm.jpa.JpaVendorAdapter]: Factory method 'jpaVendorAdapter' threw exception; nested exception is java.lang.NoClassDefFoundError: org/hibernate/jpa/HibernatePersistenceProvider
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 50 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/hibernate/jpa/HibernatePersistenceProvider
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1027)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter.<init>(HibernateJpaVendorAdapter.java:84)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.createJpaVendorAdapter(HibernateJpaConfiguration.java:125)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:105)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 51 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.hibernate.jpa.HibernatePersistenceProvider
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 66 common frames omitted
+2024-04-06 16:42:52,125 INFO com.data.percept.PerceptApplication [main] Inicio PerceptApplication
+2024-04-06 16:42:52,363 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2024-04-06 16:42:53,181 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
+2024-04-06 16:42:53,207 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 21.0.2 on C11-O435SSYUCKT with PID 21584 (C:\Users\andre.p.cassiano\projetos-estudo\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projetos-estudo\data-percept\percept)
+2024-04-06 16:42:53,207 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2024-04-06 16:42:53,207 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2024-04-06 16:42:53,252 INFO org.springframework.boot.devtools.restart.ChangeableUrls [restartedMain] The Class-Path manifest attribute in C:\Users\andre.p.cassiano\.m2\repository\io\grpc\grpc-netty-shaded\1.38.0\grpc-netty-shaded-1.38.0.jar referenced one or more files that do not exist: file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-core-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-api-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/gson-2.8.6.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/annotations-4.1.1.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/animal-sniffer-annotations-1.19.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/error_prone_annotations-2.4.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/guava-30.1-android.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/perfmark-api-0.23.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/jsr305-3.0.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-context-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/failureaccess-1.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/checker-compat-qual-2.5.5.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/j2objc-annotations-1.3.jar
+2024-04-06 16:42:53,252 INFO org.springframework.boot.devtools.restart.ChangeableUrls [restartedMain] The Class-Path manifest attribute in C:\Users\andre.p.cassiano\.m2\repository\io\grpc\grpc-alts\1.38.0\grpc-alts-1.38.0.jar referenced one or more files that do not exist: file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-auth-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-grpclb-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-protobuf-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-stub-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/protobuf-java-util-3.12.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/protobuf-java-3.12.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/conscrypt-openjdk-uber-2.5.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-auth-library-oauth2-http-0.22.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-netty-shaded-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-core-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-protobuf-lite-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-api-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/guava-30.1-android.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/error_prone_annotations-2.4.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-auth-library-credentials-0.22.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/animal-sniffer-annotations-1.19.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-http-client-jackson2-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-http-client-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/jsr305-3.0.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-context-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/opencensus-api-0.28.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/proto-google-common-protos-2.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/auto-value-annotations-1.7.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/failureaccess-1.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/checker-compat-qual-2.5.5.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/j2objc-annotations-1.3.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/gson-2.8.6.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/annotations-4.1.1.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/perfmark-api-0.23.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/httpclient-4.5.13.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/httpcore-4.4.13.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/opencensus-contrib-http-util-0.24.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/jackson-core-2.11.3.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/commons-logging-1.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/commons-codec-1.11.jar
+2024-04-06 16:42:53,252 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-06 16:42:53,252 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-04-06 16:42:53,931 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-06 16:42:54,033 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 86 ms. Found 11 JPA repository interfaces.
+2024-04-06 16:42:54,204 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=aa23d5e9-893c-3897-8e45-689b5736c948
+2024-04-06 16:42:54,697 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-04-06 16:42:54,705 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-06 16:42:54,705 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2024-04-06 16:42:54,705 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2024-04-06 16:42:54,821 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-04-06 16:42:54,821 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1564 ms
+2024-04-06 16:42:54,948 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-06 16:42:54,993 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.4.Final
+2024-04-06 16:42:55,113 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-04-06 16:42:55,209 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-04-06 16:42:56,393 ERROR com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'percept'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:829)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:242)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.data.percept.PerceptApplication.main(PerceptApplication.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2024-04-06 16:42:56,393 WARN org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [restartedMain] HHH000342: Could not obtain connection to query metadata
+java.sql.SQLSyntaxErrorException: Unknown database 'percept'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:829)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:242)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.data.percept.PerceptApplication.main(PerceptApplication.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2024-04-06 16:42:56,405 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2024-04-06 16:42:57,142 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-04-06 16:42:58,158 ERROR com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'percept'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:829)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:242)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:555)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:68)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.data.percept.PerceptApplication.main(PerceptApplication.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2024-04-06 16:42:58,158 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] SQL Error: 1049, SQLState: 42000
+2024-04-06 16:42:58,158 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] Unknown database 'percept'
+2024-04-06 16:42:58,166 ERROR org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2024-04-06 16:42:58,166 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2024-04-06 16:42:58,174 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2024-04-06 16:42:58,181 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-04-06 16:42:58,198 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.data.percept.PerceptApplication.main(PerceptApplication.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 19 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:71)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:555)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:68)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 23 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'percept'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:829)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:242)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44)
+	... 39 common frames omitted
+2024-04-06 16:44:30,243 INFO com.data.percept.PerceptApplication [main] Inicio PerceptApplication
+2024-04-06 16:44:30,587 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2024-04-06 16:44:31,637 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
+2024-04-06 16:44:31,672 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 21.0.2 on C11-O435SSYUCKT with PID 23272 (C:\Users\andre.p.cassiano\projetos-estudo\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projetos-estudo\data-percept\percept)
+2024-04-06 16:44:31,673 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2024-04-06 16:44:31,673 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2024-04-06 16:44:31,768 INFO org.springframework.boot.devtools.restart.ChangeableUrls [restartedMain] The Class-Path manifest attribute in C:\Users\andre.p.cassiano\.m2\repository\io\grpc\grpc-netty-shaded\1.38.0\grpc-netty-shaded-1.38.0.jar referenced one or more files that do not exist: file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-core-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-api-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/gson-2.8.6.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/annotations-4.1.1.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/animal-sniffer-annotations-1.19.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/error_prone_annotations-2.4.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/guava-30.1-android.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/perfmark-api-0.23.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/jsr305-3.0.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-context-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/failureaccess-1.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/checker-compat-qual-2.5.5.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/j2objc-annotations-1.3.jar
+2024-04-06 16:44:31,769 INFO org.springframework.boot.devtools.restart.ChangeableUrls [restartedMain] The Class-Path manifest attribute in C:\Users\andre.p.cassiano\.m2\repository\io\grpc\grpc-alts\1.38.0\grpc-alts-1.38.0.jar referenced one or more files that do not exist: file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-auth-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-grpclb-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-protobuf-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-stub-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/protobuf-java-util-3.12.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/protobuf-java-3.12.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/conscrypt-openjdk-uber-2.5.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-auth-library-oauth2-http-0.22.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-netty-shaded-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-core-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-protobuf-lite-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-api-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/guava-30.1-android.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/error_prone_annotations-2.4.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-auth-library-credentials-0.22.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/animal-sniffer-annotations-1.19.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-http-client-jackson2-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-http-client-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/jsr305-3.0.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-context-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/opencensus-api-0.28.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/proto-google-common-protos-2.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/auto-value-annotations-1.7.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/failureaccess-1.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/checker-compat-qual-2.5.5.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/j2objc-annotations-1.3.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/gson-2.8.6.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/annotations-4.1.1.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/perfmark-api-0.23.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/httpclient-4.5.13.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/httpcore-4.4.13.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/opencensus-contrib-http-util-0.24.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/jackson-core-2.11.3.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/commons-logging-1.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/commons-codec-1.11.jar
+2024-04-06 16:44:31,769 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-06 16:44:31,769 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-04-06 16:44:32,642 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-06 16:44:32,749 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 96 ms. Found 11 JPA repository interfaces.
+2024-04-06 16:44:32,938 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=aa23d5e9-893c-3897-8e45-689b5736c948
+2024-04-06 16:44:33,414 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-04-06 16:44:33,422 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-06 16:44:33,422 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2024-04-06 16:44:33,422 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2024-04-06 16:44:33,538 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-04-06 16:44:33,538 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1768 ms
+2024-04-06 16:44:33,652 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-06 16:44:33,707 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.4.Final
+2024-04-06 16:44:33,862 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-04-06 16:44:33,964 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-04-06 16:44:34,151 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-04-06 16:44:34,164 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2024-04-06 16:44:36,864 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-04-06 16:44:36,881 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-06 16:44:37,364 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-06 16:44:37,707 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-04-06 16:44:38,246 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-04-06 16:44:38,302 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-06 16:44:38,794 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 8.198 seconds (JVM running for 9.201)
+2024-04-06 16:44:38,799 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
+2024-04-06 16:58:16,108 INFO org.apache.coyote.http11.Http11Processor [http-nio-8080-exec-2] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xf70x010x000x000xf30x030x030xadn0x980xcf0x1d0~0xe50xbe0x170xf30xe9a0x97W0xd0?0x120x7f0x1b|0xbd0x8c0x98Q0x900xb03P0xab0xfco ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:269)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-04-06 17:11:13,358 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-06 17:11:13,358 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-04-06 17:11:13,371 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-04-06 17:14:50,189 INFO com.data.percept.PerceptApplication [main] Inicio PerceptApplication
+2024-04-06 17:14:50,404 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
+2024-04-06 17:14:51,273 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
+2024-04-06 17:14:51,292 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 21.0.2 on C11-O435SSYUCKT with PID 24680 (C:\Users\andre.p.cassiano\projetos-estudo\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projetos-estudo\data-percept\percept)
+2024-04-06 17:14:51,292 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2024-04-06 17:14:51,292 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
+2024-04-06 17:14:51,345 INFO org.springframework.boot.devtools.restart.ChangeableUrls [restartedMain] The Class-Path manifest attribute in C:\Users\andre.p.cassiano\.m2\repository\io\grpc\grpc-netty-shaded\1.38.0\grpc-netty-shaded-1.38.0.jar referenced one or more files that do not exist: file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-core-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-api-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/gson-2.8.6.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/annotations-4.1.1.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/animal-sniffer-annotations-1.19.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/error_prone_annotations-2.4.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/guava-30.1-android.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/perfmark-api-0.23.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/jsr305-3.0.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/grpc-context-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/failureaccess-1.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/checker-compat-qual-2.5.5.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-netty-shaded/1.38.0/j2objc-annotations-1.3.jar
+2024-04-06 17:14:51,345 INFO org.springframework.boot.devtools.restart.ChangeableUrls [restartedMain] The Class-Path manifest attribute in C:\Users\andre.p.cassiano\.m2\repository\io\grpc\grpc-alts\1.38.0\grpc-alts-1.38.0.jar referenced one or more files that do not exist: file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-auth-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-grpclb-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-protobuf-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-stub-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/protobuf-java-util-3.12.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/protobuf-java-3.12.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/conscrypt-openjdk-uber-2.5.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-auth-library-oauth2-http-0.22.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-netty-shaded-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-core-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-protobuf-lite-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-api-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/guava-30.1-android.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/error_prone_annotations-2.4.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-auth-library-credentials-0.22.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/animal-sniffer-annotations-1.19.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-http-client-jackson2-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/google-http-client-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/jsr305-3.0.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/grpc-context-1.38.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/opencensus-api-0.28.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/proto-google-common-protos-2.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/auto-value-annotations-1.7.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/failureaccess-1.0.1.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/checker-compat-qual-2.5.5.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/j2objc-annotations-1.3.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/gson-2.8.6.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/annotations-4.1.1.4.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/perfmark-api-0.23.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/httpclient-4.5.13.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/httpcore-4.4.13.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/opencensus-contrib-http-util-0.24.0.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/jackson-core-2.11.3.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/commons-logging-1.2.jar,file:/C:/Users/andre.p.cassiano/.m2/repository/io/grpc/grpc-alts/1.38.0/commons-codec-1.11.jar
+2024-04-06 17:14:51,345 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-06 17:14:51,345 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-04-06 17:14:52,024 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-06 17:14:52,108 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 78 ms. Found 11 JPA repository interfaces.
+2024-04-06 17:14:52,305 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=aa23d5e9-893c-3897-8e45-689b5736c948
+2024-04-06 17:14:52,783 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2024-04-06 17:14:52,790 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-06 17:14:52,790 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2024-04-06 17:14:52,790 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2024-04-06 17:14:52,889 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-04-06 17:14:52,889 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1543 ms
+2024-04-06 17:14:53,005 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-06 17:14:53,047 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.4.Final
+2024-04-06 17:14:53,176 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-04-06 17:14:53,261 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-04-06 17:14:53,402 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-04-06 17:14:53,413 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2024-04-06 17:14:54,143 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-04-06 17:14:54,159 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-06 17:14:54,728 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-06 17:14:55,008 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-04-06 17:14:55,525 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2024-04-06 17:14:55,540 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-06 17:14:56,015 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 5.605 seconds (JVM running for 6.396)
+2024-04-06 17:14:56,015 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
+2024-04-06 17:19:48,691 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-06 17:19:48,691 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-04-06 17:19:48,693 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2024-04-06 17:21:11,481 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-6] createCustumer: start
+2024-04-06 17:21:11,854 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-6] createCustumer: create customer
+2024-04-06 17:21:12,103 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-6] createCustumer: erro
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because "tipoconta" is null
+	at com.data.percept.models.enuns.TipoConta.getValor(TipoConta.java:18)
+	at com.data.percept.controller.CreateCustumerController.createCustumer(CreateCustumerController.java:69)
+	at com.data.percept.controller.CreateCustumerController$$FastClassBySpringCGLIB$$aedf38c0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.data.percept.controller.CreateCustumerController$$EnhancerBySpringCGLIB$$1e53c8cd.createCustumer(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.data.percept.config.CorsWebConfig.doFilter(CorsWebConfig.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-04-06 17:22:14,365 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-8] createCustumer: start
+2024-04-06 17:22:14,389 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-8] createCustumer: cpf is presents
+2024-04-06 17:23:42,959 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-1] createCustumer: start
+2024-04-06 17:23:42,965 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-1] createCustumer: cpf is presents
