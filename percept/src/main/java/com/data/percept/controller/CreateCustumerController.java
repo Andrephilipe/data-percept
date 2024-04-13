@@ -100,7 +100,7 @@ public class CreateCustumerController {
                 logger.info("createAccount: customer not exist");
                 return ResponseEntity.internalServerError()
                         .body("account not created, customer not exist");
-            }
+            } 
 
             int numeroEmInteiro = Integer.parseInt(newAccount.getTipoDaConta());
             Account cpfAccount = cpf.get();
@@ -112,6 +112,9 @@ public class CreateCustumerController {
                     logger.info("createAccount: account exist");
                     return ResponseEntity.internalServerError()
                             .body("account not created, account exist" + cpfAccount.getAccount());
+                }
+                else{
+                    logger.info("createAccount: cpf nao existe.");
                 }
 
             }
@@ -128,7 +131,7 @@ public class CreateCustumerController {
             accountCreate.setDataCriacao(newAccount.getDataCriacao());
             newaccountRepository.save(accountCreate);
 
-        } catch (Exception e) {
+        } catch (Exception e) { 
             logger.info("createCustumer: erro", e);
             return ResponseEntity.internalServerError().body("account not created");
         }

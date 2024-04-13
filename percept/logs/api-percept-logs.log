@@ -1,86 +1,242 @@
-2024-04-13 09:44:49,583 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
-2024-04-13 09:44:49,583 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
-2024-04-13 09:44:54,162 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-04-13 09:44:54,163 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2024-04-13 09:44:54,170 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
-2024-04-13 09:44:54,365 WARN org.springframework.web.servlet.PageNotFound [http-nio-8080-exec-9] No mapping for GET /
-2024-04-13 09:44:54,376 WARN org.springframework.web.servlet.PageNotFound [http-nio-8080-exec-10] No mapping for GET /csrf
-2024-04-13 09:46:55,881 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-39] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-04-13 09:46:55,881 INFO com.zaxxer.hikari.HikariDataSource [Thread-39] HikariPool-7 - Shutdown initiated...
-2024-04-13 09:46:55,894 INFO com.zaxxer.hikari.HikariDataSource [Thread-39] HikariPool-7 - Shutdown completed.
-2024-04-13 09:46:55,963 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
-2024-04-13 09:46:56,489 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 21.0.2 on C11-O435SSYUCKT with PID 8232 (C:\Users\andre.p.cassiano\projetos-estudo\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projetos-estudo\data-percept\percept)
-2024-04-13 09:46:56,489 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2024-04-13 09:46:56,489 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
-2024-04-13 09:46:56,812 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-04-13 09:46:56,843 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 39 ms. Found 11 JPA repository interfaces.
-2024-04-13 09:46:56,882 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=bab99a0c-8de2-3875-b313-33d095aee368
-2024-04-13 09:46:56,921 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2024-04-13 09:46:56,921 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2024-04-13 09:46:56,921 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
-2024-04-13 09:46:56,921 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2024-04-13 09:46:56,973 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
-2024-04-13 09:46:56,973 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 484 ms
-2024-04-13 09:46:56,991 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-04-13 09:46:56,991 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-8 - Starting...
-2024-04-13 09:46:57,007 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-8 - Start completed.
-2024-04-13 09:46:57,007 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2024-04-13 09:46:57,070 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-04-13 09:46:57,070 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-04-13 09:46:57,257 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-04-13 09:46:57,287 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2024-04-13 09:46:57,287 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2024-04-13 09:46:57,816 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2024-04-13 09:46:57,818 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
-2024-04-13 09:46:58,273 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
-2024-04-13 09:46:58,273 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
-2024-04-13 09:46:58,273 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
-2024-04-13 09:46:58,273 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 2.299 seconds (JVM running for 863.209)
-2024-04-13 09:46:58,273 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
-2024-04-13 09:46:58,273 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
-2024-04-13 09:47:16,232 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-04-13 09:47:16,232 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2024-04-13 09:47:16,233 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
-2024-04-13 09:47:16,372 WARN org.springframework.web.servlet.PageNotFound [http-nio-8080-exec-6] No mapping for GET /
-2024-04-13 09:47:16,384 WARN org.springframework.web.servlet.PageNotFound [http-nio-8080-exec-7] No mapping for GET /csrf
-2024-04-13 09:47:18,748 WARN org.springframework.web.servlet.PageNotFound [http-nio-8080-exec-3] No mapping for GET /
-2024-04-13 09:47:18,757 WARN org.springframework.web.servlet.PageNotFound [http-nio-8080-exec-4] No mapping for GET /csrf
-2024-04-13 09:47:55,873 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-45] Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-04-13 09:47:55,874 INFO com.zaxxer.hikari.HikariDataSource [Thread-45] HikariPool-8 - Shutdown initiated...
-2024-04-13 09:47:55,877 INFO com.zaxxer.hikari.HikariDataSource [Thread-45] HikariPool-8 - Shutdown completed.
-2024-04-13 09:47:55,934 INFO com.data.percept.PerceptApplication [restartedMain] Inicio PerceptApplication
-2024-04-13 09:47:56,435 INFO com.data.percept.PerceptApplication [restartedMain] Starting PerceptApplication using Java 21.0.2 on C11-O435SSYUCKT with PID 8232 (C:\Users\andre.p.cassiano\projetos-estudo\data-percept\percept\target\classes started by andre.p.cassiano in C:\Users\andre.p.cassiano\projetos-estudo\data-percept\percept)
-2024-04-13 09:47:56,435 DEBUG com.data.percept.PerceptApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
-2024-04-13 09:47:56,435 INFO com.data.percept.PerceptApplication [restartedMain] No active profile set, falling back to default profiles: default
-2024-04-13 09:47:56,821 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-04-13 09:47:56,883 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 61 ms. Found 11 JPA repository interfaces.
-2024-04-13 09:47:56,928 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=1f5b1d7a-c7e4-32a5-9c78-5ce361806b8b
-2024-04-13 09:47:56,983 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2024-04-13 09:47:56,983 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2024-04-13 09:47:56,983 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
-2024-04-13 09:47:56,983 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2024-04-13 09:47:57,030 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
-2024-04-13 09:47:57,030 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 592 ms
-2024-04-13 09:47:57,060 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-04-13 09:47:57,066 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-9 - Starting...
-2024-04-13 09:47:57,070 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-9 - Start completed.
-2024-04-13 09:47:57,070 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2024-04-13 09:47:57,156 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-04-13 09:47:57,156 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-04-13 09:47:57,397 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-04-13 09:47:57,442 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2024-04-13 09:47:57,451 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2024-04-13 09:47:57,996 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2024-04-13 09:47:58,000 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
-2024-04-13 09:47:58,478 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
-2024-04-13 09:47:58,479 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
-2024-04-13 09:47:58,486 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
-2024-04-13 09:47:58,528 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: createOrderBoletoUsingPOST_1
-2024-04-13 09:47:58,543 INFO com.data.percept.PerceptApplication [restartedMain] Started PerceptApplication in 2.601 seconds (JVM running for 923.47)
-2024-04-13 09:47:58,545 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
-2024-04-13 09:47:58,545 INFO com.data.percept.PerceptApplication [restartedMain] Pronto para uso Inicio PerceptApplication
-2024-04-13 09:48:03,324 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-04-13 09:48:03,324 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2024-04-13 09:48:03,325 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
-2024-04-13 09:48:03,435 WARN org.springframework.web.servlet.PageNotFound [http-nio-8080-exec-6] No mapping for GET /
-2024-04-13 09:48:03,444 WARN org.springframework.web.servlet.PageNotFound [http-nio-8080-exec-7] No mapping for GET /csrf
+2024-04-13 10:32:49,559 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-4] createAccount: create account
+2024-04-13 10:32:49,564 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-4] createAccount: start
+2024-04-13 10:32:49,571 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-4] createAccount: customer.isPresent
+2024-04-13 10:32:49,571 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-4] createCustumer: erro
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at com.data.percept.controller.CreateCustumerController.createAccount(CreateCustumerController.java:106)
+	at com.data.percept.controller.CreateCustumerController$$FastClassBySpringCGLIB$$aedf38c0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.data.percept.controller.CreateCustumerController$$EnhancerBySpringCGLIB$$71689d3a.createAccount(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.data.percept.config.CorsWebConfig.doFilter(CorsWebConfig.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-04-13 10:33:22,725 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-6] createAccount: create account
+2024-04-13 10:33:22,725 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-6] createAccount: start
+2024-04-13 10:33:22,730 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-6] createAccount: customer.isPresent
+2024-04-13 10:33:22,730 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-6] createCustumer: erro
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at com.data.percept.controller.CreateCustumerController.createAccount(CreateCustumerController.java:106)
+	at com.data.percept.controller.CreateCustumerController$$FastClassBySpringCGLIB$$aedf38c0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.data.percept.controller.CreateCustumerController$$EnhancerBySpringCGLIB$$71689d3a.createAccount(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.data.percept.config.CorsWebConfig.doFilter(CorsWebConfig.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-04-13 10:33:38,608 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-8] createAccount: create account
+2024-04-13 10:33:38,609 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-8] createAccount: start
+2024-04-13 10:33:38,612 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-8] createAccount: customer.isPresent
+2024-04-13 10:33:38,613 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-8] createCustumer: erro
+java.lang.NumberFormatException: For input string: "corrente"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at com.data.percept.controller.CreateCustumerController.createAccount(CreateCustumerController.java:105)
+	at com.data.percept.controller.CreateCustumerController$$FastClassBySpringCGLIB$$aedf38c0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.data.percept.controller.CreateCustumerController$$EnhancerBySpringCGLIB$$71689d3a.createAccount(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.data.percept.config.CorsWebConfig.doFilter(CorsWebConfig.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-04-13 10:33:51,689 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-10] createAccount: create account
+2024-04-13 10:33:51,689 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-10] createAccount: start
+2024-04-13 10:33:51,693 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-10] createAccount: customer.isPresent
+2024-04-13 10:33:51,693 INFO com.data.percept.controller.CreateCustumerController [http-nio-8080-exec-10] createCustumer: erro
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at com.data.percept.controller.CreateCustumerController.createAccount(CreateCustumerController.java:106)
+	at com.data.percept.controller.CreateCustumerController$$FastClassBySpringCGLIB$$aedf38c0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.data.percept.controller.CreateCustumerController$$EnhancerBySpringCGLIB$$71689d3a.createAccount(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.data.percept.config.CorsWebConfig.doFilter(CorsWebConfig.java:49)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
