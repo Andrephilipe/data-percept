@@ -30,9 +30,7 @@ public class Account {
     @Column(name = "agencia")
     private Integer agencia;
 
-	private String dataCriacao;
-
-    @Column
+	@Column
     private String cpf;
 
     
@@ -52,7 +50,6 @@ public class Account {
     }
 
     public void setDataCriacao(String string) {
-        this.dataCriacao = string;
     }
     public String getNameTitutular() {
         return nameTitutular;

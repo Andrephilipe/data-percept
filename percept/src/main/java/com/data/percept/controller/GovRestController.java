@@ -1,6 +1,5 @@
 package com.data.percept.controller;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 import javax.validation.Valid;
@@ -75,7 +74,7 @@ public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
             return ResponseEntity.ok()
                     .headers(headers)
                     .contentType(MediaType.APPLICATION_PDF)
-                    .body(new InputStreamResource(this.schoolService.gerarPdf()));
+                    .body(new InputStreamResource(RelatorioController.gerarPdf()));
 
 		} catch (Exception e) {
 			logger.info("GovRestController: Erro" + e);
@@ -123,7 +122,7 @@ public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
             return ResponseEntity.ok()
                     .headers(headers)
                     .contentType(MediaType.APPLICATION_PDF)
-                    .body(new InputStreamResource(this.schoolService.gerarPdf()));
+                    .body(new InputStreamResource(RelatorioController.gerarPdf()));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }

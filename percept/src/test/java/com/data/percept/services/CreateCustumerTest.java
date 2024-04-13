@@ -33,6 +33,7 @@ public class CreateCustumerTest {
     @Mock
     private NewAccountRepository newaccountRepository;
 
+    @SuppressWarnings("deprecation")
     @BeforeEach
     void setUp() {
         MockitoAnnotations.initMocks(this);

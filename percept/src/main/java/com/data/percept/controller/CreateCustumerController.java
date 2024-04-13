@@ -26,6 +26,8 @@ import com.data.percept.repository.CreateAccountRepository;
 import com.data.percept.repository.CreateCustumerRepository;
 import com.data.percept.repository.NewAccountRepository;
 
+import io.swagger.annotations.ApiOperation;
+
 @Validated
 @Controller
 @RestController
@@ -42,7 +44,8 @@ public class CreateCustumerController {
 
     @Autowired
     private NewAccountRepository newaccountRepository;
-
+    
+    @ApiOperation(value = "Endpoint Salvar Pessoas")
     @PostMapping("/createCustumer")
     public ResponseEntity<String> createCustumer(@Valid @RequestBody Custumer custumer) {
 

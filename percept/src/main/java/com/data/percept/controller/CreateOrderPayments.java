@@ -52,7 +52,6 @@ public class CreateOrderPayments {
     private static final String ERRO_INTERNO = "Error internal";
 
     private static final String ODERCASH = "Payment cash created";
-    private static final String CASHDELETED = "Payment cash deleted";
 
     public static final Logger logger = LoggerFactory.getLogger(CreateOrderPayments.class);
 
