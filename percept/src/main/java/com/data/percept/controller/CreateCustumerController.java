@@ -44,7 +44,7 @@ public class CreateCustumerController {
 
     @Autowired
     private NewAccountRepository newaccountRepository;
-    
+
     @ApiOperation(value = "Endpoint Salvar Pessoas")
     @PostMapping("/createCustumer")
     public ResponseEntity<String> createCustumer(@Valid @RequestBody Custumer custumer) {
@@ -103,7 +103,11 @@ public class CreateCustumerController {
             } 
 
             int numeroEmInteiro = Integer.parseInt(newAccount.getTipoDaConta());
-            Account cpfAccount = cpf.get();
+            logger.info("createAccount: get cpf");
+            if(cpf.get() != null){
+                Account cpfAccount = cpf.get();
+
+            
             String test = TipoConta.getValor(numeroEmInteiro);
             if (cpf.isPresent()) {
                 logger.info("createAccount: cpf.isPresent");
@@ -117,7 +121,10 @@ public class CreateCustumerController {
                     logger.info("createAccount: cpf nao existe.");
                 }
 
+            }else{
+                logger.info("createAccount: cpf nao existe.");
             }
+  
             
 
             int agenciaNew = cpfAccount.getAgencia();
@@ -130,6 +137,7 @@ public class CreateCustumerController {
             accountCreate.setAgencia(agenciaNew);
             accountCreate.setDataCriacao(newAccount.getDataCriacao());
             newaccountRepository.save(accountCreate);
+        }
 
         } catch (Exception e) { 
             logger.info("createCustumer: erro", e);
