@@ -10,7 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+@Entity 
 public class Account {
     
     @Id
@@ -25,7 +25,7 @@ public class Account {
     private String accountNumber;
 
     @Column(name = "tipo_da_conta")
-    private String tipoDaConta;
+    private String tipoDaConta; 
 
     @Column(name = "agencia")
     private Integer agencia;

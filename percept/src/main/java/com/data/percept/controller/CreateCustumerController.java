@@ -100,46 +100,42 @@ public class CreateCustumerController {
                 logger.info("createAccount: customer not exist");
                 return ResponseEntity.internalServerError()
                         .body("account not created, customer not exist");
-            } 
+            }
 
             int numeroEmInteiro = Integer.parseInt(newAccount.getTipoDaConta());
             logger.info("createAccount: get cpf");
-            if(cpf.get() != null){
+            if (cpf.get() != null) {
                 Account cpfAccount = cpf.get();
 
-            
-            String test = TipoConta.getValor(numeroEmInteiro);
-            if (cpf.isPresent()) {
-                logger.info("createAccount: cpf.isPresent");
+                String test = TipoConta.getValor(numeroEmInteiro);
+                if (cpf.isPresent()) {
+                    logger.info("createAccount: cpf.isPresent");
 
-                if (test.equals(cpfAccount.getTipoDaConta())) {
-                    logger.info("createAccount: account exist");
-                    return ResponseEntity.internalServerError()
-                            .body("account not created, account exist" + cpfAccount.getAccount());
-                }
-                else{
+                    if (test.equals(cpfAccount.getTipoDaConta())) {
+                        logger.info("createAccount: account exist");
+                        return ResponseEntity.internalServerError()
+                                .body("account not created, account exist" + cpfAccount.getAccount());
+                    } else {
+                        logger.info("createAccount: cpf nao existe.");
+                    }
+
+                } else {
                     logger.info("createAccount: cpf nao existe.");
                 }
 
-            }else{
-                logger.info("createAccount: cpf nao existe.");
+                int agenciaNew = cpfAccount.getAgencia();
+                String newCpf = cpfAccount.getCpf();
+                String number = CreateCustumerValidators.generateAccountNumber();
+                accountCreate.setAccount(number);
+                accountCreate.setCpf(newCpf);
+                accountCreate.setNameTitutular(newAccount.getNameTitutular());
+                accountCreate.setTipoDaConta(TipoConta.getValor(numeroEmInteiro));
+                accountCreate.setAgencia(agenciaNew);
+                accountCreate.setDataCriacao(newAccount.getDataCriacao());
+                newaccountRepository.save(accountCreate);
             }
-  
-            
 
-            int agenciaNew = cpfAccount.getAgencia();
-            String newCpf = cpfAccount.getCpf();
-            String number = CreateCustumerValidators.generateAccountNumber();
-            accountCreate.setAccount(number);
-            accountCreate.setCpf(newCpf);
-            accountCreate.setNameTitutular(newAccount.getNameTitutular());
-            accountCreate.setTipoDaConta(TipoConta.getValor(numeroEmInteiro));
-            accountCreate.setAgencia(agenciaNew);
-            accountCreate.setDataCriacao(newAccount.getDataCriacao());
-            newaccountRepository.save(accountCreate);
-        }
-
-        } catch (Exception e) { 
+        } catch (Exception e) {
             logger.info("createCustumer: erro", e);
             return ResponseEntity.internalServerError().body("account not created");
         }
