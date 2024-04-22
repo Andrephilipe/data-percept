@@ -9,7 +9,7 @@
                 <maxHistory>60</maxHistory>
             </rollingPolicy>
             <encoder>
-                <pattern>%d %p %c{1.} [%t] %m%n</pattern>
+                <pattern>%d %p %c{1} [%t] %m%n</pattern>
             </encoder>
         </appender>
         <logger name="com.data.percept" level="debug" additivity="false">
