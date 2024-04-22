@@ -15,7 +15,8 @@ import com.data.percept.repository.CreateCustumerRepository;
 import com.data.percept.repository.NewAccountRepository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.anyString;
+import static org.mockito.Mockito.when;
 
 import java.util.Optional;
 

@@ -6,17 +6,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.data.percept.funtions.geraarquivoexel.ExcelService;
 
+import com.data.percept.services.CreateCustumerTest;
+
+
 @SpringBootTest
 class PerceptApplicationTests {
 
-	@Test
-	void conectaFire() {
-	}
-	
-	ExcelService criarArquivoExcel = new ExcelService();
-
-	@Test
-	void criarArquivoExcelTest(){
-		
-	} 
 }

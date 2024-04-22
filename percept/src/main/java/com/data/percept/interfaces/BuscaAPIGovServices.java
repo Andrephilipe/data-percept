@@ -10,6 +10,6 @@ import com.data.percept.models.InfoResultsGOV;
 public interface BuscaAPIGovServices {
     
     @GetMapping("")
-    InfoResultsGOV consultaInfo(@PathVariable("codeige") String codeige, @PathVariable("mesAno") String mesAno) throws IOException, InterruptedException;
+    InfoResultsGOV consultaInfo(@PathVariable String codeige, @PathVariable String mesAno) throws IOException, InterruptedException;
 
 }
