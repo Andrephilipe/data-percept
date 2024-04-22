@@ -1,6 +1,5 @@
 package com.data.percept.funtions.createcustumer;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.data.percept.models.Custumer;
@@ -13,7 +12,6 @@ public class CreateAccountService {
 
     private final CreateCustumerRepository usuarioRepository;
 
-    @Autowired
     public CreateAccountService(CreateCustumerRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
     }

@@ -9,12 +9,12 @@
 package com.data.percept.config;
 
 /**INICIO - Imports da aplicacao.**/
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -55,9 +55,13 @@ public class CorsWebConfig implements Filter,WebMvcConfigurer {
           response.setHeader("Access-Control-Allow-Origin", "*");
           response.setHeader("Access-Control-Allow-Methods", "POST,GET,DELETE,PUT");
           response.setHeader("Access-Control-Max-Age", "3600");
-          response.setHeader("Access-Control-Allow-Headers", "Access-Control-Expose-Headers"+"Authorization, content-type," +
-          "USERID"+"ROLE"+
-                  "access-control-request-headers,access-control-request-method,accept,origin,authorization,x-requested-with,responseType,observe");
+          response.setHeader("Access-Control-Allow-Headers", """
+          Access-Control-Expose-Headers\
+          Authorization, content-type,\
+          USERID\
+          ROLE\
+          access-control-request-headers,access-control-request-method,accept,origin,authorization,x-requested-with,responseType,observe\
+          """);
           response.setStatus(HttpServletResponse.SC_OK);
       }
 
