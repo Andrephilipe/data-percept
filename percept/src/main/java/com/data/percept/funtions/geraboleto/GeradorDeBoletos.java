@@ -51,7 +51,6 @@ public class GeradorDeBoletos {
 
                     } catch (Exception e) {
                         logger.info("UsuarioDAO: erro : " + e);
-                        // TODO: handle exception
                     }
 
                 }else{

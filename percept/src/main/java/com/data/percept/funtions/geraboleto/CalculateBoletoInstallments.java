@@ -15,7 +15,7 @@ public class CalculateBoletoInstallments {
         throw new IllegalStateException("CalculateBoletoInstallments");
     }
 
-    public static BigDecimal CalculateBoletoInstallments(BigDecimal valor, Integer parcelas) {
+    public static BigDecimal calculateBoletoInstallments(BigDecimal valor, Integer parcelas) {
         logger.info("CalculateBoletoInstallments :  start");
         try {
             Boolean reults = verificaValor(valor);

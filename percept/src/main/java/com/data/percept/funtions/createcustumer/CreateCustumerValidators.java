@@ -69,7 +69,6 @@ public class CreateCustumerValidators {
             return ResponseEntity.internalServerError().body("name obrigatorio"); 
         }
         } catch (Exception e) {
-            // TODO: handle exception
             logger.info("validatorCampos: error" + e);
         }
  
