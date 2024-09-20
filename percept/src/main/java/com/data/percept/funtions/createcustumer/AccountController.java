@@ -21,7 +21,6 @@ public static Logger logger = LoggerFactory.getLogger(AccountController.class);
             logger.info("createCustumer: custumerRepository.findAll()" + repository.findByCpf("49442003402"));
 
         } catch (Exception e) {
-            // TODO: handle exception
             logger.info("buscarPorEmail: erro r " + e);
         }
         return null;

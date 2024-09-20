@@ -33,7 +33,6 @@ public static Logger logger = LoggerFactory.getLogger(PerceptApplication.class);
             return test.conectaApiGog(endereco);
                 
         } catch (Exception e) {
-            // TODO: handle exception
             logger.info("Erro na consultaInfo" + e);
         }
         return null;

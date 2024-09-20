@@ -248,7 +248,6 @@ public class DownPaymentsController {
             }
 
         } catch (Exception e) {
-            // TODO: handle exception
             logger.error("incrementBalanceCounter: erro", e);
             return false;
         }
